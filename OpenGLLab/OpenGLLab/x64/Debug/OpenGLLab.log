@@ -1,0 +1,2 @@
+﻿  main.cpp
+C:\Users\Admin\Desktop\OpenGLLab\OpenGLLab\includes\GL\glew.h(85,1): fatal error C1189: #error:  gl.h included before glew.h
