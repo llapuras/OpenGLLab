@@ -1,0 +1,16 @@
+<RCC>
+  <qresource prefix="/">
+    <file>main.qml</file>
+    <file>SettingsPane.qml</file>
+    <file>Settings/Graphics.qml</file>
+    <file>Settings/World.qml</file>
+
+    <file>Controls/SettingGroupBox.qml</file>
+    <file>Controls/SettingBaseControl.qml</file>
+
+    <file>Controls/SettingCheckBox.qml</file>
+    <file>Controls/SettingComboBox.qml</file>
+    <file>Controls/SettingSpinBox.qml</file>
+    <file>Controls/SettingSlider.qml</file>
+  </qresource>
+</RCC>

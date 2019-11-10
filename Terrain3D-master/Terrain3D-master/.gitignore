@@ -1,0 +1,17 @@
+*.exe
+*.pdb
+*ilk
+*.nvuser
+Doc/Doxygen/
+IDE/
+NSight/
+*.autosave
+*.dll
+Terrain3D.pro.user
+Makefile
+Guitar.config
+Bin/Terrain3D.ini
+Deployment/Bin/
+_intermediate/
+/Deployment/Terrain3D.ini
+*.user
