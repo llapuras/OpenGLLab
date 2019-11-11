@@ -1,2 +1,9 @@
 ﻿  main.cpp
-  OpenGLLab.vcxproj -> D:\CG\OpenGLLab\OpenGLLab\x64\Debug\OpenGLLab.exe
+C:\Users\Admin\Desktop\OpenGLLab\OpenGLLab\OpenGLLab\main.cpp(302,11): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\OpenGLLab\OpenGLLab\main.cpp(303,11): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\OpenGLLab\OpenGLLab\main.cpp(307,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\OpenGLLab\OpenGLLab\main.cpp(308,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\OpenGLLab\OpenGLLab\main.cpp(310,10): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\OpenGLLab\OpenGLLab\main.cpp(311,10): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\OpenGLLab\OpenGLLab\main.cpp(318,28): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  OpenGLLab.vcxproj -> C:\Users\Admin\Desktop\OpenGLLab\OpenGLLab\x64\Debug\OpenGLLab.exe

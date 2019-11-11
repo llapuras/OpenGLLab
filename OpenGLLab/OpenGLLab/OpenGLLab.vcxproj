@@ -74,16 +74,16 @@
     <LibraryPath>D:\CG\OpenGLLab\OpenGLLab\libs;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>D:\CG\OpenGLLab\OpenGLLab\includes;$(IncludePath)</IncludePath>
-    <LibraryPath>D:\CG\OpenGLLab\OpenGLLab\libs;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\Admin\Desktop\OpenGLLab\OpenGLLab\includes;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\Admin\Desktop\OpenGLLab\OpenGLLab\libs;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <IncludePath>D:\CG\OpenGLLab\OpenGLLab\includes;$(IncludePath)</IncludePath>
     <LibraryPath>D:\CG\OpenGLLab\OpenGLLab\libs;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>D:\CG\OpenGLLab\OpenGLLab\includes;$(IncludePath)</IncludePath>
-    <LibraryPath>D:\CG\OpenGLLab\OpenGLLab\libs;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\Admin\Desktop\OpenGLLab\OpenGLLab\includes;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\Admin\Desktop\OpenGLLab\OpenGLLab\libs;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -104,7 +104,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>D:\CG\OpenGLLab\OpenGLLab\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Admin\Desktop\OpenGLLab\OpenGLLab\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -136,7 +136,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>D:\CG\OpenGLLab\OpenGLLab\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Admin\Desktop\OpenGLLab\OpenGLLab\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -146,16 +146,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="camera.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="stb_image.cpp" />
     <ClCompile Include="viewport.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Camera.h" />
     <ClInclude Include="stb_image.h" />
     <ClInclude Include="Shader.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Shaders\fs.glsl" />
+    <None Include="Shaders\lampfs.glsl" />
+    <None Include="Shaders\lampvs.glsl" />
     <None Include="Shaders\vs.glsl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
