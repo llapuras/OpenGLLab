@@ -29,6 +29,12 @@
     <ClCompile Include="light.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="specular.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="texture_cube.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Shader.h">
@@ -52,6 +58,15 @@
       <Filter>Shaders</Filter>
     </None>
     <None Include="Shaders\lampvs.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\matfs.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\matvs.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\diffusefs.glsl">
       <Filter>Shaders</Filter>
     </None>
   </ItemGroup>
