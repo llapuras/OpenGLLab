@@ -35,6 +35,9 @@
     <ClCompile Include="texture_cube.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="PartSpecular.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Shader.h">
@@ -67,6 +70,9 @@
       <Filter>Shaders</Filter>
     </None>
     <None Include="Shaders\diffusefs.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\specular_fs.glsl">
       <Filter>Shaders</Filter>
     </None>
   </ItemGroup>

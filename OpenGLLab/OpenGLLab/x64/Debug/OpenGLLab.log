@@ -1,10 +1,10 @@
 ﻿  main.cpp
-C:\Users\Admin\Desktop\OpenGLLab\OpenGLLab\OpenGLLab\main.cpp(181,22): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\Admin\Desktop\OpenGLLab\OpenGLLab\OpenGLLab\main.cpp(288,11): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\Admin\Desktop\OpenGLLab\OpenGLLab\OpenGLLab\main.cpp(289,11): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\Admin\Desktop\OpenGLLab\OpenGLLab\OpenGLLab\main.cpp(293,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\Admin\Desktop\OpenGLLab\OpenGLLab\OpenGLLab\main.cpp(294,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\Admin\Desktop\OpenGLLab\OpenGLLab\OpenGLLab\main.cpp(296,10): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\Admin\Desktop\OpenGLLab\OpenGLLab\OpenGLLab\main.cpp(297,10): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\Admin\Desktop\OpenGLLab\OpenGLLab\OpenGLLab\main.cpp(304,28): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\OpenGLLab\OpenGLLab\main.cpp(182,22): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\OpenGLLab\OpenGLLab\main.cpp(284,11): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\OpenGLLab\OpenGLLab\main.cpp(285,11): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\OpenGLLab\OpenGLLab\main.cpp(289,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\OpenGLLab\OpenGLLab\main.cpp(290,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\OpenGLLab\OpenGLLab\main.cpp(292,10): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\OpenGLLab\OpenGLLab\main.cpp(293,10): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\OpenGLLab\OpenGLLab\main.cpp(300,28): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
   OpenGLLab.vcxproj -> C:\Users\Admin\Desktop\OpenGLLab\OpenGLLab\x64\Debug\OpenGLLab.exe

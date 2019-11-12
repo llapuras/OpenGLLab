@@ -149,6 +149,7 @@
     <ClCompile Include="camera.cpp" />
     <ClCompile Include="light.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="PartSpecular.cpp" />
     <ClCompile Include="specular.cpp" />
     <ClCompile Include="stb_image.cpp" />
     <ClCompile Include="texture_cube.cpp" />
@@ -166,6 +167,7 @@
     <None Include="Shaders\lampvs.glsl" />
     <None Include="Shaders\matfs.glsl" />
     <None Include="Shaders\matvs.glsl" />
+    <None Include="Shaders\specular_fs.glsl" />
     <None Include="Shaders\vs.glsl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
