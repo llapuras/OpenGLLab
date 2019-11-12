@@ -1,9 +1,16 @@
-﻿  main.cpp
-C:\Users\Admin\Desktop\OpenGLLab\OpenGLLab\OpenGLLab\main.cpp(302,11): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\Admin\Desktop\OpenGLLab\OpenGLLab\OpenGLLab\main.cpp(303,11): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\Admin\Desktop\OpenGLLab\OpenGLLab\OpenGLLab\main.cpp(307,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\Admin\Desktop\OpenGLLab\OpenGLLab\OpenGLLab\main.cpp(308,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\Admin\Desktop\OpenGLLab\OpenGLLab\OpenGLLab\main.cpp(310,10): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\Admin\Desktop\OpenGLLab\OpenGLLab\OpenGLLab\main.cpp(311,10): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\Admin\Desktop\OpenGLLab\OpenGLLab\OpenGLLab\main.cpp(318,28): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-  OpenGLLab.vcxproj -> C:\Users\Admin\Desktop\OpenGLLab\OpenGLLab\x64\Debug\OpenGLLab.exe
+﻿  camera.cpp
+  light.cpp
+  main.cpp
+D:\CG\OpenGLLab\OpenGLLab\OpenGLLab\main.cpp(227,22): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\CG\OpenGLLab\OpenGLLab\OpenGLLab\main.cpp(318,11): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\CG\OpenGLLab\OpenGLLab\OpenGLLab\main.cpp(319,11): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\CG\OpenGLLab\OpenGLLab\OpenGLLab\main.cpp(323,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\CG\OpenGLLab\OpenGLLab\OpenGLLab\main.cpp(324,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\CG\OpenGLLab\OpenGLLab\OpenGLLab\main.cpp(326,10): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\CG\OpenGLLab\OpenGLLab\OpenGLLab\main.cpp(327,10): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  stb_image.cpp
+  viewport.cpp
+  Generating Code...
+D:\CG\OpenGLLab\OpenGLLab\OpenGLLab\main.cpp(334,28): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+  OpenGLLab.vcxproj -> D:\CG\OpenGLLab\OpenGLLab\x64\Debug\OpenGLLab.exe

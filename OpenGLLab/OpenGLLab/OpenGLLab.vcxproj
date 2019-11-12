@@ -70,20 +70,20 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>D:\CG\OpenGLLab\OpenGLLab\includes;$(IncludePath)</IncludePath>
-    <LibraryPath>D:\CG\OpenGLLab\OpenGLLab\libs;$(LibraryPath)</LibraryPath>
+    <IncludePath>..\includes;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\CG\OpenGLLab\OpenGLLab\libs;..\OpenGLLab\OpenGLLab\libs;D:\CG\OpenGLLab\OpenGLLab\libs;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>C:\Users\Admin\Desktop\OpenGLLab\OpenGLLab\includes;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\Admin\Desktop\OpenGLLab\OpenGLLab\libs;$(LibraryPath)</LibraryPath>
+    <IncludePath>..\includes;$(IncludePath)</IncludePath>
+    <LibraryPath>..\libs;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>D:\CG\OpenGLLab\OpenGLLab\includes;$(IncludePath)</IncludePath>
-    <LibraryPath>D:\CG\OpenGLLab\OpenGLLab\libs;$(LibraryPath)</LibraryPath>
+    <IncludePath>..\includes;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\CG\OpenGLLab\OpenGLLab\libs;..\OpenGLLab\OpenGLLab\libs;D:\CG\OpenGLLab\OpenGLLab\libs;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>C:\Users\Admin\Desktop\OpenGLLab\OpenGLLab\includes;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\Admin\Desktop\OpenGLLab\OpenGLLab\libs;$(LibraryPath)</LibraryPath>
+    <IncludePath>..\includes;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\CG\OpenGLLab\OpenGLLab\libs;..\OpenGLLab\OpenGLLab\libs;C:\Users\Admin\Desktop\OpenGLLab\OpenGLLab\libs;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -91,7 +91,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>D:\CG\OpenGLLab\OpenGLLab\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\OpenGLLab\includes;D:\CG\OpenGLLab\OpenGLLab\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -104,7 +104,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\Admin\Desktop\OpenGLLab\OpenGLLab\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -119,7 +119,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>D:\CG\OpenGLLab\OpenGLLab\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\OpenGLLab\includes;D:\CG\OpenGLLab\OpenGLLab\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -136,7 +136,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\Admin\Desktop\OpenGLLab\OpenGLLab\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\OpenGLLab\includes;C:\Users\Admin\Desktop\OpenGLLab\OpenGLLab\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -147,6 +147,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="camera.cpp" />
+    <ClCompile Include="light.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="stb_image.cpp" />
     <ClCompile Include="viewport.cpp" />
