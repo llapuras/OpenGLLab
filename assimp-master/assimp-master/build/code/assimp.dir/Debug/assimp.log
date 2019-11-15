@@ -1,0 +1,731 @@
+﻿  Building Custom Rule C:/Users/Admin/Desktop/OpenGLLab/assimp-master/assimp-master/code/CMakeLists.txt
+cl : command line warning D9002: ignoring unknown option '-g'
+cl : command line warning D9002: ignoring unknown option '-O0'
+cl : command line warning D9002: ignoring unknown option '-fprofile-arcs'
+cl : command line warning D9002: ignoring unknown option '-ftest-coverage'
+cl : command line warning D9002: ignoring unknown option '-g'
+cl : command line warning D9002: ignoring unknown option '-O0'
+cl : command line warning D9002: ignoring unknown option '-fprofile-arcs'
+  Assimp.cpp
+cl : command line warning D9002: ignoring unknown option '-ftest-coverage'
+cl : command line warning D9002: ignoring unknown option '-g'
+cl : command line warning D9002: ignoring unknown option '-O0'
+cl : command line warning D9002: ignoring unknown option '-fprofile-arcs'
+  CInterfaceIOWrapper.cpp
+cl : command line warning D9002: ignoring unknown option '-ftest-coverage'
+cl : command line warning D9002: ignoring unknown option '-g'
+cl : command line warning D9002: ignoring unknown option '-O0'
+cl : command line warning D9002: ignoring unknown option '-fprofile-arcs'
+  BaseImporter.cpp
+cl : command line warning D9002: ignoring unknown option '-ftest-coverage'
+cl : command line warning D9002: ignoring unknown option '-g'
+cl : command line warning D9002: ignoring unknown option '-O0'
+cl : command line warning D9002: ignoring unknown option '-g'
+cl : command line warning D9002: ignoring unknown option '-fprofile-arcs'
+cl : command line warning D9002: ignoring unknown option '-O0'
+cl : command line warning D9002: ignoring unknown option '-g'
+cl : command line warning D9002: ignoring unknown option '-ftest-coverage'
+cl : command line warning D9002: ignoring unknown option '-fprofile-arcs'
+  BaseProcess.cpp
+cl : command line warning D9002: ignoring unknown option '-O0'
+cl : command line warning D9002: ignoring unknown option '-ftest-coverage'
+  PostStepRegistry.cpp
+cl : command line warning D9002: ignoring unknown option '-fprofile-arcs'
+  ImporterRegistry.cpp
+  DefaultIOStream.cpp
+  DefaultIOSystem.cpp
+cl : command line warning D9002: ignoring unknown option '-ftest-coverage'
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\MD5\MD5Parser.h(262,54): warning C4244: 'initializing': conversion from 'TReal' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\MD5\MD5Parser.h(262,54): warning C4244:         with
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\MD5\MD5Parser.h(262,54): warning C4244:         [
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\MD5\MD5Parser.h(262,54): warning C4244:             TReal=ai_real
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\MD5\MD5Parser.h(262,54): warning C4244:         ] (compiling source file C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Common\ImporterRegistry.cpp)
+  ZipArchiveIOSystem.cpp
+  Importer.cpp
+  SGSpatialSort.cpp
+  VertexTriangleAdjacency.cpp
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\MD5\MD5Parser.h(262,19): warning C4244: 'initializing': conversion from 'TReal' to 'const float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\MD5\MD5Parser.h(262,19): warning C4244:         with
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\MD5\MD5Parser.h(262,19): warning C4244:         [
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\MD5\MD5Parser.h(262,19): warning C4244:             TReal=ai_real
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\MD5\MD5Parser.h(262,19): warning C4244:         ] (compiling source file C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Common\ImporterRegistry.cpp)
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Common\SGSpatialSort.cpp(71,20): warning C4244: 'initializing': conversion from 'TReal' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Common\SGSpatialSort.cpp(71,20): warning C4244:         with
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Common\SGSpatialSort.cpp(71,20): warning C4244:         [
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Common\SGSpatialSort.cpp(71,20): warning C4244:             TReal=ai_real
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Common\SGSpatialSort.cpp(71,20): warning C4244:         ]
+  SpatialSort.cpp
+  SceneCombiner.cpp
+  ScenePreprocessor.cpp
+  SkeletonMeshBuilder.cpp
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Common\SGSpatialSort.cpp(89,16): warning C4244: 'initializing': conversion from 'TReal' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Common\SGSpatialSort.cpp(89,16): warning C4244:         with
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Common\SGSpatialSort.cpp(89,16): warning C4244:         [
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Common\SGSpatialSort.cpp(89,16): warning C4244:             TReal=ai_real
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Common\SGSpatialSort.cpp(89,16): warning C4244:         ]
+  SplitByBoneCountProcess.cpp
+  StandardShapes.cpp
+  TargetAnimation.cpp
+  RemoveComments.cpp
+  Subdivision.cpp
+  scene.cpp
+  Bitmap.cpp
+  Version.cpp
+  CreateAnimMesh.cpp
+  simd.cpp
+  DefaultLogger.cpp
+  CalcTangentsProcess.cpp
+  ComputeUVMappingProcess.cpp
+  ConvertToLHProcess.cpp
+  EmbedTexturesProcess.cpp
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Common\SpatialSort.cpp(224,67): warning C4293: '<<': shift count negative or too big, undefined behavior
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\CalcTangentsProcess.cpp(60,23): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\CalcTangentsProcess.cpp(85,44): warning C4244: '=': conversion from 'ai_real' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\CalcTangentsProcess.cpp(87,22): warning C4244: '=': conversion from 'ai_real' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\CalcTangentsProcess.cpp(148,32): warning C4244: 'initializing': conversion from 'ai_real' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\CalcTangentsProcess.cpp(148,22): warning C4244: 'initializing': conversion from 'ai_real' to 'const float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\CalcTangentsProcess.cpp(189,18): warning C4244: 'initializing': conversion from 'TReal' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\CalcTangentsProcess.cpp(189,18): warning C4244:         with
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\CalcTangentsProcess.cpp(189,18): warning C4244:         [
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\CalcTangentsProcess.cpp(189,18): warning C4244:             TReal=ai_real
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\CalcTangentsProcess.cpp(189,18): warning C4244:         ]
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\CalcTangentsProcess.cpp(189,54): warning C4244: 'initializing': conversion from 'TReal' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\CalcTangentsProcess.cpp(189,54): warning C4244:         with
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\CalcTangentsProcess.cpp(189,54): warning C4244:         [
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\CalcTangentsProcess.cpp(189,54): warning C4244:             TReal=ai_real
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\CalcTangentsProcess.cpp(189,54): warning C4244:         ]
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\CalcTangentsProcess.cpp(190,18): warning C4244: 'initializing': conversion from 'TReal' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\CalcTangentsProcess.cpp(190,18): warning C4244:         with
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\CalcTangentsProcess.cpp(190,18): warning C4244:         [
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\CalcTangentsProcess.cpp(190,18): warning C4244:             TReal=ai_real
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\CalcTangentsProcess.cpp(190,18): warning C4244:         ]
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\CalcTangentsProcess.cpp(190,54): warning C4244: 'initializing': conversion from 'TReal' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\CalcTangentsProcess.cpp(190,54): warning C4244:         with
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\CalcTangentsProcess.cpp(190,54): warning C4244:         [
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\CalcTangentsProcess.cpp(190,54): warning C4244:             TReal=ai_real
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\CalcTangentsProcess.cpp(190,54): warning C4244:         ]
+  FindDegenerates.cpp
+  FindInstancesProcess.cpp
+  FindInvalidDataProcess.cpp
+  FixNormalsStep.cpp
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\CalcTangentsProcess.cpp(257,44): warning C4244: '=': conversion from 'ai_real' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\FindInstancesProcess.cpp(142,27): warning C4244: 'initializing': conversion from 'ai_real' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\FixNormalsStep.cpp(144,38): warning C4244: 'initializing': conversion from 'TReal' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\FixNormalsStep.cpp(144,38): warning C4244:         with
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\FixNormalsStep.cpp(144,38): warning C4244:         [
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\FixNormalsStep.cpp(144,38): warning C4244:             TReal=ai_real
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\FixNormalsStep.cpp(144,38): warning C4244:         ]
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\FixNormalsStep.cpp(144,27): warning C4244: 'initializing': conversion from 'TReal' to 'const float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\FixNormalsStep.cpp(144,27): warning C4244:         with
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\FixNormalsStep.cpp(144,27): warning C4244:         [
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\FixNormalsStep.cpp(144,27): warning C4244:             TReal=ai_real
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\FixNormalsStep.cpp(144,27): warning C4244:         ]
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\FixNormalsStep.cpp(145,38): warning C4244: 'initializing': conversion from 'TReal' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\FixNormalsStep.cpp(145,38): warning C4244:         with
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\FixNormalsStep.cpp(145,38): warning C4244:         [
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\FixNormalsStep.cpp(145,38): warning C4244:             TReal=ai_real
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\FixNormalsStep.cpp(145,38): warning C4244:         ]
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\FixNormalsStep.cpp(145,27): warning C4244: 'initializing': conversion from 'TReal' to 'const float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\FixNormalsStep.cpp(145,27): warning C4244:         with
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\FixNormalsStep.cpp(145,27): warning C4244:         [
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\FixNormalsStep.cpp(145,27): warning C4244:             TReal=ai_real
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\FixNormalsStep.cpp(145,27): warning C4244:         ]
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\FixNormalsStep.cpp(146,38): warning C4244: 'initializing': conversion from 'TReal' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\FixNormalsStep.cpp(146,38): warning C4244:         with
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\FixNormalsStep.cpp(146,38): warning C4244:         [
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\FixNormalsStep.cpp(146,38): warning C4244:             TReal=ai_real
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\FixNormalsStep.cpp(146,38): warning C4244:         ]
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\FixNormalsStep.cpp(146,27): warning C4244: 'initializing': conversion from 'TReal' to 'const float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\FixNormalsStep.cpp(146,27): warning C4244:         with
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\FixNormalsStep.cpp(146,27): warning C4244:         [
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\FixNormalsStep.cpp(146,27): warning C4244:             TReal=ai_real
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\FixNormalsStep.cpp(146,27): warning C4244:         ]
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\FixNormalsStep.cpp(148,38): warning C4244: 'initializing': conversion from 'TReal' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\FixNormalsStep.cpp(148,38): warning C4244:         with
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\FixNormalsStep.cpp(148,38): warning C4244:         [
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\FixNormalsStep.cpp(148,38): warning C4244:             TReal=ai_real
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\FixNormalsStep.cpp(148,38): warning C4244:         ]
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\FixNormalsStep.cpp(148,27): warning C4244: 'initializing': conversion from 'TReal' to 'const float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\FixNormalsStep.cpp(148,27): warning C4244:         with
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\FixNormalsStep.cpp(148,27): warning C4244:         [
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\FixNormalsStep.cpp(148,27): warning C4244:             TReal=ai_real
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\FixNormalsStep.cpp(148,27): warning C4244:         ]
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\FixNormalsStep.cpp(149,38): warning C4244: 'initializing': conversion from 'TReal' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\FixNormalsStep.cpp(149,38): warning C4244:         with
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\FixNormalsStep.cpp(149,38): warning C4244:         [
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\FixNormalsStep.cpp(149,38): warning C4244:             TReal=ai_real
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\FixNormalsStep.cpp(149,38): warning C4244:         ]
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\FixNormalsStep.cpp(149,27): warning C4244: 'initializing': conversion from 'TReal' to 'const float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\FixNormalsStep.cpp(149,27): warning C4244:         with
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\FixNormalsStep.cpp(149,27): warning C4244:         [
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\FixNormalsStep.cpp(149,27): warning C4244:             TReal=ai_real
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\FixNormalsStep.cpp(149,27): warning C4244:         ]
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\FixNormalsStep.cpp(150,38): warning C4244: 'initializing': conversion from 'TReal' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\FixNormalsStep.cpp(150,38): warning C4244:         with
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\FixNormalsStep.cpp(150,38): warning C4244:         [
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\FixNormalsStep.cpp(150,38): warning C4244:             TReal=ai_real
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\FixNormalsStep.cpp(150,38): warning C4244:         ]
+  DropFaceNormalsProcess.cpp
+  GenFaceNormalsProcess.cpp
+  GenVertexNormalsProcess.cpp
+  PretransformVertices.cpp
+  ImproveCacheLocality.cpp
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\FixNormalsStep.cpp(150,27): warning C4244: 'initializing': conversion from 'TReal' to 'const float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\FixNormalsStep.cpp(150,27): warning C4244:         with
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\FixNormalsStep.cpp(150,27): warning C4244:         [
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\FixNormalsStep.cpp(150,27): warning C4244:             TReal=ai_real
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\FixNormalsStep.cpp(150,27): warning C4244:         ]
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\GenFaceNormalsProcess.cpp(123,32): warning C4244: 'initializing': conversion from 'ai_real' to 'float', possible loss of data
+  JoinVerticesProcess.cpp
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\GenFaceNormalsProcess.cpp(123,22): warning C4244: 'initializing': conversion from 'ai_real' to 'const float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\GenVertexNormalsProcess.cpp(132,63): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  LimitBoneWeightsProcess.cpp
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\GenVertexNormalsProcess.cpp(132,22): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\ImproveCacheLocality.cpp(103,38): warning C4244: 'initializing': conversion from 'ai_real' to 'float', possible loss of data
+  RemoveRedundantMaterials.cpp
+  RemoveVCProcess.cpp
+  SortByPTypeProcess.cpp
+  SplitLargeMeshes.cpp
+  TextureTransform.cpp
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\ImproveCacheLocality.cpp(103,25): warning C4244: 'initializing': conversion from 'ai_real' to 'const float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\TextureTransform.cpp(107,19): warning C4244: 'initializing': conversion from 'ai_real' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\TextureTransform.cpp(133,38): warning C4244: '=': conversion from 'TReal' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\TextureTransform.cpp(133,38): warning C4244:         with
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\TextureTransform.cpp(133,38): warning C4244:         [
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\TextureTransform.cpp(133,38): warning C4244:             TReal=ai_real
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\TextureTransform.cpp(133,38): warning C4244:         ]
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\TextureTransform.cpp(140,38): warning C4244: '=': conversion from 'TReal' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\TextureTransform.cpp(140,38): warning C4244:         with
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\TextureTransform.cpp(140,38): warning C4244:         [
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\TextureTransform.cpp(140,38): warning C4244:             TReal=ai_real
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\TextureTransform.cpp(140,38): warning C4244:         ]
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\TextureTransform.cpp(166,38): warning C4244: '=': conversion from 'TReal' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\TextureTransform.cpp(166,38): warning C4244:         with
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\TextureTransform.cpp(166,38): warning C4244:         [
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\TextureTransform.cpp(166,38): warning C4244:             TReal=ai_real
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\TextureTransform.cpp(166,38): warning C4244:         ]
+  TriangulateProcess.cpp
+  ValidateDataStructure.cpp
+  OptimizeGraph.cpp
+  OptimizeMeshes.cpp
+  DeboneProcess.cpp
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\TextureTransform.cpp(173,38): warning C4244: '=': conversion from 'TReal' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\TextureTransform.cpp(173,38): warning C4244:         with
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\TextureTransform.cpp(173,38): warning C4244:         [
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\TextureTransform.cpp(173,38): warning C4244:             TReal=ai_real
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\TextureTransform.cpp(173,38): warning C4244:         ]
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\TriangulateProcess.cpp(248,58): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\TriangulateProcess.cpp(248,35): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\TriangulateProcess.cpp(303,34): warning C4244: 'initializing': conversion from 'TReal' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\TriangulateProcess.cpp(303,34): warning C4244:         with
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\TriangulateProcess.cpp(303,34): warning C4244:         [
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\TriangulateProcess.cpp(303,34): warning C4244:             TReal=ai_real
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\TriangulateProcess.cpp(303,34): warning C4244:         ]
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\TriangulateProcess.cpp(303,28): warning C4244: 'initializing': conversion from 'TReal' to 'const float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\TriangulateProcess.cpp(303,28): warning C4244:         with
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\TriangulateProcess.cpp(303,28): warning C4244:         [
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\TriangulateProcess.cpp(303,28): warning C4244:             TReal=ai_real
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\TriangulateProcess.cpp(303,28): warning C4244:         ]
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\TriangulateProcess.cpp(304,34): warning C4244: 'initializing': conversion from 'TReal' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\TriangulateProcess.cpp(304,34): warning C4244:         with
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\TriangulateProcess.cpp(304,34): warning C4244:         [
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\TriangulateProcess.cpp(304,34): warning C4244:             TReal=ai_real
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\TriangulateProcess.cpp(304,34): warning C4244:         ]
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\TriangulateProcess.cpp(304,28): warning C4244: 'initializing': conversion from 'TReal' to 'const float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\TriangulateProcess.cpp(304,28): warning C4244:         with
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\TriangulateProcess.cpp(304,28): warning C4244:         [
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\TriangulateProcess.cpp(304,28): warning C4244:             TReal=ai_real
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\TriangulateProcess.cpp(304,28): warning C4244:         ]
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\TriangulateProcess.cpp(305,34): warning C4244: 'initializing': conversion from 'TReal' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\TriangulateProcess.cpp(305,34): warning C4244:         with
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\TriangulateProcess.cpp(305,34): warning C4244:         [
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\TriangulateProcess.cpp(305,34): warning C4244:             TReal=ai_real
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\TriangulateProcess.cpp(305,34): warning C4244:         ]
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\TriangulateProcess.cpp(305,28): warning C4244: 'initializing': conversion from 'TReal' to 'const float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\TriangulateProcess.cpp(305,28): warning C4244:         with
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\TriangulateProcess.cpp(305,28): warning C4244:         [
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\TriangulateProcess.cpp(305,28): warning C4244:             TReal=ai_real
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\TriangulateProcess.cpp(305,28): warning C4244:         ]
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\TriangulateProcess.cpp(308,23): warning C4244: 'initializing': conversion from 'TReal' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\TriangulateProcess.cpp(308,23): warning C4244:         with
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\TriangulateProcess.cpp(308,23): warning C4244:         [
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\TriangulateProcess.cpp(308,23): warning C4244:             TReal=ai_real
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\TriangulateProcess.cpp(308,23): warning C4244:         ]
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\TriangulateProcess.cpp(312,28): warning C4244: '=': conversion from 'TReal' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\TriangulateProcess.cpp(312,28): warning C4244:         with
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\TriangulateProcess.cpp(312,28): warning C4244:         [
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\TriangulateProcess.cpp(312,28): warning C4244:             TReal=ai_real
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\TriangulateProcess.cpp(312,28): warning C4244:         ]
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\TriangulateProcess.cpp(317,24): warning C4244: '=': conversion from 'TReal' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\TriangulateProcess.cpp(317,24): warning C4244:         with
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\TriangulateProcess.cpp(317,24): warning C4244:         [
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\TriangulateProcess.cpp(317,24): warning C4244:             TReal=ai_real
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\TriangulateProcess.cpp(317,24): warning C4244:         ]
+  ProcessHelper.cpp
+  MakeVerboseFormat.cpp
+  ScaleProcess.cpp
+  ArmaturePopulate.cpp
+  GenBoundingBoxesProcess.cpp
+  MaterialSystem.cpp
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\DeboneProcess.cpp(87,40): warning C4244: '=': conversion from 'ai_real' to 'float', possible loss of data
+  STEPFileReader.cpp
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\PostProcessing\ScaleProcess.cpp(76,25): warning C4244: 'initializing': conversion from 'ai_real' to 'float', possible loss of data
+  STEPFileEncoding.cpp
+  AMFImporter.cpp
+  AMFImporter_Geometry.cpp
+  AMFImporter_Material.cpp
+  AMFImporter_Postprocess.cpp
+  3DSConverter.cpp
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Material\MaterialSystem.cpp(507,40): warning C4267: '=': conversion from 'size_t' to 'ai_uint32', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\AMF\AMFImporter_Postprocess.cpp(563,133): warning C4244: 'argument': conversion from 'const TReal' to 'const float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\AMF\AMFImporter_Postprocess.cpp(563,133): warning C4244:         with
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\AMF\AMFImporter_Postprocess.cpp(563,133): warning C4244:         [
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\AMF\AMFImporter_Postprocess.cpp(563,133): warning C4244:             TReal=ai_real
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\AMF\AMFImporter_Postprocess.cpp(563,133): warning C4244:         ]
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\AMF\AMFImporter_Postprocess.cpp(563,98): warning C4244: 'argument': conversion from 'const TReal' to 'const float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\AMF\AMFImporter_Postprocess.cpp(563,98): warning C4244:         with
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\AMF\AMFImporter_Postprocess.cpp(563,98): warning C4244:         [
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\AMF\AMFImporter_Postprocess.cpp(563,98): warning C4244:             TReal=ai_real
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\AMF\AMFImporter_Postprocess.cpp(563,98): warning C4244:         ]
+  3DSLoader.cpp
+  ACLoader.cpp
+  ASELoader.cpp
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\AMF\AMFImporter_Postprocess.cpp(563,63): warning C4244: 'argument': conversion from 'const TReal' to 'const float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\AMF\AMFImporter_Postprocess.cpp(563,63): warning C4244:         with
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\AMF\AMFImporter_Postprocess.cpp(563,63): warning C4244:         [
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\AMF\AMFImporter_Postprocess.cpp(563,63): warning C4244:             TReal=ai_real
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\AMF\AMFImporter_Postprocess.cpp(563,63): warning C4244:         ]
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\3DS\3DSLoader.cpp(477,34): warning C4244: '=': conversion from 'ai_real' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\3DS\3DSLoader.cpp(479,57): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\3DS\3DSLoader.cpp(511,34): warning C4244: '=': conversion from 'ai_real' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\3DS\3DSLoader.cpp(514,56): warning C4244: '=': conversion from 'ai_real' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\AC\ACLoader.cpp(295,35): warning C4244: '=': conversion from 'ai_real' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\include\assimp\SmoothingGroups.inl(91,57): warning C4244: 'initializing': conversion from 'TReal' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\include\assimp\SmoothingGroups.inl(91,57): warning C4244:         with
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\include\assimp\SmoothingGroups.inl(91,57): warning C4244:         [
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\include\assimp\SmoothingGroups.inl(91,57): warning C4244:             TReal=ai_real
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\include\assimp\SmoothingGroups.inl(91,57): warning C4244:         ] (compiling source file C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\3DS\3DSLoader.cpp)
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\3DS\3DSLoader.cpp(200): message : see reference to function template instantiation 'void ComputeNormalsWithSmoothingsGroups<Assimp::D3DS::Face>(MeshWithSmoothingGroups<Assimp::D3DS::Face> &)' being compiled
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\include\assimp\SmoothingGroups.inl(91,28): warning C4244: 'initializing': conversion from 'TReal' to 'const float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\include\assimp\SmoothingGroups.inl(91,28): warning C4244:         with
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\include\assimp\SmoothingGroups.inl(91,28): warning C4244:         [
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\include\assimp\SmoothingGroups.inl(91,28): warning C4244:             TReal=ai_real
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\include\assimp\SmoothingGroups.inl(91,28): warning C4244:         ] (compiling source file C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\3DS\3DSLoader.cpp)
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\ASE\ASELoader.cpp(438,37): warning C4244: '=': conversion from 'ai_real' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\ASE\ASELoader.cpp(439,38): warning C4244: '=': conversion from 'ai_real' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\ASE\ASELoader.cpp(440,37): warning C4244: '=': conversion from 'ai_real' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\ASE\ASELoader.cpp(469,40): warning C4244: '=': conversion from 'ai_real' to 'float', possible loss of data
+  ASEParser.cpp
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\ASE\ASELoader.cpp(470,43): warning C4244: '=': conversion from 'ai_real' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\include\assimp\SmoothingGroups.inl(91,57): warning C4244: 'initializing': conversion from 'TReal' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\include\assimp\SmoothingGroups.inl(91,57): warning C4244:         with
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\include\assimp\SmoothingGroups.inl(91,57): warning C4244:         [
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\include\assimp\SmoothingGroups.inl(91,57): warning C4244:             TReal=ai_real
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\include\assimp\SmoothingGroups.inl(91,57): warning C4244:         ] (compiling source file C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\ASE\ASELoader.cpp)
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\ASE\ASELoader.cpp(1322): message : see reference to function template instantiation 'void ComputeNormalsWithSmoothingsGroups<Assimp::ASE::Face>(MeshWithSmoothingGroups<Assimp::ASE::Face> &)' being compiled
+  AssbinLoader.cpp
+  B3DImporter.cpp
+  BVHLoader.cpp
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\include\assimp\SmoothingGroups.inl(91,28): warning C4244: 'initializing': conversion from 'TReal' to 'const float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\include\assimp\SmoothingGroups.inl(91,28): warning C4244:         with
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\include\assimp\SmoothingGroups.inl(91,28): warning C4244:         [
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\include\assimp\SmoothingGroups.inl(91,28): warning C4244:             TReal=ai_real
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\include\assimp\SmoothingGroups.inl(91,28): warning C4244:         ] (compiling source file C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\ASE\ASELoader.cpp)
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.23.28105\include\utility(147,1): warning C4244: 'initializing': conversion from 'const _Ty2' to '_Ty2', possible loss of data
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.23.28105\include\utility(147,1): warning C4244:         with
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.23.28105\include\utility(147,1): warning C4244:         [
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.23.28105\include\utility(147,1): warning C4244:             _Ty2=ai_real
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.23.28105\include\utility(147,1): warning C4244:         ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.23.28105\include\utility(147,1): warning C4244:         and
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.23.28105\include\utility(147,1): warning C4244:         [
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.23.28105\include\utility(147,1): warning C4244:             _Ty2=float
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.23.28105\include\utility(147,1): warning C4244:         ] (compiling source file C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\ASE\ASEParser.cpp)
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\ASE\ASEParser.cpp(454): message : see reference to function template instantiation 'std::pair<int,float>::pair<int,ai_real,0>(const std::pair<int,ai_real> &) noexcept' being compiled
+  ColladaLoader.cpp
+  ColladaParser.cpp
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\ASE\ASEParser.cpp(454): message : see reference to function template instantiation 'std::pair<int,float>::pair<int,ai_real,0>(const std::pair<int,ai_real> &) noexcept' being compiled
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Collada\ColladaLoader.cpp(367,45): warning C4244: '=': conversion from 'const ai_real' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Collada\ColladaLoader.cpp(368,43): warning C4244: '=': conversion from 'const ai_real' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Collada\ColladaLoader.cpp(369,46): warning C4244: '=': conversion from 'const ai_real' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Collada\ColladaLoader.cpp(384,36): warning C4244: '=': conversion from 'ai_real' to 'float', possible loss of data
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.23.28105\include\xtgmath.h(22,104): warning C4244: '=': conversion from 'double' to 'float', possible loss of data (compiling source file C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Collada\ColladaLoader.cpp)
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Collada\ColladaLoader.cpp(396,65): warning C4244: '=': conversion from 'ai_real' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Collada\ColladaLoader.cpp(402,40): warning C4244: '=': conversion from 'ai_real' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Collada\ColladaLoader.cpp(436,39): warning C4244: '=': conversion from 'const ai_real' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Collada\ColladaLoader.cpp(437,40): warning C4244: '=': conversion from 'const ai_real' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Collada\ColladaLoader.cpp(442,37): warning C4244: '=': conversion from 'const ai_real' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Collada\ColladaLoader.cpp(446,44): warning C4244: '=': conversion from 'const ai_real' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Collada\ColladaLoader.cpp(449,76): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Collada\ColladaLoader.cpp(454,40): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Collada\ColladaLoader.cpp(459,31): warning C4244: '=': conversion from 'ai_real' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Collada\ColladaLoader.cpp(725,62): warning C4244: 'argument': conversion from 'const _Ty' to 'const _Ty', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Collada\ColladaLoader.cpp(725,62): warning C4244:         with
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Collada\ColladaLoader.cpp(725,62): warning C4244:         [
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Collada\ColladaLoader.cpp(725,62): warning C4244:             _Ty=ai_real
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Collada\ColladaLoader.cpp(725,62): warning C4244:         ]
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Collada\ColladaLoader.cpp(725,62): warning C4244:         and
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Collada\ColladaLoader.cpp(725,62): warning C4244:         [
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Collada\ColladaLoader.cpp(725,62): warning C4244:             _Ty=float
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Collada\ColladaLoader.cpp(725,62): warning C4244:         ]
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Collada\ColladaLoader.cpp(809,33): warning C4244: '=': conversion from 'ai_real' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Collada\ColladaLoader.cpp(1454,115): warning C4244: 'argument': conversion from 'const _Ty' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Collada\ColladaLoader.cpp(1454,115): warning C4244:         with
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Collada\ColladaLoader.cpp(1454,115): warning C4244:         [
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Collada\ColladaLoader.cpp(1454,115): warning C4244:             _Ty=ai_real
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Collada\ColladaLoader.cpp(1454,115): warning C4244:         ]
+  DXFLoader.cpp
+  CSMLoader.cpp
+  HMPLoader.cpp
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Collada\ColladaLoader.cpp(1454,86): warning C4244: 'argument': conversion from 'const _Ty' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Collada\ColladaLoader.cpp(1454,86): warning C4244:         with
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Collada\ColladaLoader.cpp(1454,86): warning C4244:         [
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Collada\ColladaLoader.cpp(1454,86): warning C4244:             _Ty=ai_real
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Collada\ColladaLoader.cpp(1454,86): warning C4244:         ]
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\DXF/DXFHelper.h(110,25): warning C4244: 'return': conversion from 'ai_real' to 'float', possible loss of data (compiling source file C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\DXF\DXFLoader.cpp)
+  IRRMeshLoader.cpp
+  IRRShared.cpp
+  IRRLoader.cpp
+  LWOAnimation.cpp
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\CSM\CSMLoader.cpp(181,77): warning C4267: '=': conversion from 'size_t' to 'ai_uint32', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Irr\IRRShared.cpp(157,34): warning C4244: '=': conversion from 'ai_real' to 'T', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Irr\IRRShared.cpp(157,34): warning C4244:         with
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Irr\IRRShared.cpp(157,34): warning C4244:         [
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Irr\IRRShared.cpp(157,34): warning C4244:             T=float
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Irr\IRRShared.cpp(157,34): warning C4244:         ]
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Irr\IRRLoader.cpp(1204,75): warning C4244: '=': conversion from 'ai_real' to 'float', possible loss of data
+  LWOBLoader.cpp
+  LWOLoader.cpp
+  LWOMaterial.cpp
+  LWSLoader.cpp
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Irr\IRRLoader.cpp(1207,75): warning C4244: '=': conversion from 'ai_real' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\LWO\LWOMaterial.cpp(292,30): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\LWS\LWSLoader.cpp(795,57): warning C4244: '=': conversion from 'ai_real' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\LWS\LWSLoader.cpp(803,57): warning C4244: '=': conversion from 'ai_real' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\LWO\LWOLoader.cpp(508,52): warning C4244: 'initializing': conversion from 'ai_real' to 'float', possible loss of data
+  M3DImporter.cpp
+  MD2Loader.cpp
+  MD3Loader.cpp
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\LWO\LWOLoader.cpp(508,28): warning C4244: 'initializing': conversion from 'ai_real' to 'const float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\M3D\m3d.h(1994,23): warning C4267: '=': conversion from 'size_t' to 'unsigned int', possible loss of data (compiling source file C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\M3D\M3DImporter.cpp)
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\M3D\m3d.h(1997,77): warning C4146: unary minus operator applied to unsigned type, result still unsigned (compiling source file C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\M3D\M3DImporter.cpp)
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\M3D\m3d.h(2015,36): warning C4146: unary minus operator applied to unsigned type, result still unsigned (compiling source file C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\M3D\M3DImporter.cpp)
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\M3D\m3d.h(2020,62): warning C4146: unary minus operator applied to unsigned type, result still unsigned (compiling source file C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\M3D\M3DImporter.cpp)
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\M3D\m3d.h(2048,30): warning C4146: unary minus operator applied to unsigned type, result still unsigned (compiling source file C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\M3D\M3DImporter.cpp)
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\M3D\m3d.h(2294,61): warning C4146: unary minus operator applied to unsigned type, result still unsigned (compiling source file C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\M3D\M3DImporter.cpp)
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\M3D\m3d.h(2303,91): warning C4146: unary minus operator applied to unsigned type, result still unsigned (compiling source file C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\M3D\M3DImporter.cpp)
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\M3D\m3d.h(2323,23): warning C4146: unary minus operator applied to unsigned type, result still unsigned (compiling source file C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\M3D\M3DImporter.cpp)
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\M3D\m3d.h(2333,39): warning C4146: unary minus operator applied to unsigned type, result still unsigned (compiling source file C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\M3D\M3DImporter.cpp)
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\M3D\m3d.h(2425,80): warning C4146: unary minus operator applied to unsigned type, result still unsigned (compiling source file C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\M3D\M3DImporter.cpp)
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\M3D\m3d.h(2451,36): warning C4146: unary minus operator applied to unsigned type, result still unsigned (compiling source file C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\M3D\M3DImporter.cpp)
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\M3D\m3d.h(2456,44): warning C4146: unary minus operator applied to unsigned type, result still unsigned (compiling source file C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\M3D\M3DImporter.cpp)
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\M3D\m3d.h(2781,57): warning C4146: unary minus operator applied to unsigned type, result still unsigned (compiling source file C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\M3D\M3DImporter.cpp)
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\M3D\m3d.h(2805,66): warning C4146: unary minus operator applied to unsigned type, result still unsigned (compiling source file C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\M3D\M3DImporter.cpp)
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\M3D\m3d.h(2905,76): warning C4146: unary minus operator applied to unsigned type, result still unsigned (compiling source file C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\M3D\M3DImporter.cpp)
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\M3D\m3d.h(2936,32): warning C4146: unary minus operator applied to unsigned type, result still unsigned (compiling source file C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\M3D\M3DImporter.cpp)
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\M3D\m3d.h(2944,40): warning C4146: unary minus operator applied to unsigned type, result still unsigned (compiling source file C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\M3D\M3DImporter.cpp)
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\M3D\m3d.h(2952,48): warning C4146: unary minus operator applied to unsigned type, result still unsigned (compiling source file C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\M3D\M3DImporter.cpp)
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\M3D\m3d.h(3026,51): warning C4146: unary minus operator applied to unsigned type, result still unsigned (compiling source file C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\M3D\M3DImporter.cpp)
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\M3D\m3d.h(3058,36): warning C4146: unary minus operator applied to unsigned type, result still unsigned (compiling source file C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\M3D\M3DImporter.cpp)
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\M3D\m3d.h(3076,83): warning C4146: unary minus operator applied to unsigned type, result still unsigned (compiling source file C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\M3D\M3DImporter.cpp)
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\M3D\m3d.h(3078,83): warning C4146: unary minus operator applied to unsigned type, result still unsigned (compiling source file C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\M3D\M3DImporter.cpp)
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\M3D\m3d.h(3093,59): warning C4146: unary minus operator applied to unsigned type, result still unsigned (compiling source file C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\M3D\M3DImporter.cpp)
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\M3D\m3d.h(3117,7): warning C4146: unary minus operator applied to unsigned type, result still unsigned (compiling source file C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\M3D\M3DImporter.cpp)
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\M3D\m3d.h(3131,7): warning C4146: unary minus operator applied to unsigned type, result still unsigned (compiling source file C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\M3D\M3DImporter.cpp)
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\M3D\m3d.h(3240,43): warning C4146: unary minus operator applied to unsigned type, result still unsigned (compiling source file C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\M3D\M3DImporter.cpp)
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\M3D\M3DImporter.cpp(223,20): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\M3D\M3DImporter.cpp(355,56): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\M3D\M3DImporter.cpp(396,33): warning C4267: '=': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\M3D\M3DImporter.cpp(405,15): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\M3D\M3DImporter.cpp(411,24): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\M3D\M3DImporter.cpp(418,24): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\M3D\M3DImporter.cpp(435,40): warning C4267: '=': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\M3D\M3DImporter.cpp(440,51): warning C4267: '=': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\M3D\M3DImporter.cpp(567,5): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\M3D\M3DImporter.cpp(568,5): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\M3D\M3DImporter.cpp(648,41): warning C4267: '=': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\M3D\M3DImporter.cpp(651,47): warning C4267: '=': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\M3D\M3DImporter.cpp(690,23): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\M3D\M3DImporter.cpp(690,43): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\M3D\M3DImporter.cpp(713,23): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+  MD5Loader.cpp
+  MD5Parser.cpp
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\M3D\M3DImporter.cpp(713,43): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\MD5\MD5Parser.h(262,54): warning C4244: 'initializing': conversion from 'TReal' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\MD5\MD5Parser.h(262,54): warning C4244:         with
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\MD5\MD5Parser.h(262,54): warning C4244:         [
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\MD5\MD5Parser.h(262,54): warning C4244:             TReal=ai_real
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\MD5\MD5Parser.h(262,54): warning C4244:         ] (compiling source file C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\MD5\MD5Loader.cpp)
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\MD5\MD5Parser.h(262,19): warning C4244: 'initializing': conversion from 'TReal' to 'const float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\MD5\MD5Parser.h(262,19): warning C4244:         with
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\MD5\MD5Parser.h(262,19): warning C4244:         [
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\MD5\MD5Parser.h(262,19): warning C4244:             TReal=ai_real
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\MD5\MD5Parser.h(262,19): warning C4244:         ] (compiling source file C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\MD5\MD5Loader.cpp)
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\MD5\MD5Loader.cpp(513,91): warning C4244: 'argument': conversion from 'const ai_real' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\MD5\MD5Loader.cpp(724,27): warning C4244: '=': conversion from 'ai_real' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\MD5\MD5Parser.h(262,54): warning C4244: 'initializing': conversion from 'TReal' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\MD5\MD5Parser.h(262,54): warning C4244:         with
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\MD5\MD5Parser.h(262,54): warning C4244:         [
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\MD5\MD5Parser.h(262,54): warning C4244:             TReal=ai_real
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\MD5\MD5Parser.h(262,54): warning C4244:         ] (compiling source file C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\MD5\MD5Parser.cpp)
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\MD5\MD5Parser.h(262,19): warning C4244: 'initializing': conversion from 'TReal' to 'const float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\MD5\MD5Parser.h(262,19): warning C4244:         with
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\MD5\MD5Parser.h(262,19): warning C4244:         [
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\MD5\MD5Parser.h(262,19): warning C4244:             TReal=ai_real
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\MD5\MD5Parser.h(262,19): warning C4244:         ] (compiling source file C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\MD5\MD5Parser.cpp)
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\MD5\MD5Parser.cpp(462,36): warning C4244: '=': conversion from 'ai_real' to 'float', possible loss of data
+  MDCLoader.cpp
+  MDLLoader.cpp
+  MDLMaterialLoader.cpp
+  NFFLoader.cpp
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\MD5\MD5Parser.cpp(481,37): warning C4244: '=': conversion from 'ai_real' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\MDL\MDLMaterialLoader.cpp(544,29): warning C4267: '=': conversion from 'size_t' to 'ai_uint32', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\MDL\MDLMaterialLoader.cpp(713,29): warning C4267: '=': conversion from 'size_t' to 'ai_uint32', possible loss of data
+  NDOLoader.cpp
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\MDL\MDLMaterialLoader.cpp(834,46): warning C4267: '=': conversion from 'size_t' to 'ai_uint32', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\MDL\MDLLoader.cpp(1555,46): warning C4267: '=': conversion from 'size_t' to 'ai_uint32', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\NFF\NFFLoader.cpp(293,36): warning C4244: 'initializing': conversion from 'ai_real' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\NFF\NFFLoader.cpp(293,26): warning C4244: 'initializing': conversion from 'ai_real' to 'const float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\NFF\NFFLoader.cpp(971,49): warning C4244: '=': conversion from 'TReal' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\NFF\NFFLoader.cpp(971,49): warning C4244:         with
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\NFF\NFFLoader.cpp(971,49): warning C4244:         [
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\NFF\NFFLoader.cpp(971,49): warning C4244:             TReal=ai_real
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\NFF\NFFLoader.cpp(971,49): warning C4244:         ]
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\NFF\NFFLoader.cpp(1096,29): warning C4244: '=': conversion from 'ai_real' to 'float', possible loss of data
+  OFFLoader.cpp
+  ObjFileImporter.cpp
+  ObjFileMtlImporter.cpp
+  ObjFileParser.cpp
+  OgreImporter.cpp
+  OgreStructs.cpp
+  OgreBinarySerializer.cpp
+  OgreXmlSerializer.cpp
+  OgreMaterial.cpp
+  OpenGEXImporter.cpp
+  PlyLoader.cpp
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\NFF\NFFLoader.cpp(1103,28): warning C4244: '=': conversion from 'TReal' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\NFF\NFFLoader.cpp(1103,28): warning C4244:         with
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\NFF\NFFLoader.cpp(1103,28): warning C4244:         [
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\NFF\NFFLoader.cpp(1103,28): warning C4244:             TReal=ai_real
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\NFF\NFFLoader.cpp(1103,28): warning C4244:         ]
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Ogre\OgreMaterial.cpp(294,37): warning C4244: 'initializing': conversion from 'ai_real' to 'float', possible loss of data
+  PlyParser.cpp
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Ogre\OgreMaterial.cpp(300,37): warning C4244: 'initializing': conversion from 'ai_real' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Ply\PlyLoader.cpp(361,69): warning C4244: 'argument': conversion from 'ai_uint' to 'int', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Ply\PlyLoader.cpp(366,69): warning C4244: 'argument': conversion from 'ai_uint' to 'int', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Ply\PlyLoader.cpp(371,69): warning C4244: 'argument': conversion from 'ai_uint' to 'int', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Ply\PlyLoader.cpp(379,66): warning C4244: 'argument': conversion from 'ai_uint' to 'int', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Ply\PlyLoader.cpp(385,66): warning C4244: 'argument': conversion from 'ai_uint' to 'int', possible loss of data
+  MS3DLoader.cpp
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Ply\PlyLoader.cpp(391,66): warning C4244: 'argument': conversion from 'ai_uint' to 'int', possible loss of data
+  COBLoader.cpp
+  BlenderLoader.cpp
+  BlenderDNA.cpp
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Ply\PlyParser.cpp(965,28): warning C4244: '=': conversion from 'ai_real' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\COB\COBLoader.cpp(376,37): warning C4244: '=': conversion from 'ai_real' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\COB\COBLoader.cpp(377,37): warning C4244: '=': conversion from 'ai_real' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\COB\COBLoader.cpp(583,28): warning C4244: '=': conversion from 'ai_real' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\COB\COBLoader.cpp(584,28): warning C4244: '=': conversion from 'ai_real' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\COB\COBLoader.cpp(585,28): warning C4244: '=': conversion from 'ai_real' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\COB\COBLoader.cpp(586,28): warning C4244: '=': conversion from 'ai_real' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\COB\COBLoader.cpp(587,28): warning C4244: '=': conversion from 'ai_real' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\COB\COBLoader.cpp(665,26): warning C4244: '=': conversion from 'ai_real' to 'float', possible loss of data
+  BlenderScene.cpp
+  BlenderModifier.cpp
+  BlenderBMesh.cpp
+  BlenderTessellator.cpp
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\COB\COBLoader.cpp(672,32): warning C4244: '=': conversion from 'ai_real' to 'float', possible loss of data
+  BlenderCustomData.cpp
+  IFCLoader.cpp
+  IFCReaderGen1_2x3.cpp
+  IFCReaderGen2_2x3.cpp
+  IFCUtil.cpp
+  IFCGeometry.cpp
+  IFCMaterial.cpp
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Blender\BlenderTessellator.cpp(429,39): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Importer\IFC\IFCGeometry.cpp(430,56): warning C4244: 'initializing': conversion from 'TReal' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Importer\IFC\IFCGeometry.cpp(430,56): warning C4244:         with
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Importer\IFC\IFCGeometry.cpp(430,56): warning C4244:         [
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Importer\IFC\IFCGeometry.cpp(430,56): warning C4244:             TReal=ai_real
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Importer\IFC\IFCGeometry.cpp(430,56): warning C4244:         ]
+  IFCProfile.cpp
+  IFCCurve.cpp
+  IFCBoolean.cpp
+  IFCOpenings.cpp
+  XGLLoader.cpp
+  FBXImporter.cpp
+  FBXParser.cpp
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Importer\IFC\IFCGeometry.cpp(430,27): warning C4244: 'initializing': conversion from 'TReal' to 'const float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Importer\IFC\IFCGeometry.cpp(430,27): warning C4244:         with
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Importer\IFC\IFCGeometry.cpp(430,27): warning C4244:         [
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Importer\IFC\IFCGeometry.cpp(430,27): warning C4244:             TReal=ai_real
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Importer\IFC\IFCGeometry.cpp(430,27): warning C4244:         ]
+  FBXTokenizer.cpp
+  FBXConverter.cpp
+  FBXUtil.cpp
+  FBXDocument.cpp
+  FBXProperties.cpp
+  FBXMeshGeometry.cpp
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\FBX\FBXParser.cpp(375,21): warning C4244: 'return': conversion from 'ai_real' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\FBX\FBXConverter.cpp(393,46): warning C4244: '=': conversion from 'ai_real' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\FBX\FBXConverter.cpp(394,46): warning C4244: '=': conversion from 'ai_real' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\FBX\FBXConverter.cpp(451,42): warning C4244: '=': conversion from 'ai_real' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\FBX\FBXConverter.cpp(456,42): warning C4244: '=': conversion from 'ai_real' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\FBX\FBXConverter.cpp(1565,35): warning C4101: 'e': unreferenced local variable
+  FBXMaterial.cpp
+  FBXModel.cpp
+  FBXAnimation.cpp
+  FBXNodeAttribute.cpp
+  FBXDeformer.cpp
+  FBXBinaryTokenizer.cpp
+  FBXDocumentUtil.cpp
+  Q3DLoader.cpp
+  Q3BSPFileParser.cpp
+  Q3BSPFileImporter.cpp
+  RawLoader.cpp
+  SIBImporter.cpp
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\FBX\FBXConverter.cpp(2205,42): warning C4244: '=': conversion from 'ai_real' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\SIB\SIBImporter.cpp(475,15): warning C4244: 'initializing': conversion from 'TReal' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\SIB\SIBImporter.cpp(475,15): warning C4244:         with
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\SIB\SIBImporter.cpp(475,15): warning C4244:         [
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\SIB\SIBImporter.cpp(475,15): warning C4244:             TReal=ai_real
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\SIB\SIBImporter.cpp(475,15): warning C4244:         ]
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\SIB\SIBImporter.cpp(738,38): warning C4244: '=': conversion from 'const _Ty' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\SIB\SIBImporter.cpp(738,38): warning C4244:         with
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\SIB\SIBImporter.cpp(738,38): warning C4244:         [
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\SIB\SIBImporter.cpp(738,38): warning C4244:             _Ty=ai_real
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\SIB\SIBImporter.cpp(738,38): warning C4244:         ]
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\SIB\SIBImporter.cpp(739,30): warning C4244: '=': conversion from 'ai_real' to 'float', possible loss of data
+  SMDLoader.cpp
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Q3BSP\Q3BSPFileImporter.cpp(619,46): warning C4267: '=': conversion from 'size_t' to 'ai_uint32', possible loss of data
+  STLLoader.cpp
+  TerragenLoader.cpp
+  UnrealLoader.cpp
+  XFileImporter.cpp
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\SMD\SMDLoader.cpp(619,55): warning C4267: '=': conversion from 'size_t' to 'ai_uint32', possible loss of data
+  XFileParser.cpp
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\Unreal\UnrealLoader.cpp(406,36): warning C4267: '=': conversion from 'size_t' to 'ai_uint32', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\X\XFileImporter.cpp(214,47): warning C4267: '=': conversion from 'size_t' to 'ai_uint32', possible loss of data
+  X3DImporter.cpp
+  X3DImporter_Geometry2D.cpp
+  X3DImporter_Geometry3D.cpp
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\X\XFileImporter.cpp(392,66): warning C4244: 'argument': conversion from 'ai_real' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\X3D\X3DImporter_Geometry2D.cpp(448,12): warning C4244: 'initializing': conversion from 'TReal' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\X3D\X3DImporter_Geometry2D.cpp(448,12): warning C4244:         with
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\X3D\X3DImporter_Geometry2D.cpp(448,12): warning C4244:         [
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\X3D\X3DImporter_Geometry2D.cpp(448,12): warning C4244:             TReal=ai_real
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\X3D\X3DImporter_Geometry2D.cpp(448,12): warning C4244:         ]
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\X3D\X3DImporter_Geometry2D.cpp(449,12): warning C4244: 'initializing': conversion from 'TReal' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\X3D\X3DImporter_Geometry2D.cpp(449,12): warning C4244:         with
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\X3D\X3DImporter_Geometry2D.cpp(449,12): warning C4244:         [
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\X3D\X3DImporter_Geometry2D.cpp(449,12): warning C4244:             TReal=ai_real
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\X3D\X3DImporter_Geometry2D.cpp(449,12): warning C4244:         ]
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\X3D\X3DImporter_Geometry2D.cpp(450,12): warning C4244: 'initializing': conversion from 'TReal' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\X3D\X3DImporter_Geometry2D.cpp(450,12): warning C4244:         with
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\X3D\X3DImporter_Geometry2D.cpp(450,12): warning C4244:         [
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\X3D\X3DImporter_Geometry2D.cpp(450,12): warning C4244:             TReal=ai_real
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\X3D\X3DImporter_Geometry2D.cpp(450,12): warning C4244:         ]
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\X3D\X3DImporter_Geometry2D.cpp(451,12): warning C4244: 'initializing': conversion from 'TReal' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\X3D\X3DImporter_Geometry2D.cpp(451,12): warning C4244:         with
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\X3D\X3DImporter_Geometry2D.cpp(451,12): warning C4244:         [
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\X3D\X3DImporter_Geometry2D.cpp(451,12): warning C4244:             TReal=ai_real
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\X3D\X3DImporter_Geometry2D.cpp(451,12): warning C4244:         ]
+  X3DImporter_Group.cpp
+  X3DImporter_Light.cpp
+  X3DImporter_Metadata.cpp
+  X3DImporter_Networking.cpp
+  X3DImporter_Postprocess.cpp
+  X3DImporter_Rendering.cpp
+  X3DImporter_Shape.cpp
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\X3D\X3DImporter.cpp(887,2): warning C4244: '=': conversion from 'TReal' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\X3D\X3DImporter.cpp(887,2): warning C4244:         with
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\X3D\X3DImporter.cpp(887,2): warning C4244:         [
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\X3D\X3DImporter.cpp(887,2): warning C4244:             TReal=ai_real
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\X3D\X3DImporter.cpp(887,2): warning C4244:         ]
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\X3D\X3DImporter_Postprocess.cpp(164,52): warning C4244: '=': conversion from 'const TReal' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\X3D\X3DImporter_Postprocess.cpp(164,52): warning C4244:         with
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\X3D\X3DImporter_Postprocess.cpp(164,52): warning C4244:         [
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\X3D\X3DImporter_Postprocess.cpp(164,52): warning C4244:             TReal=ai_real
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\X3D\X3DImporter_Postprocess.cpp(164,52): warning C4244:         ]
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\X3D\X3DImporter_Postprocess.cpp(165,50): warning C4244: '=': conversion from 'const TReal' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\X3D\X3DImporter_Postprocess.cpp(165,50): warning C4244:         with
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\X3D\X3DImporter_Postprocess.cpp(165,50): warning C4244:         [
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\X3D\X3DImporter_Postprocess.cpp(165,50): warning C4244:             TReal=ai_real
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\X3D\X3DImporter_Postprocess.cpp(165,50): warning C4244:         ]
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\X3D\X3DImporter_Postprocess.cpp(166,53): warning C4244: '=': conversion from 'const TReal' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\X3D\X3DImporter_Postprocess.cpp(166,53): warning C4244:         with
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\X3D\X3DImporter_Postprocess.cpp(166,53): warning C4244:         [
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\X3D\X3DImporter_Postprocess.cpp(166,53): warning C4244:             TReal=ai_real
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\X3D\X3DImporter_Postprocess.cpp(166,53): warning C4244:         ]
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\X3D\X3DImporter_Postprocess.cpp(173,52): warning C4244: '=': conversion from 'const TReal' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\X3D\X3DImporter_Postprocess.cpp(173,52): warning C4244:         with
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\X3D\X3DImporter_Postprocess.cpp(173,52): warning C4244:         [
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\X3D\X3DImporter_Postprocess.cpp(173,52): warning C4244:             TReal=ai_real
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\X3D\X3DImporter_Postprocess.cpp(173,52): warning C4244:         ]
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\X3D\X3DImporter_Postprocess.cpp(174,50): warning C4244: '=': conversion from 'const TReal' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\X3D\X3DImporter_Postprocess.cpp(174,50): warning C4244:         with
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\X3D\X3DImporter_Postprocess.cpp(174,50): warning C4244:         [
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\X3D\X3DImporter_Postprocess.cpp(174,50): warning C4244:             TReal=ai_real
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\X3D\X3DImporter_Postprocess.cpp(174,50): warning C4244:         ]
+  X3DImporter_Texturing.cpp
+  FIReader.cpp
+  X3DVocabulary.cpp
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\X3D\X3DImporter_Postprocess.cpp(175,53): warning C4244: '=': conversion from 'const TReal' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\X3D\X3DImporter_Postprocess.cpp(175,53): warning C4244:         with
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\X3D\X3DImporter_Postprocess.cpp(175,53): warning C4244:         [
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\X3D\X3DImporter_Postprocess.cpp(175,53): warning C4244:             TReal=ai_real
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\X3D\X3DImporter_Postprocess.cpp(175,53): warning C4244:         ]
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\X3D\FIReader.cpp(724,25): warning C4244: 'return': conversion from 'ai_real' to 'float', possible loss of data
+  glTFCommon.cpp
+  glTFImporter.cpp
+  glTF2Importer.cpp
+  D3MFImporter.cpp
+  D3MFOpcPackage.cpp
+  MMDImporter.cpp
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\X3D\FIReader.cpp(735,25): warning C4244: 'return': conversion from 'ai_real' to 'float', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\glTF2\glTF2Importer.cpp(617,43): warning C4267: '=': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\glTF2\glTF2Importer.cpp(644,43): warning C4267: '=': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\glTF2\glTF2Importer.cpp(1129,87): warning C4267: 'initializing': conversion from 'size_t' to 'unsigned int', possible loss of data
+  MMDPmxParser.cpp
+  StepFileImporter.cpp
+  StepFileGen1.cpp
+  StepFileGen2.cpp
+  StepFileGen3.cpp
+  shapes.cc
+  advancing_front.cc
+  cdt.cc
+  sweep.cc
+  sweep_context.cc
+  clipper.cpp
+  OpenDDLParser.cpp
+  DDLNode.cpp
+  OpenDDLCommon.cpp
+  OpenDDLExport.cpp
+  Value.cpp
+  OpenDDLStream.cpp
+  o3dgcArithmeticCodec.cpp
+  o3dgcDynamicVectorDecoder.cpp
+  o3dgcDynamicVectorEncoder.cpp
+  o3dgcTools.cpp
+  o3dgcTriangleFans.cpp
+C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\code\glTF2\glTF2Importer.cpp(1129,87): warning C4267: 'initializing': conversion from 'size_t' to 'const unsigned int', possible loss of data
+cl : command line warning D9002: ignoring unknown option '-g'
+cl : command line warning D9002: ignoring unknown option '-O0'
+cl : command line warning D9002: ignoring unknown option '-fprofile-arcs'
+cl : command line warning D9002: ignoring unknown option '-ftest-coverage'
+cl : command line warning D9002: ignoring unknown option '-g'
+cl : command line warning D9002: ignoring unknown option '-O0'
+cl : command line warning D9002: ignoring unknown option '-fprofile-arcs'
+  ioapi.c
+cl : command line warning D9002: ignoring unknown option '-ftest-coverage'
+cl : command line warning D9002: ignoring unknown option '-g'
+cl : command line warning D9002: ignoring unknown option '-O0'
+cl : command line warning D9002: ignoring unknown option '-fprofile-arcs'
+  unzip.c
+cl : command line warning D9002: ignoring unknown option '-ftest-coverage'
+cl : command line warning D9002: ignoring unknown option '-g'
+cl : command line warning D9002: ignoring unknown option '-O0'
+cl : command line warning D9002: ignoring unknown option '-fprofile-arcs'
+  zip.c
+cl : command line warning D9002: ignoring unknown option '-ftest-coverage'
+     Creating library C:/Users/Admin/Desktop/OpenGLLab/assimp-master/assimp-master/build/code/Debug/assimp-vc142-mtd.lib and object C:/Users/Admin/Desktop/OpenGLLab/assimp-master/assimp-master/build/code/Debug/assimp-vc142-mtd.exp
+  assimp.vcxproj -> C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\build\code\Debug\assimp-vc142-mtd.dll

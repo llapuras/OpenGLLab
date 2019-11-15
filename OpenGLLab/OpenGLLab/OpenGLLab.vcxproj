@@ -83,7 +83,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <IncludePath>..\includes;$(IncludePath)</IncludePath>
-    <LibraryPath>D:\CG\OpenGLLab\OpenGLLab\libs;..\OpenGLLab\OpenGLLab\libs;C:\Users\Admin\Desktop\OpenGLLab\OpenGLLab\libs;$(LibraryPath)</LibraryPath>
+    <LibraryPath>..\libs;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -136,13 +136,13 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>..\OpenGLLab\includes;C:\Users\Admin\Desktop\OpenGLLab\OpenGLLab\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>opengl32.lib;glad.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>opengl32.lib;glad.lib;glfw3.lib;assimp.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -150,6 +150,7 @@
     <ClCompile Include="directionlight.cpp" />
     <ClCompile Include="light.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="modelload.cpp" />
     <ClCompile Include="multi_light.cpp" />
     <ClCompile Include="PartSpecular.cpp" />
     <ClCompile Include="specular.cpp" />
@@ -159,6 +160,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Camera.h" />
+    <ClInclude Include="Model.h" />
+    <ClInclude Include="Mesh.h" />
     <ClInclude Include="stb_image.h" />
     <ClInclude Include="Shader.h" />
   </ItemGroup>
@@ -170,6 +173,8 @@
     <None Include="Shaders\lampvs.glsl" />
     <None Include="Shaders\matfs.glsl" />
     <None Include="Shaders\matvs.glsl" />
+    <None Include="Shaders\modelload_fs.glsl" />
+    <None Include="Shaders\modelload_vs.glsl" />
     <None Include="Shaders\multilight_fs.glsl" />
     <None Include="Shaders\specular_fs.glsl" />
     <None Include="Shaders\vs.glsl" />

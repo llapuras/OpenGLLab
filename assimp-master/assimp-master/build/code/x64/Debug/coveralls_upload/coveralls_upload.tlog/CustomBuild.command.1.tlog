@@ -1,0 +1,24 @@
+^C:\USERS\ADMIN\DESKTOP\OPENGLLAB\ASSIMP-MASTER\ASSIMP-MASTER\BUILD\CMAKEFILES\35CB3E78DBFA4F5559B882F4F152E701\COVERALLS_UPLOAD.RULE
+setlocal
+cd C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\Windows\System32\curl.exe -S -F json_file=@C:/Users/Admin/Desktop/OpenGLLab/assimp-master/assimp-master/build/coveralls.json https://coveralls.io/api/v1/jobs
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\ADMIN\DESKTOP\OPENGLLAB\ASSIMP-MASTER\ASSIMP-MASTER\CODE\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Admin/Desktop/OpenGLLab/assimp-master/assimp-master -BC:/Users/Admin/Desktop/OpenGLLab/assimp-master/assimp-master/build --check-stamp-file C:/Users/Admin/Desktop/OpenGLLab/assimp-master/assimp-master/build/code/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

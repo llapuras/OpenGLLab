@@ -44,6 +44,9 @@
     <ClCompile Include="multi_light.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="modelload.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Shader.h">
@@ -53,6 +56,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Camera.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Model.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -85,6 +94,12 @@
       <Filter>Shaders</Filter>
     </None>
     <None Include="Shaders\multilight_fs.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\modelload_fs.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\modelload_vs.glsl">
       <Filter>Shaders</Filter>
     </None>
   </ItemGroup>

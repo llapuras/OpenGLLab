@@ -1,0 +1,7 @@
+﻿  Building Custom Rule C:/Users/Admin/Desktop/OpenGLLab/assimp-master/assimp-master/contrib/irrXML/CMakeLists.txt
+cl : command line warning D9002: ignoring unknown option '-g'
+cl : command line warning D9002: ignoring unknown option '-O0'
+cl : command line warning D9002: ignoring unknown option '-fprofile-arcs'
+  irrXML.cpp
+cl : command line warning D9002: ignoring unknown option '-ftest-coverage'
+  IrrXML.vcxproj -> C:\Users\Admin\Desktop\OpenGLLab\assimp-master\assimp-master\build\contrib\irrXML\Debug\IrrXMLd.lib

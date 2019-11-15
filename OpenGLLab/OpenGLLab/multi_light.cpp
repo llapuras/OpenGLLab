@@ -17,16 +17,16 @@
 //void processInput(GLFWwindow* window);
 //unsigned int loadTexture(const char* path);
 //
-//// settings
+// settings
 //const GLuint SCR_WIDTH = 800, SCR_HEIGHT = 600;
 //
-//// camera
+// camera
 //Camera camera(glm::vec3(0.0f, 0.0f, 3.0f));
 //float lastX = SCR_WIDTH / 2.0f;
 //float lastY = SCR_HEIGHT / 2.0f;
 //bool firstMouse = true;
 //
-//// timing
+// timing
 //float deltaTime = 0.0f;	// time between current frame and last frame
 //float lastFrame = 0.0f;
 //
@@ -146,15 +146,15 @@
 //	glBindBuffer(GL_ARRAY_BUFFER, VBO);
 //	glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
 //
-//	//position
+//	position
 //	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)0);
 //	glEnableVertexAttribArray(0);
 //
-//	//texture
+//	texture
 //	glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)(3 * sizeof(float)));
 //	glEnableVertexAttribArray(1);
 //
-//	//normal
+//	normal
 //	glVertexAttribPointer(2, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)(5 * sizeof(float)));
 //	glEnableVertexAttribArray(2);
 //
@@ -169,7 +169,7 @@
 //	glGenVertexArrays(1, &lightVAO);
 //	glBindVertexArray(lightVAO);
 //
-//	// we only need to bind to the VBO (to link it with glVertexAttribPointer), no need to fill it; the VBO's data already contains all we need (it's already bound, but we do it again for educational purposes)
+//	 we only need to bind to the VBO (to link it with glVertexAttribPointer), no need to fill it; the VBO's data already contains all we need (it's already bound, but we do it again for educational purposes)
 //	glBindBuffer(GL_ARRAY_BUFFER, VBO);
 //
 //	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)0);
@@ -179,42 +179,42 @@
 //	unsigned int diffuseMap = loadTexture("Images/container2.png");
 //	unsigned int specularMap = loadTexture("Images/container2_specular.png");
 //
-//	// shader configuration
-//	// --------------------
+//	 shader configuration
+//	 --------------------
 //	lightingShader.use();
 //	lightingShader.setInt("material.diffuse", 0);
 //	lightingShader.setInt("material.specular", 1);
 //
 //
 //
-//	// render loop
+//	 render loop
 //	while (!glfwWindowShouldClose(window))
 //	{
 //		float currentFrame = glfwGetTime();
 //		deltaTime = currentFrame - lastFrame;
 //		lastFrame = currentFrame;
 //
-//		// input
+//		 input
 //		processInput(window);
 //
-//		// render
+//		 render
 //		glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
 //		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 //
-//		// be sure to activate shader when setting uniforms/drawing objects
+//		 be sure to activate shader when setting uniforms/drawing objects
 //		lightingShader.use();
 //		lightingShader.setVec3("light.position", 0.0f, -0.0f, -0.0f);
 //		lightingShader.setVec3("viewPos", camera.Position);
-//		// mat properties
+//		 mat properties
 //		lightingShader.setFloat("material.shininess", 132.0f);
 //
 //
-//		// directional light
+//		 directional light
 //		lightingShader.setVec3("dirLight.direction", -0.2f, -1.0f, -0.3f);
 //		lightingShader.setVec3("dirLight.ambient", 0.05f, 0.05f, 0.05f);
 //		lightingShader.setVec3("dirLight.diffuse", 0.4f, 0.4f, 0.4f);
 //		lightingShader.setVec3("dirLight.specular", 0.5f, 0.5f, 0.5f);
-//		// point light 1
+//		 point light 1
 //		lightingShader.setVec3("pointLights[0].position", pointLightPositions[0]);
 //		lightingShader.setVec3("pointLights[0].ambient", 0.05f, 0.05f, 0.05f);
 //		lightingShader.setVec3("pointLights[0].diffuse", 0.8f, 0.8f, 0.8f);
@@ -222,7 +222,7 @@
 //		lightingShader.setFloat("pointLights[0].constant", 1.0f);
 //		lightingShader.setFloat("pointLights[0].linear", 0.09);
 //		lightingShader.setFloat("pointLights[0].quadratic", 0.032);
-//		// point light 2
+//		 point light 2
 //		lightingShader.setVec3("pointLights[1].position", pointLightPositions[1]);
 //		lightingShader.setVec3("pointLights[1].ambient", 0.05f, 0.05f, 0.05f);
 //		lightingShader.setVec3("pointLights[1].diffuse", 0.8f, 0.8f, 0.8f);
@@ -230,7 +230,7 @@
 //		lightingShader.setFloat("pointLights[1].constant", 1.0f);
 //		lightingShader.setFloat("pointLights[1].linear", 0.09);
 //		lightingShader.setFloat("pointLights[1].quadratic", 0.032);
-//		// point light 3
+//		 point light 3
 //		lightingShader.setVec3("pointLights[2].position", pointLightPositions[2]);
 //		lightingShader.setVec3("pointLights[2].ambient", 0.05f, 0.05f, 0.05f);
 //		lightingShader.setVec3("pointLights[2].diffuse", 0.8f, 0.8f, 0.8f);
@@ -238,7 +238,7 @@
 //		lightingShader.setFloat("pointLights[2].constant", 1.0f);
 //		lightingShader.setFloat("pointLights[2].linear", 0.09);
 //		lightingShader.setFloat("pointLights[2].quadratic", 0.032);
-//		// point light 4
+//		 point light 4
 //		lightingShader.setVec3("pointLights[3].position", pointLightPositions[3]);
 //		lightingShader.setVec3("pointLights[3].ambient", 0.05f, 0.05f, 0.05f);
 //		lightingShader.setVec3("pointLights[3].diffuse", 0.8f, 0.8f, 0.8f);
@@ -246,7 +246,7 @@
 //		lightingShader.setFloat("pointLights[3].constant", 1.0f);
 //		lightingShader.setFloat("pointLights[3].linear", 0.09);
 //		lightingShader.setFloat("pointLights[3].quadratic", 0.032);
-//		// spotLight
+//		 spotLight
 //		lightingShader.setVec3("spotLight.position", camera.Position);
 //		lightingShader.setVec3("spotLight.direction", camera.Front);
 //		lightingShader.setVec3("spotLight.ambient", 0.0f, 0.0f, 0.0f);
@@ -259,13 +259,13 @@
 //		lightingShader.setFloat("spotLight.outerCutOff", glm::cos(glm::radians(15.0f)));
 //
 //
-//		// view/projection transformations
+//		 view/projection transformations
 //		glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
 //		glm::mat4 view = camera.GetViewMatrix();
 //		lightingShader.setMat4("projection", projection);
 //		lightingShader.setMat4("view", view);
 //
-//		// world transformation
+//		 world transformation
 //		glm::mat4 model = glm::mat4(1.0f);
 //		lightingShader.setMat4("model", model);
 //
@@ -291,7 +291,7 @@
 //		lampShader.setMat4("projection", projection);
 //		lampShader.setMat4("view", view);
 //
-//		// we now draw as many light bulbs as we have point lights.
+//		 we now draw as many light bulbs as we have point lights.
 //		glBindVertexArray(lightVAO);
 //		for (unsigned int i = 0; i < 4; i++)
 //		{
