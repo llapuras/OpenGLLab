@@ -38,6 +38,12 @@
     <ClCompile Include="PartSpecular.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="directionlight.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="multi_light.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Shader.h">
@@ -73,6 +79,12 @@
       <Filter>Shaders</Filter>
     </None>
     <None Include="Shaders\specular_fs.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\dl_fs.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\multilight_fs.glsl">
       <Filter>Shaders</Filter>
     </None>
   </ItemGroup>

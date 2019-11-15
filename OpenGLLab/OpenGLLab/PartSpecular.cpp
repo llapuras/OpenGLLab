@@ -31,7 +31,7 @@
 //float lastFrame = 0.0f;
 //
 //// lighting
-//glm::vec3 lightPos(1.2f, 1.0f, 2.0f);
+//glm::vec3 lightPos(1.2f, 0.0f, 2.0f);
 //
 //int main()
 //{
@@ -196,12 +196,12 @@
 //		lightingShader.setVec3("viewPos", camera.Position);
 //
 //		// light properties
-//		lightingShader.setVec3("light.ambient", 0.5f, 0.5f, 0.5f);
+//		lightingShader.setVec3("light.ambient", 0.2f, 0.2f, 0.2f);
 //		lightingShader.setVec3("light.diffuse", 0.5f, 0.5f, 0.5f);
 //		lightingShader.setVec3("light.specular", 1.0f, 1.0f, 1.0f);
 //
 //		// mat properties
-//		lightingShader.setFloat("material.shininess", 64.0f);
+//		lightingShader.setFloat("material.shininess", 164.0f);
 //
 //		// view/projection transformations
 //		glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);

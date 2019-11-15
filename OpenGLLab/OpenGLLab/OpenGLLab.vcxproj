@@ -147,8 +147,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="camera.cpp" />
+    <ClCompile Include="directionlight.cpp" />
     <ClCompile Include="light.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="multi_light.cpp" />
     <ClCompile Include="PartSpecular.cpp" />
     <ClCompile Include="specular.cpp" />
     <ClCompile Include="stb_image.cpp" />
@@ -162,11 +164,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Shaders\diffusefs.glsl" />
+    <None Include="Shaders\dl_fs.glsl" />
     <None Include="Shaders\fs.glsl" />
     <None Include="Shaders\lampfs.glsl" />
     <None Include="Shaders\lampvs.glsl" />
     <None Include="Shaders\matfs.glsl" />
     <None Include="Shaders\matvs.glsl" />
+    <None Include="Shaders\multilight_fs.glsl" />
     <None Include="Shaders\specular_fs.glsl" />
     <None Include="Shaders\vs.glsl" />
   </ItemGroup>
