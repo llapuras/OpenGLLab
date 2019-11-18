@@ -12,7 +12,11 @@ enum Camera_Movement {
 	FORWARD,
 	BACKWARD,
 	LEFT,
-	RIGHT
+	RIGHT,
+	ROTATE_LEFT,
+	ROTATE_RIGHT,
+	ROTATE_UP,
+	ROTATE_DOWN
 };
 
 // Default camera values
@@ -88,6 +92,32 @@ public:
 
 		Yaw += xoffset;
 		Pitch += yoffset;
+
+		// Make sure that when pitch is out of bounds, screen doesn't get flipped
+		if (constrainPitch)
+		{
+			if (Pitch > 89.0f)
+				Pitch = 89.0f;
+			if (Pitch < -89.0f)
+				Pitch = -89.0f;
+		}
+
+		// Update Front, Right and Up Vectors using the updated Euler angles
+		updateCameraVectors();
+	}
+
+	void ProcessKeyRotate(Camera_Movement direction, float deltaTime, GLboolean constrainPitch = true)
+	{
+		float velocity = MovementSpeed * deltaTime;
+		float rotatespeed = 10.0f;
+		if (direction == ROTATE_LEFT)
+			Yaw += velocity * rotatespeed;
+		if (direction == ROTATE_RIGHT)
+			Yaw -= velocity * rotatespeed;
+		if (direction == ROTATE_UP)
+			Pitch += velocity * rotatespeed;
+		if (direction == ROTATE_DOWN)
+			Pitch -= velocity * rotatespeed;
 
 		// Make sure that when pitch is out of bounds, screen doesn't get flipped
 		if (constrainPitch)

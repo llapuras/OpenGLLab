@@ -21,8 +21,8 @@ void scroll_callback(GLFWwindow* window, double xoffset, double yoffset);
 void processInput(GLFWwindow* window);
 
 // settings
-const unsigned int SCR_WIDTH = 800;
-const unsigned int SCR_HEIGHT = 600;
+const unsigned int SCR_WIDTH = 1200;
+const unsigned int SCR_HEIGHT = 900;
 
 // camera
 Camera camera(glm::vec3(0.0f, 0.0f, 3.0f));
@@ -35,6 +35,9 @@ float deltaTime = 0.0f;
 float lastFrame = 0.0f;
 
 glm::vec3 pointpos = glm::vec3(0.0f, 0.0f, 0.0f);
+
+
+const char* glsl_version = "#version 150";
 
 int main()
 {
@@ -60,7 +63,7 @@ int main()
 	}
 	glfwMakeContextCurrent(window);
 	glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
-	glfwSetCursorPosCallback(window, mouse_callback);
+	
 	glfwSetScrollCallback(window, scroll_callback);
 
 	// tell GLFW to capture our mouse
@@ -90,6 +93,29 @@ int main()
 
 	// draw in wireframe
 	//glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+
+	// Setup Dear ImGui context
+	ImGui::CreateContext();
+	IMGUI_CHECKVERSION();
+	ImGuiIO& io = ImGui::GetIO(); (void)io;
+	io.MouseDrawCursor = true;
+
+	// Setup Dear ImGui style
+	ImGui::StyleColorsDark();
+	//ImGui::StyleColorsClassic();
+
+	// Setup Platform/Renderer bindings
+	ImGui_ImplGlfw_InitForOpenGL(window, true);
+	ImGui_ImplOpenGL3_Init(glsl_version);
+
+	bool show_demo_window = true;
+	bool show_another_window = false;
+	bool show_Mouse = true;
+	ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
+
+	glm::vec3 pointlightcolor = glm::vec3(1.0f,1.0f,1.0f);
+
+	
 
 	// render loop
 	// -----------
@@ -124,7 +150,7 @@ int main()
 		ourShader.setVec3("dirLight.specular", 0.5f, 0.5f, 0.5f);
 
 		ourShader.setVec3("pointLight.position", -1.45f, -1.6f, 1.1f);
-		ourShader.setVec3("pointLight.ambient", 1.0f, 0.0f, 0.0f);
+		ourShader.setVec3("pointLight.ambient", pointlightcolor);
 		ourShader.setVec3("pointLight.diffuse", 0.8f, 0.8f, 0.8f);
 		ourShader.setVec3("pointLight.specular", 1.0f, 1.0f, 1.0f);
 		ourShader.setFloat("pointLight.constant", 1.0f);
@@ -169,9 +195,61 @@ int main()
 
 		//cout << camera.Position.x <<"," << camera.Position.y << "," << camera.Position.z << "," << endl;
 
+
+		//....................................
+		// Start the Dear ImGui frame
+		ImGui_ImplOpenGL3_NewFrame();
+		ImGui_ImplGlfw_NewFrame();
+		ImGui::NewFrame();
+
+		// 1. Show the big demo window (Most of the sample code is in ImGui::ShowDemoWindow()! You can browse its code to learn more about Dear ImGui!).
+		if (show_demo_window)
+			ImGui::ShowDemoWindow(&show_demo_window);
+		if (show_another_window)
+			glfwSetCursorPosCallback(window, mouse_callback);
+		
+		// 2. Show a simple window that we create ourselves. We use a Begin/End pair to created a named window.
+		{
+			static float f = 0.0f;
+			static int counter = 0;
+
+			ImGui::Begin("Hello, world!");// Create a window called "Hello, world!" and append into it.
+
+			ImGui::Text("This is some useful text.");// Display some text (you can use a format strings too)
+			ImGui::Checkbox("Demo Window", &show_demo_window);// Edit bools storing our window open/close state
+			ImGui::Checkbox("Mouse Control", &show_another_window);
+
+			ImGui::SliderFloat("float", &f, 0.0f, 1.0f);// Edit 1 float using a slider from 0.0f to 1.0f
+			ImGui::ColorEdit3("clear color", (float*)&pointlightcolor);// Edit 3 floats representing a color
+
+			if (ImGui::Button("Button"))// Buttons return true when clicked (most widgets return true when edited/activated)
+				counter++;
+			ImGui::SameLine();
+			ImGui::Text("counter = %d", counter);
+
+			ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);
+			ImGui::End();
+		}
+
+		// 3. Show another simple window.
+
+
+		// Rendering
+		ImGui::Render();
+		int display_w, display_h;
+		glfwMakeContextCurrent(window);
+		glfwGetFramebufferSize(window, &display_w, &display_h);
+		ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+
 		glfwSwapBuffers(window);
 		glfwPollEvents();
 	}
+
+
+	// Cleanup
+	ImGui_ImplOpenGL3_Shutdown();
+	ImGui_ImplGlfw_Shutdown();
+	ImGui::DestroyContext();
 
 	// glfw: terminate, clearing all previously allocated GLFW resources.
 	// ------------------------------------------------------------------
@@ -194,6 +272,15 @@ void processInput(GLFWwindow* window)
 		camera.ProcessKeyboard(LEFT, deltaTime);
 	if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
 		camera.ProcessKeyboard(RIGHT, deltaTime);
+
+	if (glfwGetKey(window, GLFW_KEY_LEFT) == GLFW_PRESS)
+		camera.ProcessKeyRotate(ROTATE_RIGHT, deltaTime);
+	if (glfwGetKey(window, GLFW_KEY_RIGHT) == GLFW_PRESS)
+		camera.ProcessKeyRotate(ROTATE_LEFT, deltaTime);
+	if (glfwGetKey(window, GLFW_KEY_UP) == GLFW_PRESS)
+		camera.ProcessKeyRotate(ROTATE_UP, deltaTime);
+	if (glfwGetKey(window, GLFW_KEY_DOWN) == GLFW_PRESS)
+		camera.ProcessKeyRotate(ROTATE_DOWN, deltaTime);
 }
 
 // glfw: whenever the window size changed (by OS or user resize) this callback function executes
