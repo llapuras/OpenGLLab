@@ -1,8 +1,0 @@
-﻿  Generating coveralls output...
-  Test project C:/Users/Admin/Desktop/OpenGLLab/assimp-master/assimp-master/build
-  No tests were found!!!
-  CMake Error at C:/Users/Admin/Desktop/OpenGLLab/assimp-master/assimp-master/cmake-modules/CoverallsGenerateGcov.cmake:88 (message):
-    gcov not found! Aborting...
-  
-  
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets(230,5): error MSB6006: "cmd.exe" exited with code 1.

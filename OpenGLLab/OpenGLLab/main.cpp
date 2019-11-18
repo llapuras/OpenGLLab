@@ -1,5 +1,9 @@
-#include <glad/glad.h>
+﻿#include <glad/glad.h>
 #include <GLFW/glfw3.h>
+
+#include "imgui/imgui.h"
+#include "imgui/imgui_impl_glfw.h"
+#include "imgui/imgui_impl_opengl3.h"
 
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
@@ -30,6 +34,8 @@ bool firstMouse = true;
 float deltaTime = 0.0f;
 float lastFrame = 0.0f;
 
+glm::vec3 pointpos = glm::vec3(0.0f, 0.0f, 0.0f);
+
 int main()
 {
 	// glfw: initialize and configure
@@ -45,7 +51,7 @@ int main()
 
 	// glfw window creation
 	// --------------------
-	GLFWwindow* window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "LearnOpenGL", NULL, NULL);
+	GLFWwindow* window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "LapuEngine(´-ω-`)", NULL, NULL);
 	if (window == NULL)
 	{
 		std::cout << "Failed to create GLFW window" << std::endl;
@@ -78,8 +84,9 @@ int main()
 
 	// load models
 	// -----------
-	Model ourModel("Model/bottle.obj");
-
+	Model ourModel01("Model/spongebob/one-room-pratamacam.obj");
+	Model ourModel02("Model/character/nanosuit.obj");
+	Model cube("Model/cube/cube.obj");
 
 	// draw in wireframe
 	//glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
@@ -106,6 +113,35 @@ int main()
 		// don't forget to enable shader before setting uniforms
 		ourShader.use();
 
+		ourShader.use();
+		ourShader.setVec3("viewPos", camera.Position);
+		ourShader .setFloat("material.shininess", 32.0f);
+
+		// directional light
+		ourShader.setVec3("dirLight.direction", -0.2f, -1.0f, -0.3f);
+		ourShader.setVec3("dirLight.ambient", 0.2f, 0.2f, 0.2f);
+		ourShader.setVec3("dirLight.diffuse", 0.4f, 0.4f, 0.4f);
+		ourShader.setVec3("dirLight.specular", 0.5f, 0.5f, 0.5f);
+
+		ourShader.setVec3("pointLight.position", -1.45f, -1.6f, 1.1f);
+		ourShader.setVec3("pointLight.ambient", 1.0f, 0.0f, 0.0f);
+		ourShader.setVec3("pointLight.diffuse", 0.8f, 0.8f, 0.8f);
+		ourShader.setVec3("pointLight.specular", 1.0f, 1.0f, 1.0f);
+		ourShader.setFloat("pointLight.constant", 1.0f);
+		ourShader.setFloat("pointLight.linear", 0.09);
+		ourShader.setFloat("pointLight.quadratic", 0.032);
+
+		ourShader.setVec3("spotLight.position", camera.Position);
+		ourShader.setVec3("spotLight.direction", camera.Front);
+		ourShader.setVec3("spotLight.ambient", 1.0f, 1.0f, 1.0f);
+		ourShader.setVec3("spotLight.diffuse", 1.0f, 1.0f, 1.0f);
+		ourShader.setVec3("spotLight.specular", 1.0f, 1.0f, 1.0f);
+		ourShader.setFloat("spotLight.constant", 1.0f);
+		ourShader.setFloat("spotLight.linear", 0.5);
+		ourShader.setFloat("spotLight.quadratic", 0.062);
+		ourShader.setFloat("spotLight.cutOff", glm::cos(glm::radians(12.5f)));
+		ourShader.setFloat("spotLight.outerCutOff", glm::cos(glm::radians(15.0f)));
+
 		// view/projection transformations
 		glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
 		glm::mat4 view = camera.GetViewMatrix();
@@ -114,14 +150,25 @@ int main()
 
 		// render the loaded model
 		glm::mat4 model = glm::mat4(1.0f);
-		model = glm::translate(model, glm::vec3(0.0f, -1.75f, 0.0f)); // translate it down so it's at the center of the scene
-		model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));	// it's a bit too big for our scene, so scale it down
+		model = glm::translate(model, glm::vec3(2.0f, -15.0f, 0.0f)); // translate it down so it's at the center of the scene
+		model = glm::scale(model, glm::vec3(0.4f, 0.4f, 0.4f));	// it's a bit too big for our scene, so scale it down
 		ourShader.setMat4("model", model);
-		ourModel.Draw(ourShader);
+		ourModel01.Draw(ourShader);
 
+		//model = glm::mat4(1.0f);
+		//model = glm::translate(model, glm::vec3(0.0f, -1.75f, 0.0f)); // translate it down so it's at the center of the scene
+		//model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));	// it's a bit too big for our scene, so scale it down
+		//ourShader.setMat4("model", model);
+		//ourModel02.Draw(ourShader);
 
-		// glfw: swap buffers and poll IO events (keys pressed/released, mouse moved etc.)
-		// -------------------------------------------------------------------------------
+		//model = glm::mat4(1.0f);
+		//model = glm::translate(model, glm::vec3(-1.45f, -1.6f, 1.1f)); // translate it down so it's at the center of the scene
+		//model = glm::scale(model, glm::vec3(0.04f, 0.04f, 0.04f));	// it's a bit too big for our scene, so scale it down
+		//ourShader.setMat4("model", model);
+		//cube.Draw(ourShader);
+
+		//cout << camera.Position.x <<"," << camera.Position.y << "," << camera.Position.z << "," << endl;
+
 		glfwSwapBuffers(window);
 		glfwPollEvents();
 	}
