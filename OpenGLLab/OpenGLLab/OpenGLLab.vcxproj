@@ -177,6 +177,7 @@
     <ClInclude Include="Light.h" />
     <ClInclude Include="Model.h" />
     <ClInclude Include="Mesh.h" />
+    <ClInclude Include="SkyBox.h" />
     <ClInclude Include="stb_image.h" />
     <ClInclude Include="Shader.h" />
   </ItemGroup>
@@ -191,6 +192,8 @@
     <None Include="Shaders\modelload_fs.glsl" />
     <None Include="Shaders\modelload_vs.glsl" />
     <None Include="Shaders\multilight_fs.glsl" />
+    <None Include="Shaders\skyboxfs.glsl" />
+    <None Include="Shaders\skyboxvs.glsl" />
     <None Include="Shaders\specular_fs.glsl" />
     <None Include="Shaders\vs.glsl" />
   </ItemGroup>

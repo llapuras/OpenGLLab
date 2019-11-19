@@ -19,10 +19,12 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void mouse_callback(GLFWwindow* window, double xpos, double ypos);
 void scroll_callback(GLFWwindow* window, double xoffset, double yoffset);
 void processInput(GLFWwindow* window);
+unsigned int loadTexture(char const* path);
+unsigned int loadCubemap(vector<std::string> faces);
 
 // settings
-const unsigned int SCR_WIDTH = 1200;
-const unsigned int SCR_HEIGHT = 900;
+const unsigned int SCR_WIDTH = 1280;
+const unsigned int SCR_HEIGHT = 720;
 
 // camera
 Camera camera(glm::vec3(0.0f, 0.0f, 3.0f));
@@ -35,7 +37,6 @@ float deltaTime = 0.0f;
 float lastFrame = 0.0f;
 
 glm::vec3 pointpos = glm::vec3(0.0f, 0.0f, 0.0f);
-
 
 const char* glsl_version = "#version 150";
 
@@ -89,8 +90,10 @@ int main()
 	// -----------
 	Model ourModel01("Model/spongebob/one-room-pratamacam.obj");
 	Model ourModel02("Model/character/nanosuit.obj");
-	Model cube("Model/cube/cube.obj");
+	Model lamp("Model/lamp/lamp01.obj");
 
+
+	
 	// draw in wireframe
 	//glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 
@@ -113,10 +116,9 @@ int main()
 	bool show_Mouse = true;
 	ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
 
-	glm::vec3 pointlightcolor = glm::vec3(1.0f,1.0f,1.0f);
+	glm::vec3 pointlightcolor = glm::vec3(0.2f, 0.2f, 0.2f);
 
 	
-
 	// render loop
 	// -----------
 	while (!glfwWindowShouldClose(window))
@@ -187,13 +189,17 @@ int main()
 		//ourShader.setMat4("model", model);
 		//ourModel02.Draw(ourShader);
 
-		//model = glm::mat4(1.0f);
-		//model = glm::translate(model, glm::vec3(-1.45f, -1.6f, 1.1f)); // translate it down so it's at the center of the scene
-		//model = glm::scale(model, glm::vec3(0.04f, 0.04f, 0.04f));	// it's a bit too big for our scene, so scale it down
-		//ourShader.setMat4("model", model);
-		//cube.Draw(ourShader);
+		model = glm::mat4(1.0f);
+		model = glm::translate(model, glm::vec3(-1.45f, -1.6f, 1.1f)); // translate it down so it's at the center of the scene
+		model = glm::scale(model, glm::vec3(1.0f, 1.0f, 1.0f));	// it's a bit too big for our scene, so scale it down
+		ourShader.setMat4("model", model);
+		lamp.Draw(ourShader);
 
 		//cout << camera.Position.x <<"," << camera.Position.y << "," << camera.Position.z << "," << endl;
+
+
+
+		
 
 
 		//....................................
@@ -207,13 +213,13 @@ int main()
 			ImGui::ShowDemoWindow(&show_demo_window);
 		if (show_another_window)
 			glfwSetCursorPosCallback(window, mouse_callback);
-		
+
 		// 2. Show a simple window that we create ourselves. We use a Begin/End pair to created a named window.
 		{
 			static float f = 0.0f;
 			static int counter = 0;
 
-			ImGui::Begin("Hello, world!");// Create a window called "Hello, world!" and append into it.
+			ImGui::Begin("Hello, world!");// Create a window called "Hello, world!" and append into it.s
 
 			ImGui::Text("This is some useful text.");// Display some text (you can use a format strings too)
 			ImGui::Checkbox("Demo Window", &show_demo_window);// Edit bools storing our window open/close state
@@ -241,10 +247,12 @@ int main()
 		glfwGetFramebufferSize(window, &display_w, &display_h);
 		ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 
+
 		glfwSwapBuffers(window);
 		glfwPollEvents();
 	}
 
+	glDeleteBuffers(1, &skyboxVAO);
 
 	// Cleanup
 	ImGui_ImplOpenGL3_Shutdown();
@@ -317,4 +325,41 @@ void mouse_callback(GLFWwindow* window, double xpos, double ypos)
 void scroll_callback(GLFWwindow* window, double xoffset, double yoffset)
 {
 	camera.ProcessMouseScroll(yoffset);
+}
+
+unsigned int loadTexture(char const* path)
+{
+	unsigned int textureID;
+	glGenTextures(1, &textureID);
+
+	int width, height, nrComponents;
+	unsigned char* data = stbi_load(path, &width, &height, &nrComponents, 0);
+	if (data)
+	{
+		GLenum format;
+		if (nrComponents == 1)
+			format = GL_RED;
+		else if (nrComponents == 3)
+			format = GL_RGB;
+		else if (nrComponents == 4)
+			format = GL_RGBA;
+
+		glBindTexture(GL_TEXTURE_2D, textureID);
+		glTexImage2D(GL_TEXTURE_2D, 0, format, width, height, 0, format, GL_UNSIGNED_BYTE, data);
+		glGenerateMipmap(GL_TEXTURE_2D);
+
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+
+		stbi_image_free(data);
+	}
+	else
+	{
+		std::cout << "Texture failed to load at path: " << path << std::endl;
+		stbi_image_free(data);
+	}
+
+	return textureID;
 }

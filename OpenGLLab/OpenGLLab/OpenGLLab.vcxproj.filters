@@ -112,6 +112,9 @@
     <ClInclude Include="imgui\imstb_truetype.h">
       <Filter>imgui</Filter>
     </ClInclude>
+    <ClInclude Include="SkyBox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="Shaders\fs.glsl">
@@ -148,6 +151,12 @@
       <Filter>Shaders</Filter>
     </None>
     <None Include="Shaders\modelload_vs.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\skyboxfs.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\skyboxvs.glsl">
       <Filter>Shaders</Filter>
     </None>
   </ItemGroup>
