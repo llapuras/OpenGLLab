@@ -68,6 +68,9 @@
     <ClCompile Include="imgui\imgui_widgets.cpp">
       <Filter>imgui</Filter>
     </ClCompile>
+    <ClCompile Include="skybox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Shader.h">
@@ -115,6 +118,12 @@
     <ClInclude Include="SkyBox.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenGLInit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="Shaders\fs.glsl">
@@ -157,6 +166,12 @@
       <Filter>Shaders</Filter>
     </None>
     <None Include="Shaders\skyboxvs.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\shadowfs.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\shadowvs.glsl">
       <Filter>Shaders</Filter>
     </None>
   </ItemGroup>

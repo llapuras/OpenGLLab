@@ -7,6 +7,10 @@
 
 #include <vector>
 
+// settings
+unsigned int SCR_WIDTH = 1280;
+unsigned int SCR_HEIGHT = 720;
+
 // Defines several possible options for camera movement. Used as abstraction to stay away from window-system specific input methods
 enum Camera_Movement {
 	FORWARD,

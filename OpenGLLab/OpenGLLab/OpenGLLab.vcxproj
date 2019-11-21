@@ -159,6 +159,7 @@
     <ClCompile Include="modelload.cpp" />
     <ClCompile Include="multi_light.cpp" />
     <ClCompile Include="PartSpecular.cpp" />
+    <ClCompile Include="skybox.cpp" />
     <ClCompile Include="specular.cpp" />
     <ClCompile Include="stb_image.cpp" />
     <ClCompile Include="texture_cube.cpp" />
@@ -166,6 +167,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Camera.h" />
+    <ClInclude Include="Common.h" />
     <ClInclude Include="imgui\imconfig.h" />
     <ClInclude Include="imgui\imgui.h" />
     <ClInclude Include="imgui\imgui_impl_glfw.h" />
@@ -177,6 +179,7 @@
     <ClInclude Include="Light.h" />
     <ClInclude Include="Model.h" />
     <ClInclude Include="Mesh.h" />
+    <ClInclude Include="OpenGLInit.h" />
     <ClInclude Include="SkyBox.h" />
     <ClInclude Include="stb_image.h" />
     <ClInclude Include="Shader.h" />
@@ -192,6 +195,8 @@
     <None Include="Shaders\modelload_fs.glsl" />
     <None Include="Shaders\modelload_vs.glsl" />
     <None Include="Shaders\multilight_fs.glsl" />
+    <None Include="Shaders\shadowfs.glsl" />
+    <None Include="Shaders\shadowvs.glsl" />
     <None Include="Shaders\skyboxfs.glsl" />
     <None Include="Shaders\skyboxvs.glsl" />
     <None Include="Shaders\specular_fs.glsl" />

@@ -1,27 +1,20 @@
-#pragma once
-#pragma once
-#include <iostream>
-#include <vector>
-#include "Shader.h"
-#include "stb_image.h"
 #include "Camera.h"
+#include "Shader.h"
+
+
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 
-using namespace std;
-
-class SkyBox {
+class SkyBox 
+{
 public:
-
-	unsigned int skyboxVAO, skyboxVBO;
+	unsigned int skyboxVAO;
+	unsigned int skyboxVBO;
+	unsigned int SkyboxTexture;
 	
-	
-	void InitSkyBox() {
+	void InitSkyBox(Shader shader) {
 
-		Shader skyboxshader("Shaders/skyboxvs.glsl", "Shaders/skyboxfs.glsl");;
-		
-		// ------------------------------------------------------------------
 		float skyboxVertices[] = {
 			// positions          
 			-1.0f,  1.0f, -1.0f,
@@ -68,7 +61,6 @@ public:
 		};
 
 		// skybox VAO
-
 		glGenVertexArrays(1, &skyboxVAO);
 		glGenBuffers(1, &skyboxVBO);
 		glBindVertexArray(skyboxVAO);
@@ -77,8 +69,8 @@ public:
 		glEnableVertexAttribArray(0);
 		glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
 
+		// ------------------------------------------------------------------
 		// load textures
-		// -------------
 		vector<std::string> faces
 		{
 			"Images/skybox/right.jpg",
@@ -88,35 +80,39 @@ public:
 			"Images/skybox/front.jpg",
 			"Images/skybox/back.jpg"
 		};
-		unsigned int cubemapTexture = loadCubemap(faces);
 
-		// shader configuration
-		// --------------------
-		skyboxshader.use();
-		skyboxshader.setInt("skybox", 0);
+		SkyboxTexture = loadCubemap(faces);
+		shader.use();
+		shader.setInt("skybox", 0);
 
-
-	
 	};
 
-	void DrawSkyBox(Shader shader, Camera camera, ) {
+	void DrawSkyBox(Camera camera, Shader shader) {
 		// draw skybox as last
 		glDepthFunc(GL_LEQUAL);  // change depth function so depth test passes when values are equal to depth buffer's content
 		shader.use();
 		// view/projection transformations
 		glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
-		glm::mat4 view = camera.GetViewMatrix();
-		skyboxshader.setMat4("projection", projection);
-		skyboxshader.setMat4("view", view);
+		glm::mat4 view = glm::mat4(glm::mat3(camera.GetViewMatrix()));
+		
+		shader.setMat4("view", view);
+		shader.setMat4("projection", projection);
+
 		// skybox cube
 		glBindVertexArray(skyboxVAO);
 		glActiveTexture(GL_TEXTURE0);
-		glBindTexture(GL_TEXTURE_CUBE_MAP, cubemapTexture);
+		glBindTexture(GL_TEXTURE_CUBE_MAP, SkyboxTexture);
 		glDrawArrays(GL_TRIANGLES, 0, 36);
 		glBindVertexArray(0);
 		glDepthFunc(GL_LESS); // set depth function back to default
 	}
 
+	void DeleteSkybox() { 
+		glDeleteVertexArrays(1, &skyboxVAO);
+		glDeleteBuffers(1, &skyboxVAO);
+	}
+
+private:
 
 	unsigned int loadCubemap(vector<std::string> faces)
 	{
@@ -139,6 +135,7 @@ public:
 				stbi_image_free(data);
 			}
 		}
+
 		glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
 		glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 		glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
@@ -147,6 +144,5 @@ public:
 
 		return textureID;
 	}
-}
-
-
+	
+};
