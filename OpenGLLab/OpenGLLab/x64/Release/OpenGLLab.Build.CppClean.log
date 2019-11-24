@@ -15,7 +15,9 @@ d:\cg\lapuopengl\opengllab\opengllab\x64\release\imgui_demo.obj
 d:\cg\lapuopengl\opengllab\opengllab\x64\release\imgui.obj
 d:\cg\lapuopengl\opengllab\opengllab\x64\release\directionlight.obj
 d:\cg\lapuopengl\opengllab\opengllab\x64\release\camera.obj
+d:\cg\lapuopengl\opengllab\opengllab\x64\release\skybox.obj
 d:\cg\lapuopengl\opengllab\opengllab\x64\release\main.obj
+d:\cg\lapuopengl\opengllab\opengllab\x64\release\gameobject.obj
 d:\cg\lapuopengl\opengllab\x64\release\opengllab.exe
 d:\cg\lapuopengl\opengllab\x64\release\opengllab.pdb
 d:\cg\lapuopengl\opengllab\x64\release\opengllab.ipdb
@@ -24,6 +26,7 @@ d:\cg\lapuopengl\opengllab\opengllab\x64\release\opengllab.tlog\cl.command.1.tlo
 d:\cg\lapuopengl\opengllab\opengllab\x64\release\opengllab.tlog\cl.read.1.tlog
 d:\cg\lapuopengl\opengllab\opengllab\x64\release\opengllab.tlog\cl.write.1.tlog
 d:\cg\lapuopengl\opengllab\opengllab\x64\release\opengllab.tlog\link.command.1.tlog
+d:\cg\lapuopengl\opengllab\opengllab\x64\release\opengllab.tlog\link.delete.1.tlog
 d:\cg\lapuopengl\opengllab\opengllab\x64\release\opengllab.tlog\link.read.1.tlog
 d:\cg\lapuopengl\opengllab\opengllab\x64\release\opengllab.tlog\link.write.1.tlog
 d:\cg\lapuopengl\opengllab\opengllab\x64\release\opengllab.tlog\opengllab.write.1u.tlog

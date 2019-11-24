@@ -146,6 +146,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="1124.cpp" />
     <ClCompile Include="camera.cpp" />
     <ClCompile Include="directionlight.cpp" />
     <ClCompile Include="imgui\imgui.cpp" />
@@ -168,6 +169,7 @@
   <ItemGroup>
     <ClInclude Include="Camera.h" />
     <ClInclude Include="Common.h" />
+    <ClInclude Include="Geometry.h" />
     <ClInclude Include="imgui\imconfig.h" />
     <ClInclude Include="imgui\imgui.h" />
     <ClInclude Include="imgui\imgui_impl_glfw.h" />
@@ -180,6 +182,7 @@
     <ClInclude Include="Model.h" />
     <ClInclude Include="Mesh.h" />
     <ClInclude Include="OpenGLInit.h" />
+    <ClInclude Include="ParticleSystem.h" />
     <ClInclude Include="SkyBox.h" />
     <ClInclude Include="stb_image.h" />
     <ClInclude Include="Shader.h" />
@@ -188,6 +191,10 @@
     <None Include="Shaders\diffusefs.glsl" />
     <None Include="Shaders\dl_fs.glsl" />
     <None Include="Shaders\fs.glsl" />
+    <None Include="Shaders\geometryfs.glsl" />
+    <None Include="Shaders\geometryvs.glsl" />
+    <None Include="Shaders\instanced_fs.glsl" />
+    <None Include="Shaders\instanced_vs.glsl" />
     <None Include="Shaders\lampfs.glsl" />
     <None Include="Shaders\lampvs.glsl" />
     <None Include="Shaders\matfs.glsl" />

@@ -71,6 +71,9 @@
     <ClCompile Include="skybox.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="1124.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Shader.h">
@@ -124,6 +127,12 @@
     <ClInclude Include="OpenGLInit.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Geometry.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ParticleSystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="Shaders\fs.glsl">
@@ -172,6 +181,18 @@
       <Filter>Shaders</Filter>
     </None>
     <None Include="Shaders\shadowvs.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\geometryfs.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\geometryvs.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\instanced_fs.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\instanced_vs.glsl">
       <Filter>Shaders</Filter>
     </None>
   </ItemGroup>

@@ -18,7 +18,7 @@ enum LightType
 
 struct DirectionLight {
 	glm::vec3 direction = glm::vec3(-0.2f, -1.0f, -0.3f);
-	glm::vec3 ambient = glm::vec3(0.9f, 0.2f, 0.2f);
+	glm::vec3 ambient = glm::vec3(0.2f, 0.2f, 0.52f);
 	glm::vec3 diffuse = glm::vec3(0.4f, 0.4f, 0.4f);
 	glm::vec3 specular = glm::vec3(0.5f, 0.5f, 0.5f);
 	float intensity = 1.0f;

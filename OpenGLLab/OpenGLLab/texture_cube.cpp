@@ -15,8 +15,6 @@
 //void processInput(GLFWwindow* window);
 //unsigned int loadTexture(const char* path);
 //
-//// settings
-//const GLuint SCR_WIDTH = 800, SCR_HEIGHT = 600;
 //
 //// camera
 //Camera camera(glm::vec3(2.0f, 2.0f, 3.0f));
