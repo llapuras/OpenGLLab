@@ -3,9 +3,11 @@ d:\cg\lapuopengl\opengllab\opengllab\x64\release\viewport.obj
 d:\cg\lapuopengl\opengllab\opengllab\x64\release\texture_cube.obj
 d:\cg\lapuopengl\opengllab\opengllab\x64\release\stb_image.obj
 d:\cg\lapuopengl\opengllab\opengllab\x64\release\specular.obj
+d:\cg\lapuopengl\opengllab\opengllab\x64\release\skybox.obj
 d:\cg\lapuopengl\opengllab\opengllab\x64\release\partspecular.obj
 d:\cg\lapuopengl\opengllab\opengllab\x64\release\multi_light.obj
 d:\cg\lapuopengl\opengllab\opengllab\x64\release\modelload.obj
+d:\cg\lapuopengl\opengllab\opengllab\x64\release\main.obj
 d:\cg\lapuopengl\opengllab\opengllab\x64\release\light.obj
 d:\cg\lapuopengl\opengllab\opengllab\x64\release\imgui_widgets.obj
 d:\cg\lapuopengl\opengllab\opengllab\x64\release\imgui_impl_opengl3.obj
@@ -15,9 +17,8 @@ d:\cg\lapuopengl\opengllab\opengllab\x64\release\imgui_demo.obj
 d:\cg\lapuopengl\opengllab\opengllab\x64\release\imgui.obj
 d:\cg\lapuopengl\opengllab\opengllab\x64\release\directionlight.obj
 d:\cg\lapuopengl\opengllab\opengllab\x64\release\camera.obj
-d:\cg\lapuopengl\opengllab\opengllab\x64\release\skybox.obj
-d:\cg\lapuopengl\opengllab\opengllab\x64\release\main.obj
-d:\cg\lapuopengl\opengllab\opengllab\x64\release\gameobject.obj
+d:\cg\lapuopengl\opengllab\opengllab\x64\release\1124.obj
+d:\cg\lapuopengl\opengllab\opengllab\x64\release\scenenodetest.obj
 d:\cg\lapuopengl\opengllab\x64\release\opengllab.exe
 d:\cg\lapuopengl\opengllab\x64\release\opengllab.pdb
 d:\cg\lapuopengl\opengllab\x64\release\opengllab.ipdb

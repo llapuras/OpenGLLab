@@ -160,6 +160,7 @@
     <ClCompile Include="modelload.cpp" />
     <ClCompile Include="multi_light.cpp" />
     <ClCompile Include="PartSpecular.cpp" />
+    <ClCompile Include="ScenenodeTest.h" />
     <ClCompile Include="skybox.cpp" />
     <ClCompile Include="specular.cpp" />
     <ClCompile Include="stb_image.cpp" />
@@ -183,9 +184,11 @@
     <ClInclude Include="Mesh.h" />
     <ClInclude Include="OpenGLInit.h" />
     <ClInclude Include="ParticleSystem.h" />
+    <ClInclude Include="SceneNode.h" />
     <ClInclude Include="SkyBox.h" />
     <ClInclude Include="stb_image.h" />
     <ClInclude Include="Shader.h" />
+    <ClInclude Include="Timmer.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Shaders\diffusefs.glsl" />

@@ -126,22 +126,23 @@ D:\CG\LapuOpenGL\OpenGLLab\OpenGLLab\Model.h(131,35): warning C4244:         and
 D:\CG\LapuOpenGL\OpenGLLab\OpenGLLab\Model.h(131,35): warning C4244:         [
 D:\CG\LapuOpenGL\OpenGLLab\OpenGLLab\Model.h(131,35): warning C4244:             T=float
 D:\CG\LapuOpenGL\OpenGLLab\OpenGLLab\Model.h(131,35): warning C4244:         ]
-D:\CG\LapuOpenGL\OpenGLLab\OpenGLLab\main.cpp(53,63): warning C4566: character represented by universal-character-name '\u00B4' cannot be represented in the current code page (936)
-D:\CG\LapuOpenGL\OpenGLLab\OpenGLLab\main.cpp(104,19): warning C4244: 'argument': conversion from 'double' to 'unsigned int', possible loss of data
-D:\CG\LapuOpenGL\OpenGLLab\OpenGLLab\main.cpp(120,17): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
-D:\CG\LapuOpenGL\OpenGLLab\OpenGLLab\main.cpp(123,20): warning C4244: 'initializing': conversion from 'int' to 'GLfloat', possible loss of data
-D:\CG\LapuOpenGL\OpenGLLab\OpenGLLab\main.cpp(178,22): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-D:\CG\LapuOpenGL\OpenGLLab\OpenGLLab\main.cpp(328,11): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-D:\CG\LapuOpenGL\OpenGLLab\OpenGLLab\main.cpp(329,11): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-D:\CG\LapuOpenGL\OpenGLLab\OpenGLLab\main.cpp(333,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-D:\CG\LapuOpenGL\OpenGLLab\OpenGLLab\main.cpp(334,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-D:\CG\LapuOpenGL\OpenGLLab\OpenGLLab\main.cpp(336,10): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-D:\CG\LapuOpenGL\OpenGLLab\OpenGLLab\main.cpp(337,10): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-D:\CG\LapuOpenGL\OpenGLLab\OpenGLLab\main.cpp(344,28): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\CG\LapuOpenGL\OpenGLLab\OpenGLLab\main.cpp(59,63): warning C4566: character represented by universal-character-name '\u00B4' cannot be represented in the current code page (936)
+D:\CG\LapuOpenGL\OpenGLLab\OpenGLLab\main.cpp(108,19): warning C4244: 'argument': conversion from 'double' to 'unsigned int', possible loss of data
+D:\CG\LapuOpenGL\OpenGLLab\OpenGLLab\main.cpp(124,17): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
+D:\CG\LapuOpenGL\OpenGLLab\OpenGLLab\main.cpp(127,20): warning C4244: 'initializing': conversion from 'int' to 'GLfloat', possible loss of data
+D:\CG\LapuOpenGL\OpenGLLab\OpenGLLab\main.cpp(159,22): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\CG\LapuOpenGL\OpenGLLab\OpenGLLab\main.cpp(205,24): warning C4018: '<': signed/unsigned mismatch
+D:\CG\LapuOpenGL\OpenGLLab\OpenGLLab\main.cpp(305,11): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\CG\LapuOpenGL\OpenGLLab\OpenGLLab\main.cpp(306,11): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\CG\LapuOpenGL\OpenGLLab\OpenGLLab\main.cpp(310,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\CG\LapuOpenGL\OpenGLLab\OpenGLLab\main.cpp(311,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\CG\LapuOpenGL\OpenGLLab\OpenGLLab\main.cpp(313,10): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\CG\LapuOpenGL\OpenGLLab\OpenGLLab\main.cpp(314,10): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\CG\LapuOpenGL\OpenGLLab\OpenGLLab\main.cpp(321,28): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
 LINK : warning LNK4098: defaultlib 'MSVCRTD' conflicts with use of other libs; use /NODEFAULTLIB:library
   Generating code
-  2229 of 2445 functions (91.2%) were compiled, the rest were copied from previous compilation.
-    770 functions were new in current compilation
-    37 functions had inline decision re-evaluated but remain unchanged
+  62 of 2529 functions ( 2.5%) were compiled, the rest were copied from previous compilation.
+    25 functions were new in current compilation
+    122 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   OpenGLLab.vcxproj -> D:\CG\LapuOpenGL\OpenGLLab\x64\Release\OpenGLLab.exe
