@@ -44,7 +44,7 @@ public:
 
 		for (vector <SceneNode*>::const_iterator i = n->GetChildIteratorStart(); i != n->GetChildIteratorEnd(); ++i) {
 			((*i)->model).Draw(shader);
-			cout << ((*i)->name) << endl;
+			//cout << ((*i)->name) << endl;
 		}
 	}
 

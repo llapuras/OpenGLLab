@@ -168,6 +168,7 @@
     <ClCompile Include="viewport.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="112501.cpp" />
     <ClInclude Include="Camera.h" />
     <ClInclude Include="Common.h" />
     <ClInclude Include="Geometry.h" />
@@ -191,6 +192,8 @@
     <ClInclude Include="Timmer.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Shaders\depthfs.glsl" />
+    <None Include="Shaders\depthvs.glsl" />
     <None Include="Shaders\diffusefs.glsl" />
     <None Include="Shaders\dl_fs.glsl" />
     <None Include="Shaders\fs.glsl" />
@@ -206,6 +209,8 @@
     <None Include="Shaders\modelload_vs.glsl" />
     <None Include="Shaders\multilight_fs.glsl" />
     <None Include="Shaders\shadowfs.glsl" />
+    <None Include="Shaders\shadowmapfs.glsl" />
+    <None Include="Shaders\shadowmapvs.glsl" />
     <None Include="Shaders\shadowvs.glsl" />
     <None Include="Shaders\skyboxfs.glsl" />
     <None Include="Shaders\skyboxvs.glsl" />
