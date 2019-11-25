@@ -1,4 +1,5 @@
-﻿//#include <glad/glad.h>
+﻿///*add shadow map*/
+//#include <glad/glad.h>
 //#include <GLFW/glfw3.h>
 //
 //#include "imgui/imgui.h"
@@ -16,6 +17,7 @@
 //#include "SkyBox.h"
 //#include "Light.h"
 //
+//#include "SceneNode.h"
 //
 //#include <iostream>
 //
@@ -23,6 +25,11 @@
 //void mouse_callback(GLFWwindow* window, double xpos, double ypos);
 //void scroll_callback(GLFWwindow* window, double xoffset, double yoffset);
 //void processInput(GLFWwindow* window);
+//GLuint loadTexture(const char* path);
+//void RenderScene(Shader& shader);
+//void RenderQuad();
+//void RenderCube();
+//void createEnvirnCube();
 //
 //Camera camera(glm::vec3(-0.5f, 2.0f, 2.0f));
 //float lastX = SCR_WIDTH / 2.0f;
@@ -43,6 +50,10 @@
 //PointLight pointLight;
 //SpotLight spotLight;
 //
+//// Global variables
+//GLuint woodTexture;
+//GLuint planeVAO;
+//
 //int main()
 //{
 //	glfwInit();
@@ -57,26 +68,31 @@
 //		glfwTerminate();
 //		return -1;
 //	}
+//
 //	glfwMakeContextCurrent(window);
 //	glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
-//
 //	glfwSetScrollCallback(window, scroll_callback);
-//
 //	glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
-//
 //	if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
 //	{
 //		std::cout << "Failed to initialize GLAD" << std::endl;
 //		return -1;
 //	}
 //
+//	// Define the viewport dimensions
+//	glViewport(0, 0, SCR_WIDTH, SCR_HEIGHT);
 //	glEnable(GL_DEPTH_TEST);
+//
 //
 //	Shader ourShader("Shaders/modelload_vs.glsl", "Shaders/modelload_fs.glsl");
 //	Shader skyboxShader("Shaders/skyboxvs.glsl", "Shaders/skyboxfs.glsl");
 //	Shader instancedShader("Shaders/skyboxvs.glsl", "Shaders/skyboxfs.glsl");
+//	Shader simpleDepthShader("Shaders/shadowvs.glsl", "Shaders/shadowfs.glsl");
+//	Shader debugDepthQuad("Shaders/depthvs.glsl", "Shaders/depthfs.glsl");
+//	Shader shader("Shaders/shadowmapvs.glsl", "Shaders/shadowmapfs.glsl");
+//	Shader environShader("Shaders/environmentvs.glsl", "Shaders/environmentfs.glsl");
 //
-//	//Model ourModel02("Model/character/nanosuit.obj");
+//
 //	Model lamp("Model/lamp/lamp01.obj");
 //	Model sponge("Model/spongebob/one-room-pratamacam.obj");
 //
@@ -96,57 +112,126 @@
 //
 //	ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
 //
+//	//model pos array
+//	int amount = 1000;
+//	glm::mat4* modelMatrices;
+//	modelMatrices = new glm::mat4[amount];
+//	srand(glfwGetTime()); // initialize random seed
+//	GLfloat radius = 50.0;
+//	GLfloat offset = 2.5f;
+//	for (int i = 0; i < amount; i++)
+//	{
+//		glm::mat4 model;
+//		// 1. Translation: displace along circle with 'radius' in range [-offset, offset]
+//		GLfloat angle = (GLfloat)i / (GLfloat)amount * 360.0f;
+//		GLfloat displacement = (rand() % (GLint)(2 * offset * 100)) / 100.0f - offset;
+//		GLfloat x = sin(angle) * radius + displacement;
+//		displacement = (rand() % (GLint)(2 * offset * 100)) / 100.0f - offset;
+//		GLfloat y = displacement * 0.4f; // y value has smaller displacement
+//		displacement = (rand() % (GLint)(2 * offset * 100)) / 100.0f - offset;
+//		GLfloat z = cos(angle) * radius + displacement;
+//		model = glm::translate(model, glm::vec3(x, y, z));
+//		// 2. Scale: Scale between 0.05 and 0.25f
+//		GLfloat scale = (rand() % 20) / 100.0f + 0.05;
+//		model = glm::scale(model, glm::vec3(scale));
+//		// 3. Rotation: add random rotation around a (semi)randomly picked rotation axis vector
+//		GLfloat rotAngle = (rand() % 360);
+//		model = glm::rotate(model, rotAngle, glm::vec3(0.4f, 0.6f, 0.8f));
+//		// 4. Now add to list of matrices
+//		modelMatrices[i] = model;
+//	}
 //
 //	sky.InitSkyBox(skyboxShader);
 //
-//	plane.CreatePlane();
+//	double lastTime = glfwGetTime();
+//	int nbFrames = 0;
 //
-//	//position list
-//	glm::vec3 translations[1000];
-//	int index = 0;
-//	GLfloat offset = 0.1f;
-//	for (GLint y = -10; y < 10; y += 2)
-//	{
-//		for (GLint x = -10; x < 10; x += 2)
-//		{
-//			for (GLint z = -10; z < 10; z += 2) {
-//				glm::vec3 translation;
-//				translation.x = (GLfloat)x / 10.0f + offset;
-//				translation.y = (GLfloat)y / 10.0f + offset;
-//				translation.z = (GLfloat)z / 10.0f + offset;
-//				translations[index] = translation;
-//				index++;
-//			}
-//		}
-//	}
 //
-//	//send position to shader
-//	instancedShader.use();
-//	glm::vec3 newpos;
-//	for (GLuint i = 0; i < 100; i++)
-//	{
-//		stringstream ss;
-//		string index;
-//		ss << i;
-//		index = ss.str();
-//		newpos = glm::vec3(translations[i].x, translations[i].y, translations[i].z);
-//		instancedShader.setVec3(("offsets[" + index + "]"), newpos);
-//	}
+//	SceneNode* root = new SceneNode(sponge, "gameobject");
+//	SceneNode* child01 = new SceneNode(sponge, "root", root);
+//	SceneNode* child02 = new SceneNode(sponge, "root", root);
+//	root->AddChild(child01);
+//	root->AddChild(child02);
 //
-//	GLuint instanceVBO;
-//	glGenBuffers(1, &instanceVBO);
-//	glBindBuffer(GL_ARRAY_BUFFER, instanceVBO);
-//	glBufferData(GL_ARRAY_BUFFER, sizeof(glm::vec3) * 100, &translations[0], GL_STATIC_DRAW);
-//	glBindBuffer(GL_ARRAY_BUFFER, 0);
 //
+//	//------------------------------------------------------------
+//	//shadow!!!!fighting!!!
+//	//plane
+//	GLfloat planeVertices[] = {
+//		// Positions          // Normals         // Texture Coords
+//		25.0f, -0.5f, 25.0f, 0.0f, 1.0f, 0.0f, 25.0f, 0.0f,
+//		-25.0f, -0.5f, -25.0f, 0.0f, 1.0f, 0.0f, 0.0f, 25.0f,
+//		-25.0f, -0.5f, 25.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f,
+//
+//		25.0f, -0.5f, 25.0f, 0.0f, 1.0f, 0.0f, 25.0f, 0.0f,
+//		25.0f, -0.5f, -25.0f, 0.0f, 1.0f, 0.0f, 25.0f, 25.0f,
+//		-25.0f, -0.5f, -25.0f, 0.0f, 1.0f, 0.0f, 0.0f, 25.0f
+//	};
+//	// Setup plane VAO
+//	GLuint planeVBO;
+//	glGenVertexArrays(1, &planeVAO);
+//	glGenBuffers(1, &planeVBO);
+//	glBindVertexArray(planeVAO);
+//	glBindBuffer(GL_ARRAY_BUFFER, planeVBO);
+//	glBufferData(GL_ARRAY_BUFFER, sizeof(planeVertices), &planeVertices, GL_STATIC_DRAW);
+//	glEnableVertexAttribArray(0);
+//	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(GLfloat), (GLvoid*)0);
+//	glEnableVertexAttribArray(1);
+//	glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(GLfloat), (GLvoid*)(3 * sizeof(GLfloat)));
 //	glEnableVertexAttribArray(2);
-//	glBindBuffer(GL_ARRAY_BUFFER, instanceVBO);
-//	glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 2 * sizeof(GLfloat), (GLvoid*)0);
-//	glBindBuffer(GL_ARRAY_BUFFER, 0);
-//	glVertexAttribDivisor(2, 1);
+//	glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 8 * sizeof(GLfloat), (GLvoid*)(6 * sizeof(GLfloat)));
+//	glBindVertexArray(0);
+//
+//	// Load textures
+//	woodTexture = loadTexture("Images/wall1.jpg");
+//
+//	// Configure depth map FBO
+//	const GLuint SHADOW_WIDTH = 1024, SHADOW_HEIGHT = 1024;
+//	GLuint depthMapFBO;
+//	glGenFramebuffers(1, &depthMapFBO);
+//	// - Create depth texture
+//	GLuint depthMap;
+//	glGenTextures(1, &depthMap);
+//	glBindTexture(GL_TEXTURE_2D, depthMap);
+//
+//	glTexImage2D(GL_TEXTURE_2D, 0, GL_DEPTH_COMPONENT, SHADOW_WIDTH, SHADOW_HEIGHT, 0, GL_DEPTH_COMPONENT, GL_FLOAT, NULL);
+//	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+//	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+//	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+//	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+//
+//	glBindFramebuffer(GL_FRAMEBUFFER, depthMapFBO);
+//	glFramebufferTexture2D(GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_TEXTURE_2D, depthMap, 0);
+//	glDrawBuffer(GL_NONE);
+//	glReadBuffer(GL_NONE);
+//	glBindFramebuffer(GL_FRAMEBUFFER, 0);
+//
+//	// Set texture samples
+//	shader.use();
+//	shader.setInt("diffuseTexture", 0);
+//	shader.setInt("shadowMap", 1);
+//	debugDepthQuad.use();
+//	debugDepthQuad.setInt("depthMap", 0);
+//
+//	// Light source
+//	glm::vec3 lightPos(-2.0f, 4.0f, -1.0f);
+//
+//	// --------------------
+//	environShader.use();
+//	environShader.setInt("skybox", 0);
 //
 //	while (!glfwWindowShouldClose(window))
 //	{
+//
+//		double currentTime = glfwGetTime();
+//		nbFrames++;
+//		if (currentTime - lastTime >= 1.0) { // If last prinf() was more than 1 sec ago
+//		 // printf and reset timer
+//			//printf("%f ms/frame\n", 1000.0 / double(nbFrames));
+//			nbFrames = 0;
+//			lastTime += 1.0;
+//		}
+//
 //		float currentFrame = glfwGetTime();
 //		deltaTime = currentFrame - lastFrame;
 //		lastFrame = currentFrame;
@@ -167,9 +252,15 @@
 //		spotLight.direction = camera.Front;
 //		light01.RenderSpotLight(ourShader, spotLight);
 //
-//		////Model
+//		root->Draw(root, camera, ourShader);
+//
 //		glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
 //		glm::mat4 view = camera.GetViewMatrix();
+//		glm::mat4 modelmat4 = glm::mat4(1.0f);
+//
+//		////Model
+//		projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
+//		view = camera.GetViewMatrix();
 //		ourShader.setMat4("projection", projection);
 //		ourShader.setMat4("view", view);
 //		glm::mat4 model = glm::mat4(1.0f);
@@ -179,36 +270,90 @@
 //		//plane.DrawPlane(camera, ourShader);
 //		sponge.Draw(ourShader);
 //
-//		//glm::mat4 model = glm::mat4(1.0f);
-//		//for (int x = 0; x < 3; x++) {
-//		//	for(int y = 0;y<3;y++){
-//		//		for (int z = 0; z < 3; z++) {
-//		//			model = glm::mat4(1.0f);
-//		//			model = glm::translate(model, glm::vec3(x-3, y-3, z)); // translate it down so it's at the center of the scene
-//		//			model = glm::scale(model, glm::vec3(1.0f, 1.0f, 1.0f));	// it's a bit too big for our scene, so scale it down
-//		//			ourShader.setMat4("model", model);
-//		//			lamp.Draw(ourShader);
-//		//		}
-//		//	}
-//		//}
+//		// Draw meteorites
+//		model = glm::mat4(1.0f);
+//		model = glm::scale(model, glm::vec3(0.05f, 0.05f, 0.05f));	// it's a bit too big for our scene, so scale it down
+//		model = glm::translate(model, glm::vec3(posx, posy, posz)); // translate it down so it's at the center of the scene
+//		ourShader.setMat4("model", model);
 //
+//		for (GLuint i = 0; i < amount; i++)
+//		{
+//			//glUniformMatrix4fv(glGetUniformLocation(ourShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(modelMatrices[i]));
+//			ourShader.setMat4("model", (modelMatrices[i]));
+//			lamp.Draw(ourShader);
+//		}
 //
+//		// draw scene as normal
+//		environShader.use();
+//		model = glm::mat4(1.0f);
+//		view = camera.GetViewMatrix();
+//		projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
+//		environShader.setMat4("model", model);
+//		environShader.setMat4("view", view);
+//		environShader.setMat4("projection", projection);
+//		shader.setVec3("cameraPos", camera.Position);
+//		// cubes
+//		createEnvirnCube();
 //
+//		////shadow----------------------------------------
+//		//// 1. Render depth of scene to texture (from light's perspective)
+//		//// - Get light projection/view matrix.
+//		//glm::mat4 lightProjection, lightView;
+//		//glm::mat4 lightSpaceMatrix;
+//		//GLfloat near_plane = 1.0f, far_plane = 7.5f;
+//		//lightProjection = glm::ortho(-10.0f, 10.0f, -10.0f, 10.0f, near_plane, far_plane);
+//		//lightView = glm::lookAt(lightPos, glm::vec3(0.0f), glm::vec3(0.0, 1.0, 0.0));
+//		//lightSpaceMatrix = lightProjection * lightView;
+//		//simpleDepthShader.use();
+//		////glUniformMatrix4fv(glGetUniformLocation(simpleDepthShader.Program, "lightSpaceMatrix"), 1, GL_FALSE, glm::value_ptr(lightSpaceMatrix));
+//		//simpleDepthShader.setMat4("lightSpaceMatrix", lightSpaceMatrix);
+//
+//		//glViewport(0, 0, SHADOW_WIDTH, SHADOW_HEIGHT);
+//		//glBindFramebuffer(GL_FRAMEBUFFER, depthMapFBO);
+//		//glClear(GL_DEPTH_BUFFER_BIT);
+//		//glActiveTexture(GL_TEXTURE0);
+//		//glBindTexture(GL_TEXTURE_2D, woodTexture);
+//		//RenderScene(simpleDepthShader);
+//		//glBindFramebuffer(GL_FRAMEBUFFER, 0);
+//
+//		//// 2. render scene as normal using the generated depth/shadow map  
+//		//	   // --------------------------------------------------------------
+//		//glViewport(0, 0, SCR_WIDTH, SCR_HEIGHT);
+//		//glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+//		//shader.use();
+//		//projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
+//		//view = camera.GetViewMatrix();
+//		//shader.setMat4("projection", projection);
+//		//shader.setMat4("view", view);
+//		//// set light uniforms
+//		//shader.setVec3("viewPos", camera.Position);
+//		//shader.setVec3("lightPos", lightPos);
+//		//shader.setMat4("lightSpaceMatrix", lightSpaceMatrix);
+//		//glActiveTexture(GL_TEXTURE0);
+//		//glBindTexture(GL_TEXTURE_2D, woodTexture);
+//		//glActiveTexture(GL_TEXTURE1);
+//		//glBindTexture(GL_TEXTURE_2D, depthMap);
+//		//RenderScene(shader);
+//
+//		//// render Depth map to quad for visual debugging
+//		//// ---------------------------------------------
+//		//debugDepthQuad.use();
+//		//debugDepthQuad.setFloat("near_plane", near_plane);
+//		//debugDepthQuad.setFloat("far_plane", far_plane);
+//		//glActiveTexture(GL_TEXTURE0);
+//		//glBindTexture(GL_TEXTURE_2D, depthMap);
+//		////RenderQuad();
 //
 //
 //		sky.DrawSkyBox(camera, skyboxShader);
 //
-//
-//
 //		ImGui_ImplOpenGL3_NewFrame();
 //		ImGui_ImplGlfw_NewFrame();
 //		ImGui::NewFrame();
-//
 //		if (show_demo_window)
 //			ImGui::ShowDemoWindow(&show_demo_window);
 //		if (show_another_window)
 //			glfwSetCursorPosCallback(window, mouse_callback);
-//
 //		{
 //			static float f = 0.0f;
 //			static int counter = 0;
@@ -231,6 +376,10 @@
 //			ImGui::Text("counter = %d", counter);
 //
 //			ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);
+//			ImGui::Text("fps = %.3f", 1000.0 / double(nbFrames));
+//
+//			ImGui::SliderInt("amount", &amount, 0, 5000);// Edit 1 float using a slider from 0.0f to 1.0f
+//
 //			ImGui::End();
 //		}
 //
@@ -240,12 +389,12 @@
 //		glfwGetFramebufferSize(window, &display_w, &display_h);
 //		ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 //
-//
-//
 //		glfwSwapBuffers(window);
 //		glfwPollEvents();
 //	}
 //
+//	//glDeleteVertexArrays(1, &planeVAO);
+//	//glDeleteBuffers(1, &planeVBO);
 //	sky.DeleteSkybox();
 //
 //	ImGui_ImplOpenGL3_Shutdown();
@@ -306,4 +455,242 @@
 //void scroll_callback(GLFWwindow* window, double xoffset, double yoffset)
 //{
 //	camera.ProcessMouseScroll(yoffset);
+//}
+//
+//void RenderScene(Shader& shader)
+//{
+//	// Floor
+//	glm::mat4 model;
+//	shader.setMat4("model", model);
+//
+//	glBindVertexArray(planeVAO);
+//	glDrawArrays(GL_TRIANGLES, 0, 6);
+//	glBindVertexArray(0);
+//	// Cubes
+//	model = glm::mat4();
+//	model = glm::translate(model, glm::vec3(0.0f, 1.5f, 0.0));
+//	shader.setMat4("model", model);
+//	RenderCube();
+//	model = glm::mat4();
+//	model = glm::translate(model, glm::vec3(2.0f, 0.0f, 1.0));
+//	shader.setMat4("model", model);
+//	RenderCube();
+//	model = glm::mat4();
+//	model = glm::translate(model, glm::vec3(-1.0f, 0.0f, 2.0));
+//	model = glm::rotate(model, 60.0f, glm::normalize(glm::vec3(1.0, 0.0, 1.0)));
+//	model = glm::scale(model, glm::vec3(0.5));
+//	shader.setMat4("model", model);
+//	RenderCube();
+//}
+//
+//// RenderQuad() Renders a 1x1 quad in NDC, best used for framebuffer color targets
+//// and post-processing effects.
+//GLuint quadVAO = 0;
+//GLuint quadVBO;
+//void RenderQuad()
+//{
+//	if (quadVAO == 0)
+//	{
+//		GLfloat quadVertices[] = {
+//			// Positions        // Texture Coords
+//			-1.0f,  1.0f, 0.0f,  0.0f, 1.0f,
+//			-1.0f, -1.0f, 0.0f,  0.0f, 0.0f,
+//			 1.0f,  1.0f, 0.0f,  1.0f, 1.0f,
+//			 1.0f, -1.0f, 0.0f,  1.0f, 0.0f,
+//		};
+//		// Setup plane VAO
+//		glGenVertexArrays(1, &quadVAO);
+//		glGenBuffers(1, &quadVBO);
+//		glBindVertexArray(quadVAO);
+//		glBindBuffer(GL_ARRAY_BUFFER, quadVBO);
+//		glBufferData(GL_ARRAY_BUFFER, sizeof(quadVertices), &quadVertices, GL_STATIC_DRAW);
+//		glEnableVertexAttribArray(0);
+//		glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 5 * sizeof(GLfloat), (GLvoid*)0);
+//		glEnableVertexAttribArray(1);
+//		glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 5 * sizeof(GLfloat), (GLvoid*)(3 * sizeof(GLfloat)));
+//	}
+//	glBindVertexArray(quadVAO);
+//	glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
+//	glBindVertexArray(0);
+//}
+//
+//// RenderCube() Renders a 1x1 3D cube in NDC.
+//GLuint cubeVAO = 0;
+//GLuint cubeVBO = 0;
+//void RenderCube()
+//{
+//	// Initialize (if necessary)
+//	if (cubeVAO == 0)
+//	{
+//		GLfloat vertices[] = {
+//			// Back face
+//			-0.5f, -0.5f, -0.5f, 0.0f, 0.0f, -1.0f, 0.0f, 0.0f, // Bottom-left
+//			0.5f, 0.5f, -0.5f, 0.0f, 0.0f, -1.0f, 1.0f, 1.0f, // top-right
+//			0.5f, -0.5f, -0.5f, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f, // bottom-right         
+//			0.5f, 0.5f, -0.5f, 0.0f, 0.0f, -1.0f, 1.0f, 1.0f,  // top-right
+//			-0.5f, -0.5f, -0.5f, 0.0f, 0.0f, -1.0f, 0.0f, 0.0f,  // bottom-left
+//			-0.5f, 0.5f, -0.5f, 0.0f, 0.0f, -1.0f, 0.0f, 1.0f,// top-left
+//			// Front face
+//			-0.5f, -0.5f, 0.5f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f, // bottom-left
+//			0.5f, -0.5f, 0.5f, 0.0f, 0.0f, 1.0f, 1.0f, 0.0f,  // bottom-right
+//			0.5f, 0.5f, 0.5f, 0.0f, 0.0f, 1.0f, 1.0f, 1.0f,  // top-right
+//			0.5f, 0.5f, 0.5f, 0.0f, 0.0f, 1.0f, 1.0f, 1.0f, // top-right
+//			-0.5f, 0.5f, 0.5f, 0.0f, 0.0f, 1.0f, 0.0f, 1.0f,  // top-left
+//			-0.5f, -0.5f, 0.5f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f,  // bottom-left
+//			// Left face
+//			-0.5f, 0.5f, 0.5f, -1.0f, 0.0f, 0.0f, 1.0f, 0.0f, // top-right
+//			-0.5f, 0.5f, -0.5f, -1.0f, 0.0f, 0.0f, 1.0f, 1.0f, // top-left
+//			-0.5f, -0.5f, -0.5f, -1.0f, 0.0f, 0.0f, 0.0f, 1.0f,  // bottom-left
+//			-0.5f, -0.5f, -0.5f, -1.0f, 0.0f, 0.0f, 0.0f, 1.0f, // bottom-left
+//			-0.5f, -0.5f, 0.5f, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f,  // bottom-right
+//			-0.5f, 0.5f, 0.5f, -1.0f, 0.0f, 0.0f, 1.0f, 0.0f, // top-right
+//			// Right face
+//			0.5f, 0.5f, 0.5f, 1.0f, 0.0f, 0.0f, 1.0f, 0.0f, // top-left
+//			0.5f, -0.5f, -0.5f, 1.0f, 0.0f, 0.0f, 0.0f, 1.0f, // bottom-right
+//			0.5f, 0.5f, -0.5f, 1.0f, 0.0f, 0.0f, 1.0f, 1.0f, // top-right         
+//			0.5f, -0.5f, -0.5f, 1.0f, 0.0f, 0.0f, 0.0f, 1.0f,  // bottom-right
+//			0.5f, 0.5f, 0.5f, 1.0f, 0.0f, 0.0f, 1.0f, 0.0f,  // top-left
+//			0.5f, -0.5f, 0.5f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, // bottom-left     
+//			// Bottom face
+//			-0.5f, -0.5f, -0.5f, 0.0f, -1.0f, 0.0f, 0.0f, 1.0f, // top-right
+//			0.5f, -0.5f, -0.5f, 0.0f, -1.0f, 0.0f, 1.0f, 1.0f, // top-left
+//			0.5f, -0.5f, 0.5f, 0.0f, -1.0f, 0.0f, 1.0f, 0.0f,// bottom-left
+//			0.5f, -0.5f, 0.5f, 0.0f, -1.0f, 0.0f, 1.0f, 0.0f, // bottom-left
+//			-0.5f, -0.5f, 0.5f, 0.0f, -1.0f, 0.0f, 0.0f, 0.0f, // bottom-right
+//			-0.5f, -0.5f, -0.5f, 0.0f, -1.0f, 0.0f, 0.0f, 1.0f, // top-right
+//			// Top face
+//			-0.5f, 0.5f, -0.5f, 0.0f, 1.0f, 0.0f, 0.0f, 1.0f,// top-left
+//			0.5f, 0.5f, 0.5f, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f, // bottom-right
+//			0.5f, 0.5f, -0.5f, 0.0f, 1.0f, 0.0f, 1.0f, 1.0f, // top-right     
+//			0.5f, 0.5f, 0.5f, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f, // bottom-right
+//			-0.5f, 0.5f, -0.5f, 0.0f, 1.0f, 0.0f, 0.0f, 1.0f,// top-left
+//			-0.5f, 0.5f, 0.5f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f // bottom-left        
+//		};
+//		glGenVertexArrays(1, &cubeVAO);
+//		glGenBuffers(1, &cubeVBO);
+//		// Fill buffer
+//		glBindBuffer(GL_ARRAY_BUFFER, cubeVBO);
+//		glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+//		// Link vertex attributes
+//		glBindVertexArray(cubeVAO);
+//		glEnableVertexAttribArray(0);
+//		glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(GLfloat), (GLvoid*)0);
+//		glEnableVertexAttribArray(1);
+//		glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(GLfloat), (GLvoid*)(3 * sizeof(GLfloat)));
+//		glEnableVertexAttribArray(2);
+//		glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 8 * sizeof(GLfloat), (GLvoid*)(6 * sizeof(GLfloat)));
+//		glBindBuffer(GL_ARRAY_BUFFER, 0);
+//		glBindVertexArray(0);
+//	}
+//	// Render Cube
+//	glBindVertexArray(cubeVAO);
+//	glDrawArrays(GL_TRIANGLES, 0, 36);
+//	glBindVertexArray(0);
+//}
+//
+//unsigned int loadTexture(char const* path)
+//{
+//	unsigned int textureID;
+//	glGenTextures(1, &textureID);
+//
+//	int width, height, nrComponents;
+//	unsigned char* data = stbi_load(path, &width, &height, &nrComponents, 0);
+//	if (data)
+//	{
+//		GLenum format;
+//		if (nrComponents == 1)
+//			format = GL_RED;
+//		else if (nrComponents == 3)
+//			format = GL_RGB;
+//		else if (nrComponents == 4)
+//			format = GL_RGBA;
+//
+//		glBindTexture(GL_TEXTURE_2D, textureID);
+//		glTexImage2D(GL_TEXTURE_2D, 0, format, width, height, 0, format, GL_UNSIGNED_BYTE, data);
+//		glGenerateMipmap(GL_TEXTURE_2D);
+//
+//		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+//		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+//		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
+//		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+//
+//		stbi_image_free(data);
+//	}
+//	else
+//	{
+//		std::cout << "Texture failed to load at path: " << path << std::endl;
+//		stbi_image_free(data);
+//	}
+//
+//	return textureID;
+//}
+//
+//
+//void createEnvirnCube() {
+//	// set up vertex data (and buffer(s)) and configure vertex attributes
+//// ------------------------------------------------------------------
+//	float cubeVertices[] = {
+//		// positions          // normals
+//		-0.5f, -0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
+//		 0.5f, -0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
+//		 0.5f,  0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
+//		 0.5f,  0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
+//		-0.5f,  0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
+//		-0.5f, -0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
+//
+//		-0.5f, -0.5f,  0.5f,  0.0f,  0.0f, 1.0f,
+//		 0.5f, -0.5f,  0.5f,  0.0f,  0.0f, 1.0f,
+//		 0.5f,  0.5f,  0.5f,  0.0f,  0.0f, 1.0f,
+//		 0.5f,  0.5f,  0.5f,  0.0f,  0.0f, 1.0f,
+//		-0.5f,  0.5f,  0.5f,  0.0f,  0.0f, 1.0f,
+//		-0.5f, -0.5f,  0.5f,  0.0f,  0.0f, 1.0f,
+//
+//		-0.5f,  0.5f,  0.5f, -1.0f,  0.0f,  0.0f,
+//		-0.5f,  0.5f, -0.5f, -1.0f,  0.0f,  0.0f,
+//		-0.5f, -0.5f, -0.5f, -1.0f,  0.0f,  0.0f,
+//		-0.5f, -0.5f, -0.5f, -1.0f,  0.0f,  0.0f,
+//		-0.5f, -0.5f,  0.5f, -1.0f,  0.0f,  0.0f,
+//		-0.5f,  0.5f,  0.5f, -1.0f,  0.0f,  0.0f,
+//
+//		 0.5f,  0.5f,  0.5f,  1.0f,  0.0f,  0.0f,
+//		 0.5f,  0.5f, -0.5f,  1.0f,  0.0f,  0.0f,
+//		 0.5f, -0.5f, -0.5f,  1.0f,  0.0f,  0.0f,
+//		 0.5f, -0.5f, -0.5f,  1.0f,  0.0f,  0.0f,
+//		 0.5f, -0.5f,  0.5f,  1.0f,  0.0f,  0.0f,
+//		 0.5f,  0.5f,  0.5f,  1.0f,  0.0f,  0.0f,
+//
+//		-0.5f, -0.5f, -0.5f,  0.0f, -1.0f,  0.0f,
+//		 0.5f, -0.5f, -0.5f,  0.0f, -1.0f,  0.0f,
+//		 0.5f, -0.5f,  0.5f,  0.0f, -1.0f,  0.0f,
+//		 0.5f, -0.5f,  0.5f,  0.0f, -1.0f,  0.0f,
+//		-0.5f, -0.5f,  0.5f,  0.0f, -1.0f,  0.0f,
+//		-0.5f, -0.5f, -0.5f,  0.0f, -1.0f,  0.0f,
+//
+//		-0.5f,  0.5f, -0.5f,  0.0f,  1.0f,  0.0f,
+//		 0.5f,  0.5f, -0.5f,  0.0f,  1.0f,  0.0f,
+//		 0.5f,  0.5f,  0.5f,  0.0f,  1.0f,  0.0f,
+//		 0.5f,  0.5f,  0.5f,  0.0f,  1.0f,  0.0f,
+//		-0.5f,  0.5f,  0.5f,  0.0f,  1.0f,  0.0f,
+//		-0.5f,  0.5f, -0.5f,  0.0f,  1.0f,  0.0f
+//	};
+//
+//	// cube VAO
+//	unsigned int cubeVAO, cubeVBO;
+//	glGenVertexArrays(1, &cubeVAO);
+//	glGenBuffers(1, &cubeVBO);
+//	glBindVertexArray(cubeVAO);
+//	glBindBuffer(GL_ARRAY_BUFFER, cubeVBO);
+//	glBufferData(GL_ARRAY_BUFFER, sizeof(cubeVertices), &cubeVertices, GL_STATIC_DRAW);
+//	glEnableVertexAttribArray(0);
+//	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)0);
+//	glEnableVertexAttribArray(1);
+//	glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3 * sizeof(float)));
+//	// skybox VAO
+//
+//	glBindVertexArray(cubeVAO);
+//	glActiveTexture(GL_TEXTURE0);
+//	glBindTexture(GL_TEXTURE_CUBE_MAP, sky.SkyboxTexture);
+//	glDrawArrays(GL_TRIANGLES, 0, 36);
+//	glBindVertexArray(0);
+//
 //}

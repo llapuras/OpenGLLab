@@ -74,8 +74,11 @@
     <ClCompile Include="1124.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ScenenodeTest.h">
-      <Filter>Header Files</Filter>
+    <ClCompile Include="112502.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="shadow.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -217,6 +220,18 @@
       <Filter>Shaders</Filter>
     </None>
     <None Include="Shaders\shadowmapvs.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\heightmapfs.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\heightmapvs.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\environmentfs.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\environmentvs.glsl">
       <Filter>Shaders</Filter>
     </None>
   </ItemGroup>

@@ -10,11 +10,20 @@
 
 class SceneNode {
 public:
+	SceneNode* parent;
+	string name;
+	Model model;
+	std::vector<SceneNode*> children;
+	glm::vec3 transform;
+	glm::vec3 modelScale;
+	glm::vec3 worldTransform;
+	float scale = 1.0f;
+
 	SceneNode(Model nodemodel, string name = "GameObject", SceneNode* parent = NULL) {
 		this->model = nodemodel;
 		this->name = name;
 		modelScale = glm::vec3(1, 1, 1);	
-		transform = glm::vec3(1, 1, 1);
+		transform = glm::vec3(0, 0, 0);
 		worldTransform = glm::vec3(0, 0, 0);
 		this->parent = parent;
 	}
@@ -32,17 +41,18 @@ public:
 
 	void Draw(SceneNode* n, Camera camera, Shader shader) {
 
-		shader.use();
-		glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
-		glm::mat4 view = camera.GetViewMatrix();
-		shader.setMat4("projection", projection);
-		shader.setMat4("view", view);
-		glm::mat4 modelmat4 = glm::mat4(1.0f);
-		modelmat4 = glm::scale(modelmat4, glm::vec3(0.05f, 0.05f, 0.05f));	// it's a bit too big for our scene, so scale it down
-		modelmat4 = glm::translate(modelmat4, glm::vec3(1, 1, 1)); // translate it down so it's at the center of the scene
-		shader.setMat4("model", modelmat4);
 
 		for (vector <SceneNode*>::const_iterator i = n->GetChildIteratorStart(); i != n->GetChildIteratorEnd(); ++i) {
+			shader.use();
+			glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
+			glm::mat4 view = camera.GetViewMatrix();
+			shader.setMat4("projection", projection);
+			shader.setMat4("view", view);
+			glm::mat4 modelmat4 = glm::mat4(1.0f);
+			modelmat4 = glm::scale(modelmat4, (*i)->modelScale);	// it's a bit too big for our scene, so scale it down
+			modelmat4 = glm::translate(modelmat4, (*i)->transform + worldTransform/((*i)->scale)); // translate it down so it's at the center of the scene
+			shader.setMat4("model", modelmat4);
+
 			((*i)->model).Draw(shader);
 			//cout << ((*i)->name) << endl;
 		}
@@ -56,12 +66,5 @@ public:
 		return children.end();
 	}
 
-	SceneNode* parent;
-	string name;
-	Model model;
-	std::vector<SceneNode*> children;
 
-	glm::vec3 transform;
-	glm::vec3 modelScale;
-	glm::vec3 worldTransform;
 };

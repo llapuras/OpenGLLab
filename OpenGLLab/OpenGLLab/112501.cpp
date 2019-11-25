@@ -29,8 +29,9 @@
 //void RenderScene(Shader& shader);
 //void RenderQuad();
 //void RenderCube();
+//void createEnvirnCube();
 //
-//Camera camera(glm::vec3(-0.5f, 2.0f, 2.0f));
+//Camera camera(glm::vec3(2.0f, 7.0f, 0.0f));
 //float lastX = SCR_WIDTH / 2.0f;
 //float lastY = SCR_HEIGHT / 2.0f;
 //bool firstMouse = true;
@@ -82,17 +83,27 @@
 //	glViewport(0, 0, SCR_WIDTH, SCR_HEIGHT);
 //	glEnable(GL_DEPTH_TEST);
 //
+//	double lastTime = glfwGetTime();
+//	int nbFrames = 0;
 //
+//
+//	//shader
 //	Shader ourShader("Shaders/modelload_vs.glsl", "Shaders/modelload_fs.glsl");
 //	Shader skyboxShader("Shaders/skyboxvs.glsl", "Shaders/skyboxfs.glsl");
 //	Shader instancedShader("Shaders/skyboxvs.glsl", "Shaders/skyboxfs.glsl");
 //	Shader simpleDepthShader("Shaders/shadowvs.glsl", "Shaders/shadowfs.glsl");
 //	Shader debugDepthQuad("Shaders/depthvs.glsl", "Shaders/depthfs.glsl");
 //	Shader shader("Shaders/shadowmapvs.glsl", "Shaders/shadowmapfs.glsl");
+//	Shader environShader("Shaders/environmentvs.glsl", "Shaders/environmentfs.glsl");
 //
-//
-//	Model lamp("Model/lamp/lamp01.obj");
-//	Model sponge("Model/spongebob/one-room-pratamacam.obj");
+//	//cw
+//	Model land("Model/land/land.obj");
+//	Model bush("Model/land/bush.obj");
+//	Model campfire("Model/land/campfire.obj");
+//	Model mushroom("Model/land/mushroom.obj");
+//	Model tree("Model/land/tree.obj");
+//	Model castle("Model/land/monu9.obj");
+//	Model lamp("Model/land/lamp01.obj");
 //
 //	ImGui::CreateContext();
 //	IMGUI_CHECKVERSION();
@@ -139,22 +150,33 @@
 //		modelMatrices[i] = model;
 //	}
 //
+//	//skybox
 //	sky.InitSkyBox(skyboxShader);
 //
-//	double lastTime = glfwGetTime();
-//	int nbFrames = 0;
+//	//initial scene
+//	SceneNode* root = new SceneNode(land, "gameobject");
+//	SceneNode* bush_child = new SceneNode(bush, "bush");
+//	SceneNode* tree_child = new SceneNode(tree, "tree");
+//	SceneNode* tree_child01 = new SceneNode(tree, "tree01");
+//	SceneNode* campfire_child = new SceneNode(campfire, "campfire");
+//	SceneNode* mushroom_child01 = new SceneNode(mushroom, "mushroom01");
+//	SceneNode* mushroom_child02 = new SceneNode(mushroom, "mushroom02");
+//	SceneNode* mushroom_child03 = new SceneNode(mushroom, "mushroom03");
+//	SceneNode* castle_child = new SceneNode(castle, "land");
+//	SceneNode* lamp_child = new SceneNode(lamp, "lamp");
 //
-//
-//	SceneNode* root = new SceneNode(sponge, "gameobject");
-//	SceneNode* child01 = new SceneNode(sponge, "root", root);
-//	SceneNode* child02 = new SceneNode(sponge, "root", root);
-//	root->AddChild(child01);
-//	root->AddChild(child02);
+//	root->AddChild(bush_child);
+//	root->AddChild(tree_child);
+//	root->AddChild(tree_child01);
+//	root->AddChild(campfire_child);
+//	root->AddChild(mushroom_child01);
+//	root->AddChild(mushroom_child02);
+//	root->AddChild(mushroom_child03);
+//	root->AddChild(castle_child);
+//	root->AddChild(lamp_child);
 //
 //	//------------------------------------------------------------
 //	//shadow!!!!fighting!!!
-//
-//
 //	//plane
 //	GLfloat planeVertices[] = {
 //		// Positions          // Normals         // Texture Coords
@@ -215,6 +237,9 @@
 //	// Light source
 //	glm::vec3 lightPos(-2.0f, 4.0f, -1.0f);
 //
+//	// --------------------
+//	environShader.use();
+//	environShader.setInt("skybox", 0);
 //
 //	while (!glfwWindowShouldClose(window))
 //	{
@@ -248,37 +273,30 @@
 //		spotLight.direction = camera.Front;
 //		light01.RenderSpotLight(ourShader, spotLight);
 //
-//		root->Draw(root, camera, ourShader);
 //
 //		glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
 //		glm::mat4 view = camera.GetViewMatrix();
-//		glm::mat4 modelmat4 = glm::mat4(1.0f);
-//
-//		////Model
-//		projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
-//		view = camera.GetViewMatrix();
-//		ourShader.setMat4("projection", projection);
-//		ourShader.setMat4("view", view);
 //		glm::mat4 model = glm::mat4(1.0f);
-//		model = glm::scale(model, glm::vec3(0.05f, 0.05f, 0.05f));	// it's a bit too big for our scene, so scale it down
-//		model = glm::translate(model, glm::vec3(posx, posy, posz)); // translate it down so it's at the center of the scene
-//		ourShader.setMat4("model", model);
-//		//plane.DrawPlane(camera, ourShader);
-//		sponge.Draw(ourShader);
 //
-//		// Draw meteorites
-//		model = glm::mat4(1.0f);
-//		model = glm::scale(model, glm::vec3(0.05f, 0.05f, 0.05f));	// it's a bit too big for our scene, so scale it down
-//		model = glm::translate(model, glm::vec3(posx, posy, posz)); // translate it down so it's at the center of the scene
-//		ourShader.setMat4("model", model);
 //
 //		for (GLuint i = 0; i < amount; i++)
 //		{
 //			//glUniformMatrix4fv(glGetUniformLocation(ourShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(modelMatrices[i]));
 //			ourShader.setMat4("model", (modelMatrices[i]));
-//			lamp.Draw(ourShader);
+//			mushroom.Draw(ourShader);
 //		}
 //
+//		// draw scene as normal
+//		environShader.use();
+//		model = glm::mat4(1.0f);
+//		view = camera.GetViewMatrix();
+//		projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
+//		environShader.setMat4("model", model);
+//		environShader.setMat4("view", view);
+//		environShader.setMat4("projection", projection);
+//		shader.setVec3("cameraPos", camera.Position);
+//		// cubes
+//		createEnvirnCube();
 //
 //		//shadow----------------------------------------
 //		// 1. Render depth of scene to texture (from light's perspective)
@@ -320,15 +338,27 @@
 //		glBindTexture(GL_TEXTURE_2D, depthMap);
 //		RenderScene(shader);
 //
-//		// render Depth map to quad for visual debugging
-//		// ---------------------------------------------
-//		debugDepthQuad.use();
-//		debugDepthQuad.setFloat("near_plane", near_plane);
-//		debugDepthQuad.setFloat("far_plane", far_plane);
-//		glActiveTexture(GL_TEXTURE0);
-//		glBindTexture(GL_TEXTURE_2D, depthMap);
-//		//RenderQuad();
 //
+//		//(posx, posy, posz);
+//		castle_child->modelScale = glm::vec3(2, 2, 2);
+//		castle_child->transform = glm::vec3(-1, -3, 0);
+//
+//		tree_child->transform = glm::vec3(-2, 0, -3);
+//		tree_child01->transform = glm::vec3(3, 0, -2);
+//
+//		bush_child->transform = glm::vec3(6, 0, -4);
+//
+//		campfire_child->transform = glm::vec3(2, 0, -11);
+//
+//		mushroom_child01->transform = glm::vec3(-2, 0, -10);
+//		mushroom_child02->transform = glm::vec3(4, 0, -5);
+//		mushroom_child03->transform = glm::vec3(3, 0, -2);
+//
+//		lamp_child->transform = glm::vec3(-2.3f, 2.0f, -4.5f);
+//
+//		root->worldTransform = glm::vec3(posx, posy, posz);
+//
+//		root->Draw(root, camera, ourShader);
 //
 //		sky.DrawSkyBox(camera, skyboxShader);
 //
@@ -467,7 +497,6 @@
 //	shader.setMat4("model", model);
 //	RenderCube();
 //}
-//
 //
 //// RenderQuad() Renders a 1x1 quad in NDC, best used for framebuffer color targets
 //// and post-processing effects.
@@ -609,4 +638,74 @@
 //	}
 //
 //	return textureID;
+//}
+//
+//
+//void createEnvirnCube() {
+//	// set up vertex data (and buffer(s)) and configure vertex attributes
+//// ------------------------------------------------------------------
+//	float cubeVertices[] = {
+//		// positions          // normals
+//		-0.5f, -0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
+//		 0.5f, -0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
+//		 0.5f,  0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
+//		 0.5f,  0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
+//		-0.5f,  0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
+//		-0.5f, -0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
+//
+//		-0.5f, -0.5f,  0.5f,  0.0f,  0.0f, 1.0f,
+//		 0.5f, -0.5f,  0.5f,  0.0f,  0.0f, 1.0f,
+//		 0.5f,  0.5f,  0.5f,  0.0f,  0.0f, 1.0f,
+//		 0.5f,  0.5f,  0.5f,  0.0f,  0.0f, 1.0f,
+//		-0.5f,  0.5f,  0.5f,  0.0f,  0.0f, 1.0f,
+//		-0.5f, -0.5f,  0.5f,  0.0f,  0.0f, 1.0f,
+//
+//		-0.5f,  0.5f,  0.5f, -1.0f,  0.0f,  0.0f,
+//		-0.5f,  0.5f, -0.5f, -1.0f,  0.0f,  0.0f,
+//		-0.5f, -0.5f, -0.5f, -1.0f,  0.0f,  0.0f,
+//		-0.5f, -0.5f, -0.5f, -1.0f,  0.0f,  0.0f,
+//		-0.5f, -0.5f,  0.5f, -1.0f,  0.0f,  0.0f,
+//		-0.5f,  0.5f,  0.5f, -1.0f,  0.0f,  0.0f,
+//
+//		 0.5f,  0.5f,  0.5f,  1.0f,  0.0f,  0.0f,
+//		 0.5f,  0.5f, -0.5f,  1.0f,  0.0f,  0.0f,
+//		 0.5f, -0.5f, -0.5f,  1.0f,  0.0f,  0.0f,
+//		 0.5f, -0.5f, -0.5f,  1.0f,  0.0f,  0.0f,
+//		 0.5f, -0.5f,  0.5f,  1.0f,  0.0f,  0.0f,
+//		 0.5f,  0.5f,  0.5f,  1.0f,  0.0f,  0.0f,
+//
+//		-0.5f, -0.5f, -0.5f,  0.0f, -1.0f,  0.0f,
+//		 0.5f, -0.5f, -0.5f,  0.0f, -1.0f,  0.0f,
+//		 0.5f, -0.5f,  0.5f,  0.0f, -1.0f,  0.0f,
+//		 0.5f, -0.5f,  0.5f,  0.0f, -1.0f,  0.0f,
+//		-0.5f, -0.5f,  0.5f,  0.0f, -1.0f,  0.0f,
+//		-0.5f, -0.5f, -0.5f,  0.0f, -1.0f,  0.0f,
+//
+//		-0.5f,  0.5f, -0.5f,  0.0f,  1.0f,  0.0f,
+//		 0.5f,  0.5f, -0.5f,  0.0f,  1.0f,  0.0f,
+//		 0.5f,  0.5f,  0.5f,  0.0f,  1.0f,  0.0f,
+//		 0.5f,  0.5f,  0.5f,  0.0f,  1.0f,  0.0f,
+//		-0.5f,  0.5f,  0.5f,  0.0f,  1.0f,  0.0f,
+//		-0.5f,  0.5f, -0.5f,  0.0f,  1.0f,  0.0f
+//	};
+//
+//	// cube VAO
+//	unsigned int cubeVAO, cubeVBO;
+//	glGenVertexArrays(1, &cubeVAO);
+//	glGenBuffers(1, &cubeVBO);
+//	glBindVertexArray(cubeVAO);
+//	glBindBuffer(GL_ARRAY_BUFFER, cubeVBO);
+//	glBufferData(GL_ARRAY_BUFFER, sizeof(cubeVertices), &cubeVertices, GL_STATIC_DRAW);
+//	glEnableVertexAttribArray(0);
+//	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)0);
+//	glEnableVertexAttribArray(1);
+//	glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3 * sizeof(float)));
+//	// skybox VAO
+//
+//	glBindVertexArray(cubeVAO);
+//	glActiveTexture(GL_TEXTURE0);
+//	glBindTexture(GL_TEXTURE_CUBE_MAP, sky.SkyboxTexture);
+//	glDrawArrays(GL_TRIANGLES, 0, 36);
+//	glBindVertexArray(0);
+//
 //}

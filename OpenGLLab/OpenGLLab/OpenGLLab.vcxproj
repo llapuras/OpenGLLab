@@ -147,6 +147,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="1124.cpp" />
+    <ClCompile Include="112502.cpp" />
     <ClCompile Include="camera.cpp" />
     <ClCompile Include="directionlight.cpp" />
     <ClCompile Include="imgui\imgui.cpp" />
@@ -160,7 +161,7 @@
     <ClCompile Include="modelload.cpp" />
     <ClCompile Include="multi_light.cpp" />
     <ClCompile Include="PartSpecular.cpp" />
-    <ClCompile Include="ScenenodeTest.h" />
+    <ClCompile Include="shadow.cpp" />
     <ClCompile Include="skybox.cpp" />
     <ClCompile Include="specular.cpp" />
     <ClCompile Include="stb_image.cpp" />
@@ -196,9 +197,13 @@
     <None Include="Shaders\depthvs.glsl" />
     <None Include="Shaders\diffusefs.glsl" />
     <None Include="Shaders\dl_fs.glsl" />
+    <None Include="Shaders\environmentfs.glsl" />
+    <None Include="Shaders\environmentvs.glsl" />
     <None Include="Shaders\fs.glsl" />
     <None Include="Shaders\geometryfs.glsl" />
     <None Include="Shaders\geometryvs.glsl" />
+    <None Include="Shaders\heightmapfs.glsl" />
+    <None Include="Shaders\heightmapvs.glsl" />
     <None Include="Shaders\instanced_fs.glsl" />
     <None Include="Shaders\instanced_vs.glsl" />
     <None Include="Shaders\lampfs.glsl" />
