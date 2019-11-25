@@ -234,5 +234,11 @@
     <None Include="Shaders\environmentvs.glsl">
       <Filter>Shaders</Filter>
     </None>
+    <None Include="Shaders\camerafs.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\cameravs.glsl">
+      <Filter>Shaders</Filter>
+    </None>
   </ItemGroup>
 </Project>

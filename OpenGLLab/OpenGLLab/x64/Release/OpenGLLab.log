@@ -126,20 +126,20 @@ D:\CG\LapuOpenGL\OpenGLLab\OpenGLLab\Model.h(131,35): warning C4244:         and
 D:\CG\LapuOpenGL\OpenGLLab\OpenGLLab\Model.h(131,35): warning C4244:         [
 D:\CG\LapuOpenGL\OpenGLLab\OpenGLLab\Model.h(131,35): warning C4244:             T=float
 D:\CG\LapuOpenGL\OpenGLLab\OpenGLLab\Model.h(131,35): warning C4244:         ]
-D:\CG\LapuOpenGL\OpenGLLab\OpenGLLab\main.cpp(59,63): warning C4566: character represented by universal-character-name '\u00B4' cannot be represented in the current code page (936)
-D:\CG\LapuOpenGL\OpenGLLab\OpenGLLab\main.cpp(187,22): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-D:\CG\LapuOpenGL\OpenGLLab\OpenGLLab\main.cpp(386,11): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-D:\CG\LapuOpenGL\OpenGLLab\OpenGLLab\main.cpp(387,11): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-D:\CG\LapuOpenGL\OpenGLLab\OpenGLLab\main.cpp(391,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-D:\CG\LapuOpenGL\OpenGLLab\OpenGLLab\main.cpp(392,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-D:\CG\LapuOpenGL\OpenGLLab\OpenGLLab\main.cpp(394,10): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-D:\CG\LapuOpenGL\OpenGLLab\OpenGLLab\main.cpp(395,10): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-D:\CG\LapuOpenGL\OpenGLLab\OpenGLLab\main.cpp(402,28): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\CG\LapuOpenGL\OpenGLLab\OpenGLLab\main.cpp(194,22): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\CG\LapuOpenGL\OpenGLLab\OpenGLLab\main.cpp(228,14): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\CG\LapuOpenGL\OpenGLLab\OpenGLLab\main.cpp(229,14): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\CG\LapuOpenGL\OpenGLLab\OpenGLLab\main.cpp(382,11): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\CG\LapuOpenGL\OpenGLLab\OpenGLLab\main.cpp(383,11): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\CG\LapuOpenGL\OpenGLLab\OpenGLLab\main.cpp(387,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\CG\LapuOpenGL\OpenGLLab\OpenGLLab\main.cpp(388,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\CG\LapuOpenGL\OpenGLLab\OpenGLLab\main.cpp(390,10): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\CG\LapuOpenGL\OpenGLLab\OpenGLLab\main.cpp(391,10): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\CG\LapuOpenGL\OpenGLLab\OpenGLLab\main.cpp(398,28): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
 LINK : warning LNK4098: defaultlib 'MSVCRTD' conflicts with use of other libs; use /NODEFAULTLIB:library
   Generating code
-D:\CG\LapuOpenGL\OpenGLLab\OpenGLLab\main.cpp(327): warning C4723: potential divide by 0
-  1 of 2526 functions (<0.1%) were compiled, the rest were copied from previous compilation.
+  17 of 2003 functions ( 0.8%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    58 functions had inline decision re-evaluated but remain unchanged
+    20 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   OpenGLLab.vcxproj -> D:\CG\LapuOpenGL\OpenGLLab\x64\Release\OpenGLLab.exe

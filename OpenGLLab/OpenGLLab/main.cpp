@@ -28,7 +28,7 @@ GLuint loadTexture(const char* path);
 void RenderScene(SceneNode* root, Shader& shader);
 void createEnvirnCube();
 
-Camera camera(glm::vec3(2.0f, 7.0f, 0.0f));
+Camera camera(glm::vec3(2.0f, 5.0f, 8.0f));
 float lastX = SCR_WIDTH / 2.0f;
 float lastY = SCR_HEIGHT / 2.0f;
 bool firstMouse = true;
@@ -60,18 +60,13 @@ int main()
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
-	GLFWwindow* window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "LapuEngine(´-w-`)", NULL, NULL);
+	GLFWwindow* window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "CW", NULL, NULL);
 	if (window == NULL)
 	{
 		std::cout << "Failed to create GLFW window" << std::endl;
 		glfwTerminate();
 		return -1;
 	}
-
-		
-
-	
-	
 
 	glfwMakeContextCurrent(window);
 	glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
@@ -97,13 +92,13 @@ int main()
 	PointLight pointLight02;
 	SpotLight spotLight01;
 
-
 	//shader
 	Shader ourShader("Shaders/modelload_vs.glsl", "Shaders/modelload_fs.glsl");
 	Shader skyboxShader("Shaders/skyboxvs.glsl", "Shaders/skyboxfs.glsl");
 	Shader simpleDepthShader("Shaders/shadowvs.glsl", "Shaders/shadowfs.glsl");
 	Shader shader("Shaders/shadowmapvs.glsl", "Shaders/shadowmapfs.glsl");
 	Shader environShader("Shaders/environmentvs.glsl", "Shaders/environmentfs.glsl");
+	Shader cameraShader("Shaders/cameravs.glsl", "Shaders/camerafs.glsl");
 
 	//shadow
 	Model land("Model/land/land.obj");
@@ -125,9 +120,9 @@ int main()
 	bool show_another_window = false;
 	bool show_Mouse = true;
 	bool isShowShadow = true;
-	float posx = 0;
-	float posy = 0;
-	float posz = 0;
+	float posx = -1.73f;
+	float posy = 8.57f;
+	float posz = -4.57f;
 	float xconstant = 1.0f;
 	float xlinear = 0.09f;
 	float xquadratic = 0.032f;
@@ -183,16 +178,19 @@ int main()
 	shader.setInt("diffuseTexture", 0);
 	shader.setInt("shadowMap", 1);
 
+
 	//Shadow Light source
-	glm::vec3 lightPos(-2.0f, 4.0f, -1.0f);
+	glm::vec3 lightPos(-2, 4.0f, -1.0f);
 
 	// --------------------
 	environShader.use();
 	environShader.setInt("skybox", 0);
 
+
 	while (!glfwWindowShouldClose(window))
 	{
-		
+		lightPos = glm::vec3(posx, posy, posz);
+
 		float currentFrame = glfwGetTime();
 		deltaTime = currentFrame - lastFrame;
 		lastFrame = currentFrame;
@@ -225,6 +223,12 @@ int main()
 		glm::mat4 view = camera.GetViewMatrix();
 		glm::mat4 model = glm::mat4(1.0f);
 
+		// camera/view transformation
+		float radius = 10.0f;
+		float camX = sin(glfwGetTime()) * radius;
+		float camZ = cos(glfwGetTime()) * radius;
+		view = glm::lookAt(glm::vec3(camX, 0.0f, camZ), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+		ourShader.setMat4("view", view);
 
 
 		//without shadow
@@ -288,8 +292,8 @@ int main()
 		ourShader.setMat4("view", view);
 		ourShader.setMat4("projection", projection);
 		ourShader.setVec3("cameraPos", camera.Position);
-		// cubes
-		mushroom.Draw(ourShader);
+		// test
+		//mushroom.Draw(ourShader);
 
 
 		root->worldTransform = glm::vec3(5, 0, 0);
@@ -302,8 +306,7 @@ int main()
 		ImGui_ImplOpenGL3_NewFrame();
 		ImGui_ImplGlfw_NewFrame();
 		ImGui::NewFrame();
-		if (show_demo_window)
-			ImGui::ShowDemoWindow(&show_demo_window);
+
 		if (show_another_window)
 			glfwSetCursorPosCallback(window, mouse_callback);
 
@@ -311,29 +314,11 @@ int main()
 			static float f = 0.0f;
 			static int counter = 0;
 
-			ImGui::Begin("Hello, world!");// Create a window called "Hello, world!" and append into it.s
-
-			ImGui::Text("This is some useful text.");// Display some text (you can use a format strings too)
-			ImGui::Checkbox("Demo Window", &show_demo_window);// Edit bools storing our window open/close state
+			ImGui::Begin("QAQ");// Create a window called "Hello, world!" and append into it.s
 			ImGui::Checkbox("Mouse Control", &show_another_window);
-			ImGui::Checkbox("Show Shadow", &isShowShadow);
 			ImGui::SliderFloat("posx", &posx, -20.0f, 20.0f);// Edit 1 float using a slider from 0.0f to 1.0f
 			ImGui::SliderFloat("posy", &posy, -20.0f, 20.0f);// Edit 1 float using a slider from 0.0f to 1.0f
 			ImGui::SliderFloat("posz", &posz, -20.0f, 20.0f);// Edit 1 float using a slider from 0.0f to 1.0f
-
-			ImGui::SliderFloat("xconstant", &xconstant, -1.0f, 1.0f);// Edit 1 float using a slider from 0.0f to 1.0f
-			ImGui::SliderFloat("xlinear", &xlinear, -1.0f, 1.0f);// Edit 1 float using a slider from 0.0f to 1.0f
-			ImGui::SliderFloat("xquadratic", &xquadratic, -1.0f, 1.0f);// Edit 1 float using a slider from 0.0f to 1.0f
-
-			ImGui::ColorEdit3("clear color", (float*)&f);// Edit 3 floats representing a color
-
-			if (ImGui::Button("Button"))// Buttons return true when clicked (most widgets return true when edited/activated)
-				counter++;
-			ImGui::SameLine();
-			ImGui::Text("counter = %d", counter);
-
-			ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);
-			ImGui::Text("fps = %.3f", 1000.0 / double(nbFrames));
 
 			ImGui::End();
 		}
