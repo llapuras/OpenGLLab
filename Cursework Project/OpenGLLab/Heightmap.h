@@ -20,10 +20,39 @@ public:
 	unsigned int normalMap = loadTexture("Images/terrain01normal.jpg");
 	unsigned int heightMap = loadTexture("Images/fbm.png");
 	unsigned int watertexture = loadTexture("Images/water.jpg");
+	unsigned int brickdiffuseMap = loadTexture("Images/bricks.jpg");
+	unsigned int bricknormalMap = loadTexture("Images/bricks2_normal.jpg");
 
 	Heightmap() {
 		shader = Shader("Shaders/watervs.glsl", "Shaders/waterfs.glsl");
 	};
+
+	void RenderBrick(Camera camera, Shader shader) {
+		shader.use();
+		shader.setInt("diffuseMap", 0);
+		shader.setInt("normalMap", 1);
+
+		// configure view/projection matrices
+		glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
+		glm::mat4 view = camera.GetViewMatrix();
+		shader.use();
+		shader.setMat4("projection", projection);
+		shader.setMat4("view", view);
+		// render parallax-mapped quad
+		glm::mat4 model = glm::mat4(1.0f);
+		//model = glm::rotate(model, glm::radians(float)glfwGetTime() * -10.0f), glm::normalize(glm::vec3(1.0, 0.0, 1.0))); // rotate the quad to show parallax mapping from multiple directions
+		model = glm::rotate(model, glm::radians(90.0f), glm::normalize(glm::vec3(0.0, 1.0, 0.0))); // rotate the quad to show parallax mapping from multiple directions
+		model = glm::scale(model, glm::vec3(1, 1, 1)); // rotate the quad to show parallax mapping from multiple directions
+		model = glm::translate(model, glm::vec3(0, 0, 0));
+		shader.setMat4("model", model);
+		shader.setVec3("viewPos", camera.Position);
+		shader.setVec3("lightPos", lightPos);
+		glActiveTexture(GL_TEXTURE0);
+		glBindTexture(GL_TEXTURE_2D, brickdiffuseMap);
+		glActiveTexture(GL_TEXTURE1);
+		glBindTexture(GL_TEXTURE_2D, bricknormalMap);
+		renderQuad();
+	}
 
 	void RenderWater(Camera camera, Shader shader) {
 		shader.use();
@@ -47,9 +76,10 @@ public:
 		shader.setFloat("heightScale", heightScale); // adjust with Q and E keys
 		shader.setFloat("time", glfwGetTime());
 		shader.setFloat("DRAG_MULT", DRAG_MULT);
-
 		glActiveTexture(GL_TEXTURE0);
 		glBindTexture(GL_TEXTURE_2D, watertexture);
+		glActiveTexture(GL_TEXTURE1);
+		glBindTexture(GL_TEXTURE_2D, normalMap);
 		renderQuad();
 	}
 

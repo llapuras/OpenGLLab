@@ -63,10 +63,16 @@ public:
 
 		ImGui::Begin("Menu");
 
-		//Mouse Control
-		ImGui::Checkbox("Mouse Control", &show_another_window);
+		//Environment Map
+		ImGui::Text("Introduction");
+		ImGui::Text("1.Use Arrow Keys to rotate Camera");
+		ImGui::Text("2.Use W/A/S/D to move Camera");
+		ImGui::Text("slide Wave Size to change water effect");
+		ImGui::Text("4.Press Q/E or slide Height Scale to change heightscale of height map");
+
 
 		//Water Effect
+		ImGui::Text("");
 		ImGui::Text("Water Effect Parameter:");
 		ImGui::SliderFloat("Wave Size", &DRAG_MULT, 0, 0.2);
 
@@ -75,39 +81,20 @@ public:
 		ImGui::Text("Height Map:");
 		ImGui::SliderFloat("Height Scale", &heightScale, 0, 0.8);
 
-		//Environment Map
-		ImGui::Text("");
-		ImGui::Text("Environment Map");
-		ImGui::Text("Sky Box -> Cubemap");
-		ImGui::Text("Plane -> Reflection");
-		ImGui::Text("Castle -> Fraction");
 
-		//Scene Graph
-		ImGui::Text("");
-		ImGui::Text("Scene Graph:");
+		////for shadow scene Light Pos
+		//ImGui::Text("");
+		//ImGui::Text("test Pos");
+		//ImGui::SliderFloat("posx", &posx, -1, 1);// Edit 1 float using a slider from 0.0f to 1.0f
+		//ImGui::SliderFloat("posy", &posy, -1, 1);// Edit 1 float using a slider from 0.0f to 1.0f
+		//ImGui::SliderFloat("posz", &posz, -1, 1);// Edit 1 float using a slider from 0.0f to 1.0f
 
-		//Shadow Map
-		ImGui::Text("");
-		ImGui::Text("Scene Graph:");
-
-		//Scene Graph
-		ImGui::Text("");
-		ImGui::Text("Scene Graph:");
-
-
-		//for shadow scene Light Pos
-		ImGui::Text("");
-		ImGui::Text("test Pos");
-		ImGui::SliderFloat("posx", &posx, -1, 1);// Edit 1 float using a slider from 0.0f to 1.0f
-		ImGui::SliderFloat("posy", &posy, -1, 1);// Edit 1 float using a slider from 0.0f to 1.0f
-		ImGui::SliderFloat("posz", &posz, -1, 1);// Edit 1 float using a slider from 0.0f to 1.0f
-
-		//for shadow scene Light Pos
-		ImGui::Text("");
-		ImGui::Text("Shaodw Light Pos");
-		ImGui::SliderFloat("litposx", &litposx, -30, 30);// Edit 1 float using a slider from 0.0f to 1.0f
-		ImGui::SliderFloat("litposy", &litposy, -30, 30);// Edit 1 float using a slider from 0.0f to 1.0f
-		ImGui::SliderFloat("litposz", &litposz, -30, 30);// Edit 1 float using a slider from 0.0f to 1.0f
+		////for shadow scene Light Pos
+		//ImGui::Text("");
+		//ImGui::Text("Shaodw Light Pos");
+		//ImGui::SliderFloat("litposx", &litposx, -30, 30);// Edit 1 float using a slider from 0.0f to 1.0f
+		//ImGui::SliderFloat("litposy", &litposy, -30, 30);// Edit 1 float using a slider from 0.0f to 1.0f
+		//ImGui::SliderFloat("litposz", &litposz, -30, 30);// Edit 1 float using a slider from 0.0f to 1.0f
 		ImGui::End();
 
 
