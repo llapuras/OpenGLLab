@@ -1,0 +1,140 @@
+﻿  main.cpp
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Mesh.h(97,1): warning C4267: 'argument': conversion from 'size_t' to 'GLsizei', possible loss of data
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(107,33): warning C4244: '=': conversion from 'TReal' to 'T', possible loss of data
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(107,33): warning C4244:         with
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(107,33): warning C4244:         [
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(107,33): warning C4244:             TReal=ai_real
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(107,33): warning C4244:         ]
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(107,33): warning C4244:         and
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(107,33): warning C4244:         [
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(107,33): warning C4244:             T=float
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(107,33): warning C4244:         ]
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(108,33): warning C4244: '=': conversion from 'TReal' to 'T', possible loss of data
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(108,33): warning C4244:         with
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(108,33): warning C4244:         [
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(108,33): warning C4244:             TReal=ai_real
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(108,33): warning C4244:         ]
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(108,33): warning C4244:         and
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(108,33): warning C4244:         [
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(108,33): warning C4244:             T=float
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(108,33): warning C4244:         ]
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(109,33): warning C4244: '=': conversion from 'TReal' to 'T', possible loss of data
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(109,33): warning C4244:         with
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(109,33): warning C4244:         [
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(109,33): warning C4244:             TReal=ai_real
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(109,33): warning C4244:         ]
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(109,33): warning C4244:         and
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(109,33): warning C4244:         [
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(109,33): warning C4244:             T=float
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(109,33): warning C4244:         ]
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(112,32): warning C4244: '=': conversion from 'TReal' to 'T', possible loss of data
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(112,32): warning C4244:         with
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(112,32): warning C4244:         [
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(112,32): warning C4244:             TReal=ai_real
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(112,32): warning C4244:         ]
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(112,32): warning C4244:         and
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(112,32): warning C4244:         [
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(112,32): warning C4244:             T=float
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(112,32): warning C4244:         ]
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(113,32): warning C4244: '=': conversion from 'TReal' to 'T', possible loss of data
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(113,32): warning C4244:         with
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(113,32): warning C4244:         [
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(113,32): warning C4244:             TReal=ai_real
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(113,32): warning C4244:         ]
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(113,32): warning C4244:         and
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(113,32): warning C4244:         [
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(113,32): warning C4244:             T=float
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(113,32): warning C4244:         ]
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(114,32): warning C4244: '=': conversion from 'TReal' to 'T', possible loss of data
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(114,32): warning C4244:         with
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(114,32): warning C4244:         [
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(114,32): warning C4244:             TReal=ai_real
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(114,32): warning C4244:         ]
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(114,32): warning C4244:         and
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(114,32): warning C4244:         [
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(114,32): warning C4244:             T=float
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(114,32): warning C4244:         ]
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(122,39): warning C4244: '=': conversion from 'TReal' to 'T', possible loss of data
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(122,39): warning C4244:         with
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(122,39): warning C4244:         [
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(122,39): warning C4244:             TReal=ai_real
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(122,39): warning C4244:         ]
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(122,39): warning C4244:         and
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(122,39): warning C4244:         [
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(122,39): warning C4244:             T=float
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(122,39): warning C4244:         ]
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(123,39): warning C4244: '=': conversion from 'TReal' to 'T', possible loss of data
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(123,39): warning C4244:         with
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(123,39): warning C4244:         [
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(123,39): warning C4244:             TReal=ai_real
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(123,39): warning C4244:         ]
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(123,39): warning C4244:         and
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(123,39): warning C4244:         [
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(123,39): warning C4244:             T=float
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(123,39): warning C4244:         ]
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(129,33): warning C4244: '=': conversion from 'TReal' to 'T', possible loss of data
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(129,33): warning C4244:         with
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(129,33): warning C4244:         [
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(129,33): warning C4244:             TReal=ai_real
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(129,33): warning C4244:         ]
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(129,33): warning C4244:         and
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(129,33): warning C4244:         [
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(129,33): warning C4244:             T=float
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(129,33): warning C4244:         ]
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(130,33): warning C4244: '=': conversion from 'TReal' to 'T', possible loss of data
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(130,33): warning C4244:         with
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(130,33): warning C4244:         [
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(130,33): warning C4244:             TReal=ai_real
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(130,33): warning C4244:         ]
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(130,33): warning C4244:         and
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(130,33): warning C4244:         [
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(130,33): warning C4244:             T=float
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(130,33): warning C4244:         ]
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(131,33): warning C4244: '=': conversion from 'TReal' to 'T', possible loss of data
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(131,33): warning C4244:         with
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(131,33): warning C4244:         [
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(131,33): warning C4244:             TReal=ai_real
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(131,33): warning C4244:         ]
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(131,33): warning C4244:         and
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(131,33): warning C4244:         [
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(131,33): warning C4244:             T=float
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(131,33): warning C4244:         ]
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(134,35): warning C4244: '=': conversion from 'TReal' to 'T', possible loss of data
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(134,35): warning C4244:         with
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(134,35): warning C4244:         [
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(134,35): warning C4244:             TReal=ai_real
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(134,35): warning C4244:         ]
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(134,35): warning C4244:         and
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(134,35): warning C4244:         [
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(134,35): warning C4244:             T=float
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(134,35): warning C4244:         ]
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(135,35): warning C4244: '=': conversion from 'TReal' to 'T', possible loss of data
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(135,35): warning C4244:         with
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(135,35): warning C4244:         [
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(135,35): warning C4244:             TReal=ai_real
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(135,35): warning C4244:         ]
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(135,35): warning C4244:         and
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(135,35): warning C4244:         [
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(135,35): warning C4244:             T=float
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(135,35): warning C4244:         ]
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(136,35): warning C4244: '=': conversion from 'TReal' to 'T', possible loss of data
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(136,35): warning C4244:         with
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(136,35): warning C4244:         [
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(136,35): warning C4244:             TReal=ai_real
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(136,35): warning C4244:         ]
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(136,35): warning C4244:         and
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(136,35): warning C4244:         [
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(136,35): warning C4244:             T=float
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Model.h(136,35): warning C4244:         ]
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\Heightmap.h(76,38): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\main.cpp(22,13): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\main.cpp(23,13): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\main.cpp(82,22): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\CG\LapuOpenGL\Cursework Project\OpenGLLab\main.cpp(194,28): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+LINK : warning LNK4098: defaultlib 'MSVCRTD' conflicts with use of other libs; use /NODEFAULTLIB:library
+  Generating code
+  1 of 1922 functions (<0.1%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    20 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  OpenGLLab.vcxproj -> D:\CG\LapuOpenGL\Cursework Project\x64\Release\OpenGLLab.exe
