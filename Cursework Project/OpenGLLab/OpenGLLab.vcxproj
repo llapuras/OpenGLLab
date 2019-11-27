@@ -184,6 +184,8 @@
     <ClInclude Include="UI.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Shaders\bloomfs.glsl" />
+    <None Include="Shaders\bloomvs.glsl" />
     <None Include="Shaders\camerafs.glsl" />
     <None Include="Shaders\cameravs.glsl" />
     <None Include="Shaders\depthfs.glsl" />

@@ -11,21 +11,21 @@
 
 enum LightType
 {
-	Dir, 
-	Point, 
+	Dir,
+	Point,
 	Spot
 };
 
 struct DirectionLight {
 	glm::vec3 direction = glm::vec3(-0.2f, -1.0f, -0.3f);
-	glm::vec3 ambient = glm::vec3(1.0f, 1.0f, 1.0f);
+	glm::vec3 ambient = glm::vec3(0.2f, 0.2f, 0.2f);
 	glm::vec3 diffuse = glm::vec3(0.4f, 0.4f, 0.4f);
 	glm::vec3 specular = glm::vec3(0.5f, 0.5f, 0.5f);
 };
 
 struct PointLight {
 	glm::vec3 position = glm::vec3(0.0f, 0.0f, 0.0f);
-	glm::vec3 ambient = glm::vec3(1.0f, 0.4f, 0.9f);
+	glm::vec3 ambient = glm::vec3(0.0f, 0.4f, 0.9f);
 	glm::vec3 diffuse = glm::vec3(0.8f, 0.8f, 0.8f);
 	glm::vec3 specular = glm::vec3(1.0f, 1.0f, 1.0f);
 	float constant = 1.0f;
@@ -36,7 +36,7 @@ struct PointLight {
 struct SpotLight {
 	glm::vec3 position = glm::vec3(10, 5, -4);
 	glm::vec3 ambient = glm::vec3(0.3f, 1.0f, 0.4f);
-	glm::vec3 direction = glm::vec3(0,-1,0);
+	glm::vec3 direction = glm::vec3(0, -1, 0);
 	glm::vec3 diffuse = glm::vec3(1.0f, 1.0f, 1.0f);
 	glm::vec3 specular = glm::vec3(1.0f, 1.0f, 1.0f);;
 	glm::vec3 color = glm::vec3(1.0f, 1.0f, 1.0f);
@@ -69,8 +69,8 @@ public:
 		shader.setFloat("pointLight.quadratic", pointLight.quadratic);
 	}
 
-	void RenderSpotLight(Shader shader, SpotLight spotLight) 
-	{	
+	void RenderSpotLight(Shader shader, SpotLight spotLight)
+	{
 		shader.setVec3("spotLight.position", spotLight.position);
 		shader.setVec3("spotLight.direction", spotLight.direction);
 		shader.setVec3("spotLight.ambient", spotLight.ambient);

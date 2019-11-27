@@ -222,5 +222,11 @@
     <None Include="Shaders\environmentfs_frac.glsl">
       <Filter>Shaders</Filter>
     </None>
+    <None Include="Shaders\bloomfs.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\bloomvs.glsl">
+      <Filter>Shaders</Filter>
+    </None>
   </ItemGroup>
 </Project>

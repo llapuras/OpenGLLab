@@ -6,20 +6,18 @@
 #include "imgui/imgui_impl_glfw.h"
 #include "imgui/imgui_impl_opengl3.h"
 
-//parameters
+//global variables
+//-----------------------------------
+//bool
 bool show_demo_window = true;
 bool show_another_window = false;
 bool show_Mouse = true;
 bool isShowShadow = true;
-float litposx = 0;
-float litposy = 0;
-float litposz = 0;
+
+//test
 float posx = 0;
 float posy = 0;
 float posz = 0;
-float xconstant = 1.0f;
-float xlinear = 0.09f;
-float xquadratic = 0.032f;
 
 //water
 float DRAG_MULT = .02f;
@@ -27,8 +25,10 @@ float DRAG_MULT = .02f;
 //HeightMap
 float heightScale = 0.2f;
 
-
-bool f = false;
+//shadow land
+float litposx = 0;
+float litposy = 0;
+float litposz = 0;
 
 class UI {
 public:
@@ -97,17 +97,17 @@ public:
 
 		//for shadow scene Light Pos
 		ImGui::Text("");
-		ImGui::Text("Shaodw Light Pos");
-		ImGui::SliderFloat("posx", &litposx, -1, 1);// Edit 1 float using a slider from 0.0f to 1.0f
-		ImGui::SliderFloat("posy", &litposy, -1, 1);// Edit 1 float using a slider from 0.0f to 1.0f
-		ImGui::SliderFloat("posz", &litposz, -1, 1);// Edit 1 float using a slider from 0.0f to 1.0f
+		ImGui::Text("test Pos");
+		ImGui::SliderFloat("posx", &posx, -1, 1);// Edit 1 float using a slider from 0.0f to 1.0f
+		ImGui::SliderFloat("posy", &posy, -1, 1);// Edit 1 float using a slider from 0.0f to 1.0f
+		ImGui::SliderFloat("posz", &posz, -1, 1);// Edit 1 float using a slider from 0.0f to 1.0f
 
 		//for shadow scene Light Pos
 		ImGui::Text("");
 		ImGui::Text("Shaodw Light Pos");
-		ImGui::SliderFloat("posx", &posx, -50, 50);// Edit 1 float using a slider from 0.0f to 1.0f
-		ImGui::SliderFloat("posy", &posy, -50, 50);// Edit 1 float using a slider from 0.0f to 1.0f
-		ImGui::SliderFloat("posz", &posz, -50, 50);// Edit 1 float using a slider from 0.0f to 1.0f
+		ImGui::SliderFloat("litposx", &litposx, -30, 30);// Edit 1 float using a slider from 0.0f to 1.0f
+		ImGui::SliderFloat("litposy", &litposy, -30, 30);// Edit 1 float using a slider from 0.0f to 1.0f
+		ImGui::SliderFloat("litposz", &litposz, -30, 30);// Edit 1 float using a slider from 0.0f to 1.0f
 		ImGui::End();
 
 

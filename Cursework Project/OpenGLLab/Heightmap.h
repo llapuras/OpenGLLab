@@ -70,7 +70,7 @@ public:
 		//model = glm::rotate(model, glm::radians(float)glfwGetTime() * -10.0f), glm::normalize(glm::vec3(1.0, 0.0, 1.0))); // rotate the quad to show parallax mapping from multiple directions
 		model = glm::rotate(model, glm::radians(90.0f), glm::normalize(glm::vec3(0.0, 1.0, 0.0))); // rotate the quad to show parallax mapping from multiple directions
 		model = glm::scale(model, glm::vec3(5, 10, 5)); // rotate the quad to show parallax mapping from multiple directions
-		model = glm::translate(model, glm::vec3(-0.7, -0.8, 1));
+		model = glm::translate(model, glm::vec3(-0.9, -0.9, 1));
 		shader.setMat4("model", model);
 		shader.setVec3("viewPos", camera.Position);
 		shader.setVec3("lightPos", lightPos);

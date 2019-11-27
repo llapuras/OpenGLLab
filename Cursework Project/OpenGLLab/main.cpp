@@ -53,13 +53,6 @@ int main()
 		return -1;
 	}
 	glEnable(GL_DEPTH_TEST);
-	
-	//light
-	Light light01;
-	DirectionLight dirLight;
-	PointLight pointLight;
-	PointLight pointLight02;
-	SpotLight spotLight01;
 
 	//environment shader
 	Shader environshader("Shaders/environmentvs.glsl", "Shaders/environmentfs.glsl");
@@ -68,7 +61,6 @@ int main()
 	Shader heightmapshader("Shaders/heightmapvs.glsl", "Shaders/heightmapfs.glsl");
 	Shader shader("Shaders/shadowmapvs.glsl", "Shaders/shadowmapfs.glsl");
 	Shader simpleDepthShader("Shaders/shadowvs.glsl", "Shaders/shadowfs.glsl");
-
 
 	Light lit;
 	DirectionLight dirLit;
@@ -91,6 +83,11 @@ int main()
 
 	
 	//No Shadow Scene
+	Light light01;
+	DirectionLight dirLight;
+	PointLight pointLight;
+	PointLight pointLight02;
+	SpotLight spotLight01;
 	Model landx("Model/land/land.obj");
 	Model bush("Model/land/bush.obj");
 	Model campfire("Model/land/campfire.obj");
@@ -117,7 +114,6 @@ int main()
 	root->AddChild(mushroom_child03);
 	root->AddChild(castle_child);
 	root->AddChild(lamp_child);
-	//(posx, posy, posz);
 	castle_child->modelScale = glm::vec3(2, 2, 2);
 	castle_child->scale = 2;
 	castle_child->transform = glm::vec3(-1, -3, 0);
@@ -154,7 +150,7 @@ int main()
 	shader.setInt("diffuseTexture", 0);
 	shader.setInt("shadowMap", 1);
 	//Shadow Light source
-	glm::vec3 lightPos;
+	glm::vec3 lightPos(-2, 4.0f, -1.0f);
 
 	glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
 	glm::mat4 view = camera.GetViewMatrix();
@@ -162,8 +158,6 @@ int main()
 
 	while (!glfwWindowShouldClose(window))
 	{
-		//camera.Position = glm::vec3(posx, posy, posz);
-
 		float currentFrame = glfwGetTime();
 		deltaTime = currentFrame - lastFrame;
 		lastFrame = currentFrame;
@@ -174,12 +168,11 @@ int main()
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 		//draw shadow scene
-		lightPos = glm::vec3(litposx, litposy, litposz);
-		//without shadow
+		lightPos = glm::vec3(-4.2, 8.4, 9);
 		glm::mat4 lightProjection, lightView;
 		glm::mat4 lightSpaceMatrix;
-		GLfloat near_plane = 1.0f, far_plane = 7.5f;
-		lightProjection = glm::ortho(-10.0f, 10.0f, -10.0f, 10.0f, near_plane, far_plane);
+		GLfloat near_plane = 0.1f, far_plane = 27.5f;
+		lightProjection = glm::ortho(-20.0f, 20.0f, -20.0f, 20.0f, near_plane, far_plane);
 		lightView = glm::lookAt(lightPos, glm::vec3(0.0f), glm::vec3(0.0, 1.0, 0.0));
 		lightSpaceMatrix = lightProjection * lightView;
 		simpleDepthShader.use();
@@ -192,7 +185,6 @@ int main()
 		root->Draw(root, camera, simpleDepthShader);
 		glBindFramebuffer(GL_FRAMEBUFFER, 0);
 
-		//shader on--------------------------------------------------------------
 		glViewport(0, 0, SCR_WIDTH, SCR_HEIGHT);
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 		shader.use();
@@ -211,43 +203,12 @@ int main()
 			root->Draw(root, camera, shader);
 		}
 
-
-
-		modelshader.use();
-		modelshader.setVec3("viewPos", camera.Position);
-		modelshader.setFloat("material.shininess", 32.0f);
-		model = glm::mat4(1.0f);
-		view = camera.GetViewMatrix();
-		projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
-		//model = glm::translate(model, glm::vec3(posx, posy, posz)); // translate it down so it's at the center of the scene
-		modelshader.setMat4("model", model);
-		modelshader.setMat4("view", view);
-		modelshader.setMat4("projection", projection);
-		modelshader.setVec3("cameraPos", camera.Position);
-
-		//dir light
-		light01.RenderDirLight(modelshader, dirLight);
-
-		//campfire
-		pointLight.position = glm::vec3(8.3f, -0.2f, -12.6f);
-		pointLight.ambient = glm::vec3(1.0f, 0, 0);
-		pointLight.diffuse = glm::vec3(1.0f, 1.0f, 1.0f);
-		light01.RenderPointLight(modelshader, pointLight);
-
-		//spot light
-		spotLight01.position = glm::vec3(1, 1, 1);
-		spotLight01.direction = glm::vec3(0, -1, 0);
-		light01.RenderSpotLight(modelshader, spotLight01);
-
 		//environment map
-
 		environshader.use();
 		glm::mat4 model = glm::mat4(1.0f);
 		glm::mat4 view = camera.GetViewMatrix();
 		glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
-		//model = glm::translate(model, position);
-		//model = glm::scale(model, scale);
-		//model = glm::rotate(model, 0.0f, glm::vec3(posx, posy, posz)); // translate it down so it's at the center of the scene
+		model = glm::rotate(model, glm::radians(45.0f), glm::normalize(glm::vec3(1.0, 0.0, 0.0)));
 		environshader.setMat4("model", model);
 		environshader.setMat4("view", view);
 		environshader.setMat4("projection", projection);
@@ -262,17 +223,34 @@ int main()
 
 		//draw no shadow scene
 		modelshader.use();
+		modelshader.setVec3("viewPos", camera.Position);
+		modelshader.setFloat("material.shininess", 32.0f);
+
+		//dir light
+		dirLight.direction = glm::vec3(-1, 1, -1);
+		dirLight.diffuse = glm::vec3(-1, -0.04, 0.9);
+		light01.RenderDirLight(modelshader, dirLight);
+		//campfire
+		pointLight.position = glm::vec3(3.4f, -9, -6);
+		pointLight.ambient = glm::vec3(1.0f, 0, 0);
+		pointLight.diffuse = glm::vec3(1.0f, 1.0f, 1.0f);
+		//pointLight.position = glm::vec3(litposx, litposy, litposz);
+		light01.RenderPointLight(modelshader, pointLight);
+		//spot light
+		//spotLight01.position = glm::vec3(litposx, litposy, litposz);
+		spotLight01.position = glm::vec3(5.4, -5.4, -3);
+		spotLight01.direction = glm::vec3(0, -1, 0);
+		light01.RenderSpotLight(modelshader, spotLight01);
+
 		model = glm::mat4(1.0f);
 		view = camera.GetViewMatrix();
 		projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
-			modelshader.setMat4("model", model);
+		modelshader.setMat4("model", model);
 		modelshader.setMat4("view", view);
 		modelshader.setMat4("projection", projection);
 		modelshader.setVec3("cameraPos", camera.Position);
 		root->worldTransform = glm::vec3(4, -26, -3);
 		root->Draw(root, camera, modelshader);
-
-
 
 		sky.DrawSkyBox(camera, sky.shader);
 		ui.Render(window);
