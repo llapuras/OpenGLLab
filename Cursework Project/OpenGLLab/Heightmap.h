@@ -59,8 +59,6 @@ public:
 		shader.setInt("normalMap", 1);
 		shader.setInt("depthMap", 2);
 
-		lightPos = glm::vec3(posx, posy, posz);
-
 		// configure view/projection matrices
 		glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
 		glm::mat4 view = camera.GetViewMatrix();

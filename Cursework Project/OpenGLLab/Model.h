@@ -42,12 +42,12 @@ public:
 	}
 
 	// draws the model, and thus all its meshes
-	void Draw(Camera camera, Shader shader)
+	void Draw(Shader shader)
 	{
 		for (unsigned int i = 0; i < meshes.size(); i++) {
 			meshes[i].position = position;
 			meshes[i].scale = scale;
-			meshes[i].Draw(camera, shader);
+			meshes[i].Draw(shader);
 		}
 	}
 

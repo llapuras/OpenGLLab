@@ -118,9 +118,6 @@
     <ClInclude Include="Heightmap.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="MeshX.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="UI.h">
       <Filter>Header Files</Filter>
     </ClInclude>

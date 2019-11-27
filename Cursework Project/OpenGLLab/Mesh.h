@@ -52,20 +52,8 @@ public:
 	}
 
 	// render the mesh
-	void Draw(Camera camera, Shader shader)
+	void Draw(Shader shader)
 	{
-		shader.use();
-		glm::mat4 model = glm::mat4(1.0f);
-		glm::mat4 view = camera.GetViewMatrix();
-		glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
-		model = glm::translate(model, position);
-		model = glm::scale(model, scale);
-		//model = glm::rotate(model, 0.0f, glm::vec3(posx, posy, posz)); // translate it down so it's at the center of the scene
-		shader.setMat4("model", model);
-		shader.setMat4("view", view);
-		shader.setMat4("projection", projection);
-		shader.setVec3("cameraPos", camera.Position);
-
 		// bind appropriate textures
 		unsigned int diffuseNr = 1;
 		unsigned int specularNr = 1;

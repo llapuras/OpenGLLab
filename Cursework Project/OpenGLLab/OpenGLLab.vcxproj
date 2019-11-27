@@ -172,7 +172,6 @@
     <ClInclude Include="imgui\imstb_textedit.h" />
     <ClInclude Include="imgui\imstb_truetype.h" />
     <ClInclude Include="Light.h" />
-    <ClInclude Include="MeshX.h" />
     <ClInclude Include="Model.h" />
     <ClInclude Include="Mesh.h" />
     <ClInclude Include="OpenGLInit.h" />
