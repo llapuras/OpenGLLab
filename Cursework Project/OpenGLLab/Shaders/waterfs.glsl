@@ -1,8 +1,7 @@
 #version 330 core
 
-#define DRAG_MULT 0.28
 #define ITERATIONS_RAYMARCH 33
-#define ITERATIONS_NORMAL 5
+#define ITERATIONS_NORMAL 25
 #define WATER_DEPTH 2
 
 out vec4 FragColor;
@@ -20,6 +19,7 @@ uniform sampler2D normalMap;
 uniform sampler2D depthMap;
 uniform float heightScale;
 uniform float time;
+uniform float DRAG_MULT = 0.2;
 
 //camera
 uniform vec3 viewPos;

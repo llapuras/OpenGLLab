@@ -18,6 +18,15 @@ float xconstant = 1.0f;
 float xlinear = 0.09f;
 float xquadratic = 0.032f;
 
+//water
+float DRAG_MULT = .02f;
+
+//HeightMap
+float heightScale = 0.2f;
+
+
+bool f = false;
+
 class UI {
 public:
 
@@ -48,11 +57,45 @@ public:
 		static float f = 0.0f;
 		static int counter = 0;
 
-		ImGui::Begin("awsl");// Create a window called "Hello, world!" and append into it.s
+
+		ImGui::Begin("Menu");
+
+		//Mouse Control
 		ImGui::Checkbox("Mouse Control", &show_another_window);
-		ImGui::SliderFloat("posx", &posx, -22, 22);// Edit 1 float using a slider from 0.0f to 1.0f
-		ImGui::SliderFloat("posy", &posy, -22, 22);// Edit 1 float using a slider from 0.0f to 1.0f
-		ImGui::SliderFloat("posz", &posz, -22, 22);// Edit 1 float using a slider from 0.0f to 1.0f
+
+		//Water Effect
+		ImGui::Text("Water Effect Parameter:");
+		ImGui::SliderFloat("Wave Size", &DRAG_MULT, 0, 0.2);
+
+		//Height Map
+		ImGui::Text("");
+		ImGui::Text("Height Map:");
+		ImGui::SliderFloat("Height Scale", &heightScale, 0, 0.8);
+
+		//Environment Map
+		ImGui::Text("Environment Map");
+		ImGui::Text("Sky Box -> Cubemap");
+		ImGui::Text("Plane -> Reflection");
+		ImGui::Text("Castle -> Fraction");
+
+		//Scene Graph
+		ImGui::Text("");
+		ImGui::Text("Scene Graph:");
+
+		//Shadow Map
+		ImGui::Text("");
+		ImGui::Text("Scene Graph:");
+
+		//Scene Graph
+		ImGui::Text("");
+		ImGui::Text("Scene Graph:");
+
+
+
+		//for test
+		ImGui::SliderFloat("posx", &posx, -1, 1);// Edit 1 float using a slider from 0.0f to 1.0f
+		ImGui::SliderFloat("posy", &posy, -1, 1);// Edit 1 float using a slider from 0.0f to 1.0f
+		ImGui::SliderFloat("posz", &posz, -1, 1);// Edit 1 float using a slider from 0.0f to 1.0f
 		ImGui::End();
 
 		ImGui::Render();

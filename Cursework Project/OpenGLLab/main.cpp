@@ -57,6 +57,7 @@ int main()
 	Shader environshader("Shaders/environmentvs.glsl", "Shaders/environmentfs.glsl");
 	Shader modelshader("Shaders/modelload_vs.glsl", "Shaders/modelload_fs.glsl");
 	Shader watershader("Shaders/watervs.glsl", "Shaders/waterfs.glsl");
+	Shader heightmapshader("Shaders/heightmapvs.glsl", "Shaders/heightmapfs.glsl");
 
 	Light lit;
 	DirectionLight dirLit;
@@ -72,8 +73,7 @@ int main()
 	board.position = glm::vec3(-2, -5, -2);
 	Model castle("Model/land/castle.obj");
 	castle.position = glm::vec3(2, -3, -3);
-	Model room("Model/land/mushroom.obj");
-	//room.scale = glm::vec3(0.1, 0.1, 0.1);
+
 
 	while (!glfwWindowShouldClose(window))
 	{
@@ -92,8 +92,6 @@ int main()
 		board.Draw(camera, environshader);
 		castle.Draw(camera, environshader);
 
-
-
 		lit.RenderDirLight(modelshader, dirLit);
 		poiLit.position = glm::vec3(posx, posy, posz);
 		lit.RenderPointLight(modelshader, poiLit);
@@ -101,9 +99,9 @@ int main()
 
 		//room.Draw(camera, modelshader);
 		
-		//land.Render(camera);
-		//land.Render(camera);
-		water.RenderWater(camera);
+		land.Render(camera, heightmapshader);
+		water.RenderWater(camera, watershader);
+
 
 		sky.DrawSkyBox(camera, sky.shader);
 		ui.Render(window);
@@ -115,7 +113,6 @@ int main()
 	glfwTerminate();
 	return 0;
 }
-
 
 // process all input: query GLFW whether relevant keys are pressed/released this frame and react accordingly
 // ---------------------------------------------------------------------------------------------------------
