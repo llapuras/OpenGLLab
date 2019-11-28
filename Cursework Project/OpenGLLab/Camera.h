@@ -88,6 +88,31 @@ public:
 			Position += Right * velocity;
 	}
 
+	int i = 0;
+	int countdown = 10;
+
+	//camera move track
+	glm::vec3 pos[4] = {
+		glm::vec3(0.0f, -2.0f, 20.0f),
+		glm::vec3(-7.0f, -5.0f, 22.0f),
+		glm::vec3(2.7f, -7.0f, 5.2f),
+		glm::vec3(-4.9f, -7.0f, 5.2f),
+	};
+
+	glm::vec3 dir = glm::normalize(pos[i] - Position);
+
+	void AutoMove() {
+
+		if (glm::distance(pos[i], Position) > 0.1f) {
+			Position += glm::normalize(pos[i] - Position) * 0.1f;
+		}
+		else i = (i+1)%4;
+		std::cout << i << std::endl;
+
+	}
+
+
+
 	// Processes input received from a mouse input system. Expects the offset value in both the x and y direction.
 	void ProcessMouseMovement(float xoffset, float yoffset, GLboolean constrainPitch = true)
 	{

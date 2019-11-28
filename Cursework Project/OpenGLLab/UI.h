@@ -13,17 +13,18 @@ bool show_demo_window = true;
 bool show_another_window = false;
 bool show_Mouse = true;
 bool isShowShadow = true;
+bool autoMove = true;
 
 //test
 float posx = 0;
-float posy = 0;
-float posz = 0;
+float posy = -5;
+float posz = 20;
 
 //water
 float DRAG_MULT = .02f;
 
 //HeightMap
-float heightScale = 0.2f;
+float heightScale = 0.07f;
 
 //shadow land
 float litposx = 0;
@@ -60,8 +61,10 @@ public:
 		static float f = 0.0f;
 		static int counter = 0;
 
-
 		ImGui::Begin("Menu");
+
+		//Camera
+		ImGui::Checkbox("Auto Camera", &autoMove);
 
 		//Environment Map
 		ImGui::Text("Introduction");
@@ -69,7 +72,6 @@ public:
 		ImGui::Text("2.Use W/A/S/D to move Camera");
 		ImGui::Text("slide Wave Size to change water effect");
 		ImGui::Text("4.Press Q/E or slide Height Scale to change heightscale of height map");
-
 
 		//Water Effect
 		ImGui::Text("");
@@ -79,15 +81,14 @@ public:
 		//Height Map
 		ImGui::Text("");
 		ImGui::Text("Height Map:");
-		ImGui::SliderFloat("Height Scale", &heightScale, 0, 0.8);
+		ImGui::SliderFloat("Height Scale", &heightScale, 0, 0.07);
 
-
-		////for shadow scene Light Pos
-		//ImGui::Text("");
-		//ImGui::Text("test Pos");
-		//ImGui::SliderFloat("posx", &posx, -1, 1);// Edit 1 float using a slider from 0.0f to 1.0f
-		//ImGui::SliderFloat("posy", &posy, -1, 1);// Edit 1 float using a slider from 0.0f to 1.0f
-		//ImGui::SliderFloat("posz", &posz, -1, 1);// Edit 1 float using a slider from 0.0f to 1.0f
+		//for shadow scene Light Pos
+		ImGui::Text("");
+		ImGui::Text("test Pos");
+		ImGui::SliderFloat("posx", &posx, -30, 30);// Edit 1 float using a slider from 0.0f to 1.0f
+		ImGui::SliderFloat("posy", &posy, -30, 30);// Edit 1 float using a slider from 0.0f to 1.0f
+		ImGui::SliderFloat("posz", &posz, -30, 30);// Edit 1 float using a slider from 0.0f to 1.0f
 
 		////for shadow scene Light Pos
 		//ImGui::Text("");
@@ -96,7 +97,6 @@ public:
 		//ImGui::SliderFloat("litposy", &litposy, -30, 30);// Edit 1 float using a slider from 0.0f to 1.0f
 		//ImGui::SliderFloat("litposz", &litposz, -30, 30);// Edit 1 float using a slider from 0.0f to 1.0f
 		ImGui::End();
-
 
 		ImGui::Render();
 		int display_w, display_h;
